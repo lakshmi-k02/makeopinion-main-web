@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Cards with Centered Arrow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .provide-section {
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .page-container {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .provide-main-block {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .provide-heading {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .provide-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #3498db;
+            border-radius: 2px;
+        }
+        
+        .provide-description {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            line-height: 1.6;
+        }
+        
+        .provide-option {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .options-list {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            width: 350px;
+            padding: 40px 30px;
+            position: relative;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .options-list:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(52, 152, 219, 0.2);
+        }
+        
+        .options {
+            text-align: center;
+            width: 100%;
+        }
+        
+        .option-icon {
+            width: 90px;
+            height: 90px;
+            background: #e3f2fd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .options-list:hover .option-icon {
+            background: #3498db;
+            transform: scale(1.1);
+        }
+        
+        .option-icon img {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .bold-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .provide-caption {
+            color: #7f8c8d;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .arrow {
+            position: absolute;
+            opacity: 0;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            background: #3498db;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        
+        .arrow img {
+            width: 25px;
+            height: 25px;
+            filter: invert(1);
+        }
+        
+        .options-list:hover .arrow {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        /* Overlay effect on hover */
+        .options-list::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(52, 152, 219, 0.9);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 15px;
+        }
+        
+        .options-list:hover::before {
+            opacity: 1;
+        }
+        
+        /* Content scaling on hover */
+        .options-list:hover .options > * {
+            position: relative;
+            z-index: 3;
+            color: white !important;
+        }
+        
+        .options-list:hover .provide-caption {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+        
+        .options-list:hover .option-icon img {
+            filter: invert(1);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .provide-option {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .options-list {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="provide-section">
+        <div class="page-container w-container">
+            <div class="provide-main-block">
+                <h2 class="provide-heading">Services We Provide</h2>
+                <p class="provide-description">We deliver cutting-edge solutions tailored to your business needs. Our expert team ensures top-quality results across all our service offerings.</p>
+                <div class="provide-option">
+                    <div class="options-list">
+                        <div class="options">
+                            <div class="option-icon">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1995/1995463.png" alt="Engineering Icon">
+                            </div>
+                            <div class="bold-text">Engineering & Services</div>
+                            <p class="provide-caption">Advanced engineering solutions for complex technical challenges and system development.</p>
+                        </div>
+                        <a href="/service-one" class="arrow">
+                            <img src="https://cdn-icons-png.flaticon.com/512/271/271226.png" alt="Arrow">
+                        </a>
+                    </div>
+                    
+                    <div class="options-list">
+                        <div class="options">
+                            <div class="option-icon">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png" alt="Collaboration Icon">
+                            </div>
+                            <div class="bold-text">Business Collaboration</div>
+                            <p class="provide-caption">Strategic partnerships that drive growth and innovation through synergistic relationships.</p>
+                        </div>
+                        <a href="/service-two" class="arrow">
+                            <img src="https://cdn-icons-png.flaticon.com/512/271/271226.png" alt="Arrow">
+                        </a>
+                    </div>
+                    
+                    <div class="options-list">
+                        <div class="options">
+                            <div class="option-icon">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055666.png" alt="Creativity Icon">
+                            </div>
+                            <div class="bold-text">Creative Minds</div>
+                            <p class="provide-caption">Innovative thinking and design solutions that transform your vision into reality.</p>
+                        </div>
+                        <a href="/service-three" class="arrow">
+                            <img src="https://cdn-icons-png.flaticon.com/512/271/271226.png" alt="Arrow">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
