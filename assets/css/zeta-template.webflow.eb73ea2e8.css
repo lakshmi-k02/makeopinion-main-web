@@ -5763,7 +5763,7 @@ blockquote {
 }
 
 .home-new-technology-section-one {
-  padding: 7px 15px 97px;
+  padding: 7px 15px 30px;
 }
 
 .tech-heading-one {
@@ -7420,7 +7420,7 @@ blockquote {
 }
 
 .start-free-trial-button-block.feature-block.footer-buttons-start.discover-more {
-  background-color: #3f53d8;
+  background-color: rgb(0, 112, 223);
   padding-left: 35px;
   padding-right: 35px;
 }
@@ -11611,9 +11611,9 @@ blockquote {
   margin-bottom: 15px;
 }
 
-.provide-section {
+/* .provide-section {
   padding: 110px 15px;
-}
+} */
 
 .provide-option {
   grid-column-gap: 35px;
