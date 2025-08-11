@@ -192,6 +192,24 @@
         .options-list:hover {
             cursor: pointer;
         }
+  /* Container for the cards */
+.provide-option {
+    display: flex;
+    justify-content: center; /* Center cards */
+    gap: 40px; /* Space between cards */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Each card wrapper */
+.options-list {
+    flex: 1 1 300px; /* Grow, shrink, min width 300px */
+    max-width: 500px; /* Prevent over-stretching */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
     </style>
     <style>
 
@@ -203,6 +221,25 @@
 </head>
 
 <body cz-shortcut-listen="true" class="audi-P  P-dsign">
+    <!-- Registration Modal for Fancybox -->
+    <div style="display:none;max-width:400px;padding:32px;background:#fff;border-radius:8px;" id="registerbox">
+      <h2 style="margin-bottom:16px;color:#0070DF;text-align:center;">Register</h2>
+      <form id="registration-form">
+        <div style="margin-bottom:12px;">
+          <label for="reg-name" style="display:block;margin-bottom:4px;">Name</label>
+          <input type="text" id="reg-name" name="name" required style="width:100%;padding:8px;">
+        </div>
+        <div style="margin-bottom:12px;">
+          <label for="reg-email" style="display:block;margin-bottom:4px;">Email</label>
+          <input type="email" id="reg-email" name="email" required style="width:100%;padding:8px;">
+        </div>
+        <div style="margin-bottom:12px;">
+          <label for="reg-password" style="display:block;margin-bottom:4px;">Password</label>
+          <input type="password" id="reg-password" name="password" required style="width:100%;padding:8px;">
+        </div>
+        <button type="submit" style="width:100%;background:#0070DF;color:#fff;padding:10px 0;border:none;border-radius:4px;font-size:16px;">Sign Up</button>
+      </form>
+    </div>
     <header class="nevigation wf-section">
         <div data-w-id="aa47c58e-d18c-9f72-b96c-cee67149e1dc" data-animation="over-left" data-collapse="medium"
             data-duration="1000" data-easing="ease" data-easing2="ease" role="banner" class="navbar-main w-nav"
@@ -547,7 +584,7 @@
             color: white;
         }
     </style>
-    
+
     <style>
         h1 {
             font-size: 56px
@@ -593,84 +630,86 @@
                         </a>
                     </div>
                 </div>
-                <!-- <div id="w-node-b80b60ec-434c-8789-2101-36ebbc2ddd0e-29476037"
+                <div id="w-node-b80b60ec-434c-8789-2101-36ebbc2ddd0e-29476037"
                     class="hero-image-block home-three-hero-image-block" style="margin-top: -60px;">
-                </div> -->
 
-                <section class="provide-section">
-                    <div class="page-container w-container">
-                        <div class="provide-main-block">
-                            <!-- <h2 class="provide-heading">Services we provide</h2>
+
+                    <section class="provide-section">
+                        <div class="page-container w-container">
+                            <div class="provide-main-block">
+                                <!-- <h2 class="provide-heading">Services we provide</h2>
                 <p class="provide-description">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor
                     incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit.</p> -->
-                            <div class="provide-option">
-                                <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50" class="options-list">
-                                    <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edb9-f3e30ed3"
-                                        style="background-color: rgb(255, 255, 255);" class="options">
-                                        <div class="option-icon"><img
-                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3330a2c09d732d3f687_Group%202216.svg"
-                                                loading="lazy" id="w-node-f87f6d2a-8256-0570-f306-218c1132edbb-f3e30ed3"
-                                                alt="Pricing Logo" class="option-images"></div>
-                                        <div class="bold-text margin-bottom center">Engineering &amp; services</div>
-                                        <p class="provide-caption">Lorem ipsum dolor sit amet consectetur adipiscing
-                                            eiusmod tempor
-                                            incididunt.</p>
+                                <div class="provide-option">
+                                    <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
+                                        class="options-list">
+                                        <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edb9-f3e30ed3"
+                                            style="background-color: rgb(255, 255, 255);" class="options">
+                                            <div class="option-icon"><img
+                                                    src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3330a2c09d732d3f687_Group%202216.svg"
+                                                    loading="lazy"
+                                                    id="w-node-f87f6d2a-8256-0570-f306-218c1132edbb-f3e30ed3"
+                                                    alt="Pricing Logo" class="option-images"></div>
+                                            <div class="bold-text margin-bottom center">Make Opinion Access Panel</div>
+                                            <p class="provide-caption">Lorem ipsum dolor sit amet consectetur adipiscing
+                                                eiusmod tempor
+                                                incididunt.</p>
+                                        </div>
+                                        <a style="opacity: 0;" href="/service-one" class="arrow w-inline-block"><img
+                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                                loading="lazy" alt="White Arrow"></a>
                                     </div>
-                                    <a style="opacity: 0;" href="/service-one" class="arrow w-inline-block"><img
-                                            src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
-                                            loading="lazy" alt="White Arrow"></a>
-                                </div>
-                                <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
-                                    style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-                                    class="options-list">
-                                    <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edc3-f3e30ed3"
-                                        data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60"
-                                        style="background-color: rgb(255, 255, 255);" class="options">
-                                        <div class="option-icon"><img
-                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c33310e2ffdd0a454149_Group%202215.svg"
-                                                loading="lazy" id="w-node-f87f6d2a-8256-0570-f306-218c1132edc5-f3e30ed3"
-                                                alt="Business Collaboration" class="option-images"></div>
-                                        <div class="bold-text margin-bottom center">Business collaboration</div>
-                                        <p class="provide-caption">Lorem ipsum dolor sit amet consectetur adipiscing
-                                            eiusmod tempor
-                                            incididunt.</p>
+                                    <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
+                                        style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                                        class="options-list">
+                                        <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edc3-f3e30ed3"
+                                            data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60"
+                                            style="background-color: rgb(255, 255, 255);" class="options">
+                                            <div class="option-icon"><img
+                                                    src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c33310e2ffdd0a454149_Group%202215.svg"
+                                                    loading="lazy"
+                                                    id="w-node-f87f6d2a-8256-0570-f306-218c1132edc5-f3e30ed3"
+                                                    alt="Business Collaboration" class="option-images"></div>
+                                            <div class="bold-text margin-bottom center">Make OPinion Research</div>
+                                            <p class="provide-caption">Lorem ipsum dolor sit amet consectetur adipiscing
+                                                eiusmod tempor
+                                                incididunt.</p>
+                                        </div>
+                                        <a style="opacity: 0;" href="/service-two" class="arrow w-inline-block"><img
+                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                                loading="lazy" alt="White Arrow"></a>
                                     </div>
-                                    <a style="opacity: 0;" href="/service-two" class="arrow w-inline-block"><img
-                                            src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
-                                            loading="lazy" alt="White Arrow"></a>
-                                </div>
-                                <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
-                                    style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-                                    class="options-list">
-                                    <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edcd-f3e30ed3"
-                                        data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60"
-                                        style="background-color: rgb(255, 255, 255);" class="options">
-                                        <div class="option-icon"><img
-                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3333d12ee33b200e664_Group%202214.svg"
-                                                loading="lazy" id="w-node-f87f6d2a-8256-0570-f306-218c1132edcf-f3e30ed3"
-                                                alt="Percentage Tag" class="option-images"></div>
-                                        <div class="bold-text margin-bottom center">Creative minds</div>
-                                        <p class="provide-caption">Lorem ipsum dolor sit amet consectetur adipiscing
-                                            eiusmod tempor
-                                            incididunt.</p>
-                                    </div>
-                                    <a style="opacity: 0;" href="/service-one" class="arrow w-inline-block"><img
-                                            src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
-                                            loading="lazy" alt="White Arrow"></a>
+                                    <!-- <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
+                                        style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                                        class="options-list">
+                                        <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edcd-f3e30ed3"
+                                            data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60"
+                                            style="background-color: rgb(255, 255, 255);" class="options">
+                                            <div class="option-icon"><img
+                                                    src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3333d12ee33b200e664_Group%202214.svg"
+                                                    loading="lazy"
+                                                    id="w-node-f87f6d2a-8256-0570-f306-218c1132edcf-f3e30ed3"
+                                                    alt="Percentage Tag" class="option-images"></div>
+                                            <div class="bold-text margin-bottom center">Creative minds</div>
+                                            <p class="provide-caption">Lorem ipsum dolor sit amet consectetur adipiscing
+                                                eiusmod tempor
+                                                incididunt.</p>
+                                        </div>
+                                        <a style="opacity: 0;" href="/service-one" class="arrow w-inline-block"><img
+                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                                loading="lazy" alt="White Arrow"></a>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
             </div>
         </div>
     </section>
 
-
-
-
     <section class="Clientele-section" style="box-shadow: 0 10px 10px rgba(244, 241, 241, 0.05);">
-        <div class="pro-main-container w-container" style="padding-top: 70px; padding-bottom: 70px">
+        <div class="pro-main-container w-container" style="padding-top: 250px; padding-bottom: 10px">
             <h2 class="clientele-heading" style="color: #CBE5FF;"></h2>
             <div>
                 <div class="w-dyn-list">
@@ -799,10 +838,16 @@
                         </div>
                     </div>
                     <div class="learn-button-block">
-                        <a data-w-id="817e41e4-9b96-eb12-20c0-1aa247e91274" href="/features"
-                            class="trial-button start-free-trial-button-block feature-block footer-buttons-start discover-more learn w-inline-block">
-                            <div class="trail-text-one start-trial-text-block feature-text-block discover-text">Sign up
-                            </div>
+
+                        <!-- <a data-w-id="9d91c234-c3c2-f525-4953-53e5a0bff15f" data-fancybox="register4" href="#registerbox" class="start-free-trial-button-block feature-block footer-buttons-start discover-more learn w-inline-block" style="background-color:#0070DF">
+                            <div class="start-trial-text-block feature-text-block discover-text" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Sign Up</div>
+                            <div class="start-trial-text-block feature-text-block text-two discover-more-text" style="transform: translate3d(0px, 50px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Sign Up</div>
+                        </a> -->
+                        <a data-w-id="817e41e4-9b96-eb12-20c0-1aa247e91274" data-fancybox="register4" href="#registerbox" class="start-free-trial-button-block feature-block footer-buttons-start discover-more learn w-inline-block" style="background-color:#0070DF">
+                            <!-- <div class="trail-text-one start-trial-text-block feature-text-block discover-text">Sign up
+                            </div> -->
+                            <!-- class="trial-button start-free-trial-button-block feature-block footer-buttons-start discover-more learn w-inline-block" -->
+                            <div class="start-trial-text-block feature-text-block discover-text" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Sign Up</div>
                             <div
                                 class="trail-text-two start-trial-text-block feature-text-block text-two discover-more-text">
                                 Sign up</div>
@@ -1291,79 +1336,50 @@
         </div>
     </section>
 
-    <section class="ask-for-demo-hero-section wf-section"
-        style="padding-bottom: 400px;background-color: #fff;background-image: url('./assets/images_new/bg8.png');background-size: cover;background-position: 0 0">
+    <section class="ask-for-demo-hero-section wf-section" style="padding-bottom: 400px;background-color: #fff;background-image: url('./assets/images_new/bg8.png');background-size: cover;background-position: 0 0">
         <div class="container-small w-container">
             <div class="demo-main-block">
                 <h1 class="demo-heading">Create a free Make Opinion account</h1>
                 <p class="demo-para">And start your first survey today!</p>
                 <div class="demo-form-block">
-                    <div id="w-node-e6190bc3-7b05-8029-1f59-c34b1326c35d-e200f905" class="demo-form"
-                        style="background-color: #F9FAFB">
+                    <div id="w-node-e6190bc3-7b05-8029-1f59-c34b1326c35d-e200f905" class="demo-form" style="background-color: #F9FAFB">
                         <div class="demo" style="background-color: #F9FAFB">
                             <div class="bold-text demo-margin">Create free account</div>
                             <div class="sign-up">
                                 <div class="w-form">
-                                    <form id="email-form-2" name="email-form-2" data-name="Email Form 2" method="POST"
-                                        action="https://app.makeopinion.com/index.php?page=register"
-                                        aria-label="Email Form 2">
+                                    <form id="email-form-2" name="email-form-2" data-name="Email Form 2" method="POST" action="https://app.makeopinion.com/index.php?page=register" aria-label="Email Form 2">
 
                                         <div class="text-field-block">
-                                            <input type="text" class="contact-form-text-field w-input" maxlength="256"
-                                                name="firstname" data-name="fname" placeholder="Name*" id="firstname"
-                                                required="">
-                                            <input type="tel" class="contact-form-text-field w-input" maxlength="256"
-                                                name="lastname" data-name="lname" placeholder="Last Name*" id="lastname"
-                                                required="">
+                                            <input type="text" class="contact-form-text-field w-input" maxlength="256" name="firstname" data-name="fname" placeholder="Name*" id="firstname" required="">
+                                            <input type="tel" class="contact-form-text-field w-input" maxlength="256" name="lastname" data-name="lname" placeholder="Last Name*" id="lastname" required="">
                                         </div>
                                         <style>
                                             .email_replace {
                                                 display: none !important;
                                             }
                                         </style>
-                                        <input name="email_replace" id="email_replace" class="email_replace"
-                                            type="text" />
+                                        <input name="email_replace" id="email_replace" class="email_replace" type="text">
 
-                                        <input type="text" class="contact-form-text-field w-input" maxlength="256"
-                                            name="email_register" data-name="email_register"
-                                            placeholder="Email address*" id="email_register" required="">
-                                        <input type="password" class="contact-form-text-field w-input" maxlength="256"
-                                            name="password_register" data-name="password_register"
-                                            placeholder="Password*" id="password_register" required="">
-                                        <input type="text" class="contact-form-text-field w-input" maxlength="256"
-                                            name="company" data-name="company" placeholder="Company*" id="company"
-                                            required="">
-                                        <input type="hidden" name="source" data-name="source" value="website"
-                                            id="source">
-                                        <input type="hidden" name="register" data-name="register" value="true"
-                                            id="true">
-                                        <input type="hidden" name="street_line1" data-name="street_line1" value=""
-                                            id="street_line1">
-                                        <input type="hidden" name="street_line2" data-name="street_line2" value=""
-                                            id="street_line2">
-                                        <input type="hidden" name="zip_code" data-name="zip_code" value=""
-                                            id="zip_code">
+                                        <input type="text" class="contact-form-text-field w-input" maxlength="256" name="email_register" data-name="email_register" placeholder="Email address*" id="email_register" required="">
+                                        <input type="password" class="contact-form-text-field w-input" maxlength="256" name="password_register" data-name="password_register" placeholder="Password*" id="password_register" required="">
+                                        <input type="text" class="contact-form-text-field w-input" maxlength="256" name="company" data-name="company" placeholder="Company*" id="company" required="">
+                                        <input type="hidden" name="source" data-name="source" value="website" id="source">
+                                        <input type="hidden" name="register" data-name="register" value="true" id="true">
+                                        <input type="hidden" name="street_line1" data-name="street_line1" value="" id="street_line1">
+                                        <input type="hidden" name="street_line2" data-name="street_line2" value="" id="street_line2">
+                                        <input type="hidden" name="zip_code" data-name="zip_code" value="" id="zip_code">
                                         <input type="hidden" name="city" data-name="city" value="" id="city">
-                                        <input type="hidden" name="phoneNumber" data-name="phoneNumber" value=""
-                                            id="phoneNumber">
+                                        <input type="hidden" name="phoneNumber" data-name="phoneNumber" value="" id="phoneNumber">
 
 
-                                        <label class="w-checkbox checkbox-field"><input type="checkbox" id="terms1"
-                                                name="terms" data-name="Checkbox" class="w-checkbox-input"><span
-                                                class="google-sign-up-text w-form-label" for="checkbox">I accept the<a
-                                                    href="https://app.makeopinion.com/Make%20Opinion%20DIY%20Terms%20and%20Conditions.pdf"
-                                                    class="privacy" target="_blank" style="color:#0070DF">
-                                                    terms</a></span></label>
+                                        <label class="w-checkbox checkbox-field"><input type="checkbox" id="terms1" name="terms" data-name="Checkbox" class="w-checkbox-input"><span class="google-sign-up-text w-form-label" for="checkbox">I accept the<a href="https://app.makeopinion.com/Make%20Opinion%20DIY%20Terms%20and%20Conditions.pdf" class="privacy" target="_blank" style="color:#0070DF"> terms</a></span></label>
 
-                                        <input type="submit" value="Create free account" data-wait="Please wait..."
-                                            class="contact-us-submit demo-submit w-button">
+                                        <input type="submit" value="Create free account" data-wait="Please wait..." class="contact-us-submit demo-submit w-button">
                                     </form>
-                                    <div class="w-form-done" tabindex="-1" role="region"
-                                        aria-label="Email Form 2 success">
+                                    <div class="w-form-done" tabindex="-1" role="region" aria-label="Email Form 2 success">
                                         <div>Thank you! Your submission has been received!</div>
                                     </div>
-                                    <div class="w-form-fail" tabindex="-1" role="region"
-                                        aria-label="Email Form 2 failure">
+                                    <div class="w-form-fail" tabindex="-1" role="region" aria-label="Email Form 2 failure">
                                         <div>Oops! Something went wrong while submitting the form.</div>
                                     </div>
                                 </div>
@@ -1373,9 +1389,7 @@
                     <div id="w-node-e6190bc3-7b05-8029-1f59-c34b1326c36f-e200f905" class="sign-up-image-main-block">
                         <div class="sign-up-banner-image">
                             <div class="girl-image">
-                                <img src="./assets/images_new/register.png" loading="lazy"
-                                    sizes="(max-width: 479px) 100vw, (max-width: 767px) 77vw, (max-width: 991px) 34vw, (max-width: 1279px) 35vw, 433px"
-                                    srcset="./assets/images_new/register.webp 500w, 
+                                <img src="./assets/images_new/register.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 77vw, (max-width: 991px) 34vw, (max-width: 1279px) 35vw, 433px" srcset="./assets/images_new/register.webp 500w, 
                                     ./assets/images_new/register.png 800w, 
                                     ./assets/images_new/register.png 1054w" alt="Banner Girl Image">
                             </div>
@@ -1385,8 +1399,6 @@
             </div>
         </div>
     </section>
-
-
 
     <footer class="zeta-home-page-footer-section"
         style="margin-top: 0px;background-image: url('https://makeopinion.com/en/assets/images_new/footer-bg.png');background-size: cover;background-position: 0 0">

@@ -4868,7 +4868,7 @@ blockquote {
 
 .zeta-home-page-footer-section {
   z-index: -1;
-  background-color: #3f53d8;
+  background-color: rgb(0, 112, 224);
   background-image: url("https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/64242b2ba7ff1063a6d33e96_Mask%20group%20(20).webp");
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -11074,17 +11074,47 @@ blockquote {
   margin-bottom: 120px;
 }
 
+/* Ensure the right column (sign-up-image-main-block) fills its grid/flex cell */
 .sign-up-image-main-block {
-  background-color: #3f53d8;
+  background-color: rgb(0, 112, 224);
   background-image: url("https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6440b2fddac5107630de07cb_Shape.webp");
-  background-position: 50%;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  justify-content: center;
-  align-items: center;
-  padding-left: 20px;
+  background-size: cover;
+
+  display: flex;
+  width: 100% !important;  /* fills column width */
+  height: 100% !important; /* fills column height */
+  padding: 0 !important;   /* no extra spacing */
+  margin: 0 !important;
+}
+
+/* Make the wrapper fill the block */
+.sign-up-banner-image,
+.girl-image {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* Make the image fill horizontally and vertically */
+.girl-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills both sides without distortion */
+  display: block;
+}
+.parent-container {
   display: flex;
 }
+
+.sign-up-form-block,
+.sign-up-image-main-block {
+  flex: 1; /* each takes equal width */
+}
+
+
+
 
 .infromation-main-block {
   grid-column-gap: 34px;
