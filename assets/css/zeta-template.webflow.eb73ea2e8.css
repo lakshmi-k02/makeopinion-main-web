@@ -10411,16 +10411,17 @@ blockquote {
 }
 
 .sign-up-image-block {
-  background-color: #3f53d8;
+  background-color: #0070E0;
   background-image: url("https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6440b2fddac5107630de07cb_Shape.webp");
-  background-position: 50%;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover; /* fill entire background */
   justify-content: center;
   align-items: center;
   padding-left: 40px;
   display: flex;
 }
+
 
 .sign-in {
   text-decoration: none;
