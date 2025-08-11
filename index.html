@@ -13,7 +13,7 @@
     <meta property="og:type" content="website">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="assets/css/zeta-template.webflow.eb73ea2e8.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
 
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
@@ -194,12 +194,12 @@
         }
     </style>
     <style>
-        
+
     </style>
     <link href="https://fonts.googleapis.com/" rel="preconnect">
     <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous">
 
-    
+
 </head>
 
 <body cz-shortcut-listen="true" class="audi-P  P-dsign">
@@ -463,131 +463,91 @@
         }
     </style>
 
-<style>
-  /* Technology Section "How we work with you?" Hover Effects */
+    <style>
+        /* Technology Section "How we work with you?" Hover Effects */
 
-/* Base styling for analytics cards */
-.analytics {
-    transition: all 0.4s ease !important;
-    cursor: pointer !important;
-    padding: 30px 25px !important;
-    border-radius: 16px !important;
-    background-color: #ffffff !important;
-    border: 2px solid #f5f7fa !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
-    position: relative !important;
-    overflow: hidden !important;
-}
+        /* Technology Section "How we work with you?" Hover Effects */
 
-/* Blue background on hover for analytics cards */
-.analytics:hover {
-    transform: translateY(-8px) scale(1.02) !important;
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
-    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.4) !important;
-    border: 2px solid transparent !important;
-}
+        /* Base card styles */
+        /* Technology Section "How we work with you?" Hover Effects */
 
-/* Text turns white on hover */
-.analytics:hover .bold-text {
-    color: white !important;
-    font-weight: 600 !important;
-}
+        /* Base card styles */
+        .analytics {
+            position: relative;
+            overflow: hidden;
+            /* hide shadows/padding expansion */
+            border: 2px solid transparent;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            height: 100%;
+            /* in case cards are in a flex/grid */
+            min-height: 420px;
+            /* set to your tallest card height */
+            background-color: #fff;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.analytics:hover .service-para {
-    color: white !important;
-    opacity: 0.9 !important;
-}
+        /* Inner wrapper for hover movement */
+        .analytics-inner {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* keeps layout stable */
+            transition: transform 0.3s ease;
+        }
 
-/* Icon enhancement on hover (keeps original colors) */
-.analytics:hover .service-features-icon img {
-    background: rgba(255, 255, 255, 0.2) !important;
-    border-radius: 50% !important;
-    padding: 8px !important;
-    transform: scale(1.1) !important;
-    filter: brightness(1.1) contrast(1.1) !important;
-}
+        /* Smooth text/icon color transition */
+        .analytics .bold-text,
+        .analytics .service-para,
+        .analytics .services-title,
+        .analytics h1,
+        .analytics h2,
+        .analytics h3,
+        .analytics p,
+        .analytics .feature-icon {
+            transition: color 0.3s ease, fill 0.3s ease;
+        }
 
-/* Image/chart area enhancement on hover */
-.analytics:hover .balance-image {
-    transform: scale(1.05) !important;
-    filter: brightness(1.1) !important;
-    transition: all 0.3s ease !important;
-}
+        /* Hover moves inner content, not outer */
+        .analytics:hover .analytics-inner {
+            transform: translateY(-8px) scale(1.02);
+        }
 
-/* Container for image gets subtle styling */
-.analytics:hover .balance-image-block {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-radius: 12px !important;
-    padding: 10px !important;
-    backdrop-filter: blur(10px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-}
+        /* Remove hover padding/margin changes that break height */
+        .analytics .balance-image-block {
+            padding: 10px;
+            /* fixed padding at all times */
+        }
 
-/* Review container hover effects */
-.review {
-    transition: all 0.3s ease !important;
-}
+        .analytics .services-title {
+            margin-bottom: 20px;
+            /* fixed margin at all times */
+        }
 
-.review:hover {
-    transform: translateY(-5px) !important;
-}
+        /* Text & icon color change on hover */
+        .analytics:hover .bold-text,
+        .analytics:hover .service-para,
+        .analytics:hover .services-title,
+        .analytics:hover h1,
+        .analytics:hover h2,
+        .analytics:hover h3,
+        .analytics:hover p {
+            color: #fff !important;
+        }
 
-/* Optional: Add shimmer effect on hover */
-.analytics:hover::before {
-    content: '' !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: -100% !important;
-    width: 100% !important;
-    height: 100% !important;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent) !important;
-    animation: shimmer 0.8s ease-out !important;
-    z-index: 1 !important;
-}
+        .analytics:hover .feature-icon {
+            fill: #fff !important;
+            /* for SVG icons */
+        }
 
-@keyframes shimmer {
-    0% { left: -100%; }
-    100% { left: 100%; }
-}
-
-/* Ensure content stays above shimmer */
-.analytics > * {
-    position: relative !important;
-    z-index: 2 !important;
-}
-
-/* Technology section specific styling */
-.home-new-technology-section-one .analytics:hover {
-    background: linear-gradient(135deg, rgb(0, 112, 223) 0%, rgb(0, 112, 223) 100%) !important;
-    color: white !important;
-}
-
-
-div[class="analytics"]:hover {
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
-    transform: translateY(-8px) scale(1.02) !important;
-    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.4) !important;
-}
-
-div[class="analytics"]:hover .bold-text,
-div[class="analytics"]:hover .service-para {
-    color: white !important;
-}
-
-/* Services title enhancement */
-.analytics:hover .services-title {
-    margin-bottom: 20px !important;
-}
-
-/* Enhanced focus and interaction states */
-.analytics:focus,
-.analytics:focus-within {
-    outline: 2px solid #4f46e5 !important;
-    outline-offset: 2px !important;
-}
-
-
-</style>
+        /* Example gradient background on hover */
+        .analytics:hover {
+            background: linear-gradient(135deg, #0070E0 0%, #0070E0 100%);
+            color: white;
+        }
+    </style>
+    
     <style>
         h1 {
             font-size: 56px
@@ -636,79 +596,82 @@ div[class="analytics"]:hover .service-para {
                 <!-- <div id="w-node-b80b60ec-434c-8789-2101-36ebbc2ddd0e-29476037"
                     class="hero-image-block home-three-hero-image-block" style="margin-top: -60px;">
                 </div> -->
-                
+
                 <section class="provide-section">
-        <div class="page-container w-container">
-            <div class="provide-main-block">
-                <!-- <h2 class="provide-heading">Services we provide</h2>
+                    <div class="page-container w-container">
+                        <div class="provide-main-block">
+                            <!-- <h2 class="provide-heading">Services we provide</h2>
                 <p class="provide-description">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor
                     incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit.</p> -->
-                <div class="provide-option">
-                    <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50" class="options-list">
-                        <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edb9-f3e30ed3"
-                            style="background-color: rgb(255, 255, 255);" class="options">
-                            <div class="option-icon"><img
-                                    src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3330a2c09d732d3f687_Group%202216.svg"
-                                    loading="lazy" id="w-node-f87f6d2a-8256-0570-f306-218c1132edbb-f3e30ed3"
-                                    alt="Pricing Logo" class="option-images"></div>
-                            <div class="bold-text margin-bottom center">Engineering &amp; services</div>
-                            <p class="provide-caption">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor
-                                incididunt.</p>
+                            <div class="provide-option">
+                                <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50" class="options-list">
+                                    <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edb9-f3e30ed3"
+                                        style="background-color: rgb(255, 255, 255);" class="options">
+                                        <div class="option-icon"><img
+                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3330a2c09d732d3f687_Group%202216.svg"
+                                                loading="lazy" id="w-node-f87f6d2a-8256-0570-f306-218c1132edbb-f3e30ed3"
+                                                alt="Pricing Logo" class="option-images"></div>
+                                        <div class="bold-text margin-bottom center">Engineering &amp; services</div>
+                                        <p class="provide-caption">Lorem ipsum dolor sit amet consectetur adipiscing
+                                            eiusmod tempor
+                                            incididunt.</p>
+                                    </div>
+                                    <a style="opacity: 0;" href="/service-one" class="arrow w-inline-block"><img
+                                            src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                            loading="lazy" alt="White Arrow"></a>
+                                </div>
+                                <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
+                                    style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                                    class="options-list">
+                                    <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edc3-f3e30ed3"
+                                        data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60"
+                                        style="background-color: rgb(255, 255, 255);" class="options">
+                                        <div class="option-icon"><img
+                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c33310e2ffdd0a454149_Group%202215.svg"
+                                                loading="lazy" id="w-node-f87f6d2a-8256-0570-f306-218c1132edc5-f3e30ed3"
+                                                alt="Business Collaboration" class="option-images"></div>
+                                        <div class="bold-text margin-bottom center">Business collaboration</div>
+                                        <p class="provide-caption">Lorem ipsum dolor sit amet consectetur adipiscing
+                                            eiusmod tempor
+                                            incididunt.</p>
+                                    </div>
+                                    <a style="opacity: 0;" href="/service-two" class="arrow w-inline-block"><img
+                                            src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                            loading="lazy" alt="White Arrow"></a>
+                                </div>
+                                <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
+                                    style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                                    class="options-list">
+                                    <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edcd-f3e30ed3"
+                                        data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60"
+                                        style="background-color: rgb(255, 255, 255);" class="options">
+                                        <div class="option-icon"><img
+                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3333d12ee33b200e664_Group%202214.svg"
+                                                loading="lazy" id="w-node-f87f6d2a-8256-0570-f306-218c1132edcf-f3e30ed3"
+                                                alt="Percentage Tag" class="option-images"></div>
+                                        <div class="bold-text margin-bottom center">Creative minds</div>
+                                        <p class="provide-caption">Lorem ipsum dolor sit amet consectetur adipiscing
+                                            eiusmod tempor
+                                            incididunt.</p>
+                                    </div>
+                                    <a style="opacity: 0;" href="/service-one" class="arrow w-inline-block"><img
+                                            src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                            loading="lazy" alt="White Arrow"></a>
+                                </div>
+                            </div>
                         </div>
-                        <a style="opacity: 0;" href="/service-one" class="arrow w-inline-block"><img
-                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
-                                loading="lazy" alt="White Arrow"></a>
                     </div>
-                    <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
-                        style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-                        class="options-list">
-                        <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edc3-f3e30ed3"
-                            data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60"
-                            style="background-color: rgb(255, 255, 255);" class="options">
-                            <div class="option-icon"><img
-                                    src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c33310e2ffdd0a454149_Group%202215.svg"
-                                    loading="lazy" id="w-node-f87f6d2a-8256-0570-f306-218c1132edc5-f3e30ed3"
-                                    alt="Business Collaboration" class="option-images"></div>
-                            <div class="bold-text margin-bottom center">Business collaboration</div>
-                            <p class="provide-caption">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor
-                                incididunt.</p>
-                        </div>
-                        <a style="opacity: 0;" href="/service-two" class="arrow w-inline-block"><img
-                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
-                                loading="lazy" alt="White Arrow"></a>
-                    </div>
-                    <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
-                        style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-                        class="options-list">
-                        <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edcd-f3e30ed3"
-                            data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60"
-                            style="background-color: rgb(255, 255, 255);" class="options">
-                            <div class="option-icon"><img
-                                    src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3333d12ee33b200e664_Group%202214.svg"
-                                    loading="lazy" id="w-node-f87f6d2a-8256-0570-f306-218c1132edcf-f3e30ed3"
-                                    alt="Percentage Tag" class="option-images"></div>
-                            <div class="bold-text margin-bottom center">Creative minds</div>
-                            <p class="provide-caption">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor
-                                incididunt.</p>
-                        </div>
-                        <a style="opacity: 0;" href="/service-one" class="arrow w-inline-block"><img
-                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
-                                loading="lazy" alt="White Arrow"></a>
-                    </div>
-                </div>
+                </section>
             </div>
         </div>
     </section>
-            </div>
-        </div>
-    </section>
 
 
-    
 
-    <section class="Clientele-section" style="box-shadow: 0 10px 10px rgba(244, 241, 241, 0.05); background: #0070E1; ">
+
+    <section class="Clientele-section" style="box-shadow: 0 10px 10px rgba(244, 241, 241, 0.05);">
         <div class="pro-main-container w-container" style="padding-top: 70px; padding-bottom: 70px">
-            <h2 class="clientele-heading" style="color: #CBE5FF;">Our Clientele</h2>
+            <h2 class="clientele-heading" style="color: #CBE5FF;"></h2>
             <div>
                 <div class="w-dyn-list">
                     <div class="marquee" data-duration="10000" data-gap="0" data-duplicated="true">
@@ -776,8 +739,11 @@ div[class="analytics"]:hover .service-para {
                         <div data-w-id="817e41e4-9b96-eb12-20c0-1aa247e9126f"
                             style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
                             class="ideas-main-banner">
-                            <img src="./assets/images_new/pricing-2-back.png" loading="lazy" sizes="(max-width: 479px) 81vw, (max-width: 767px) 70vw, (max-width: 991px) 75vw, (max-width: 1439px) 37vw, 496.1458435058594px" srcset="./assets/images_new/pricing-2-back.png 500w, ./assets/images_new/pricing-2-back.png 800w, ./assets/images_new/pricing-2-back.png 996w" alt="Employee Image" class="ideas-main-image">
-                            </div>
+                            <img src="./assets/images_new/pricing-2-back.png" loading="lazy"
+                                sizes="(max-width: 479px) 81vw, (max-width: 767px) 70vw, (max-width: 991px) 75vw, (max-width: 1439px) 37vw, 496.1458435058594px"
+                                srcset="./assets/images_new/pricing-2-back.png 500w, ./assets/images_new/pricing-2-back.png 800w, ./assets/images_new/pricing-2-back.png 996w"
+                                alt="Employee Image" class="ideas-main-image">
+                        </div>
                     </div>
                     <div data-w-id="817e41e4-9b96-eb12-20c0-1aa247e9126f" style="opacity: 0;
                             transform: translate3d(-50px, 0px, 0px) scale3d(1, 1, 1)
@@ -785,8 +751,11 @@ div[class="analytics"]:hover .service-para {
                                         skew(0deg, 0deg);
                             transform-style: preserve-3d;
                             transition: transform 0.6s ease-out, opacity 0.6s ease-out;" class="ideas-float-image">
-                            <img src="./assets/images_new/pricing-2-front.png" loading="lazy" sizes="(max-width: 479px) 56vw, (max-width: 991px) 58vw, (max-width: 1439px) 32vw, 416.4757080078125px" srcset="./assets/images_new/pricing-2-front.png 500w, ./assets/images_new/pricing-2-front.png 800w, ./assets/images_new/pricing-2-front.png 856w" alt="Chat" class="idea-float">
-                        </div>
+                        <img src="./assets/images_new/pricing-2-front.png" loading="lazy"
+                            sizes="(max-width: 479px) 56vw, (max-width: 991px) 58vw, (max-width: 1439px) 32vw, 416.4757080078125px"
+                            srcset="./assets/images_new/pricing-2-front.png 500w, ./assets/images_new/pricing-2-front.png 800w, ./assets/images_new/pricing-2-front.png 856w"
+                            alt="Chat" class="idea-float">
+                    </div>
                 </div>
                 <div class="service-creative-text-block">
                     <div class="overflow-off">
@@ -803,23 +772,27 @@ div[class="analytics"]:hover .service-para {
                     <div class="creative-check-list-block">
                         <div class="home-page-creative-list-block">
                             <div class="creative-check-icon">
-                            <img src="./assets/images_new/check.png" loading="lazy" alt="Check" class="checked-icon-blue-circle">
-                        </div>
-                            <p class="creative-text-list-content"><span class="creative-list-span-text-content">Quality Sample :</span> consectetur adipiscing elit sed eiusmod tempor incididunt
+                                <img src="./assets/images_new/check.png" loading="lazy" alt="Check"
+                                    class="checked-icon-blue-circle">
+                            </div>
+                            <p class="creative-text-list-content"><span class="creative-list-span-text-content">Quality
+                                    Sample :</span> consectetur adipiscing elit sed eiusmod tempor incididunt
                                 aliqua.</p>
                         </div>
                         <div class="home-page-creative-list-block">
                             <div class="creative-check-icon">
-                            <img src="./assets/images_new/check.png" loading="lazy" alt="Check" class="checked-icon-blue-circle">
-                        </div>
+                                <img src="./assets/images_new/check.png" loading="lazy" alt="Check"
+                                    class="checked-icon-blue-circle">
+                            </div>
                             <p class="creative-text-list-content list-two"><span
                                     class="creative-list-span-text-content">Outstanding support :</span> sit amet
                                 consectetur adipiscing eiusmod magna aliqua.</p>
                         </div>
                         <div class="home-page-creative-list-block">
                             <div class="creative-check-icon">
-                            <img src="./assets/images_new/check.png" loading="lazy" alt="Check" class="checked-icon-blue-circle">
-                        </div>
+                                <img src="./assets/images_new/check.png" loading="lazy" alt="Check"
+                                    class="checked-icon-blue-circle">
+                            </div>
                             <p class="creative-text-list-content list-three"><span
                                     class="creative-list-span-text-content">Great Platform :</span> sit amet
                                 consectetur elit sed eiusmod tempor incididunt magna aliqua.</p>
@@ -827,10 +800,13 @@ div[class="analytics"]:hover .service-para {
                     </div>
                     <div class="learn-button-block">
                         <a data-w-id="817e41e4-9b96-eb12-20c0-1aa247e91274" href="/features"
-   class="trial-button start-free-trial-button-block feature-block footer-buttons-start discover-more learn w-inline-block">
-    <div class="trail-text-one start-trial-text-block feature-text-block discover-text">Sign up</div>
-    <div class="trail-text-two start-trial-text-block feature-text-block text-two discover-more-text">Sign up</div>
-</a>
+                            class="trial-button start-free-trial-button-block feature-block footer-buttons-start discover-more learn w-inline-block">
+                            <div class="trail-text-one start-trial-text-block feature-text-block discover-text">Sign up
+                            </div>
+                            <div
+                                class="trail-text-two start-trial-text-block feature-text-block text-two discover-more-text">
+                                Sign up</div>
+                        </a>
 
                     </div>
                 </div>
@@ -848,91 +824,117 @@ div[class="analytics"]:hover .service-para {
                 <div class="review-block">
                     <div class="review-block">
                         <div class="home-page-reviews">
+
+                            <!-- Card 1 -->
                             <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50" class="review">
                                 <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d5-d8996253"
                                     data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d5" class="analytics"
                                     style="background-color: rgb(255, 255, 255);">
-                                    <div class="services-title">
-                                        <div class="service-features-icon"><img
-                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb8c75b83703f4cebd26_Group%202490.svg"
-                                                loading="lazy" alt="Save" class="feature-icon"></div>
-                                        <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d9" class="bold-text"
-                                            style="color: rgb(34, 34, 34);">Self Service</div>
-                                    </div>
-                                    <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22db" class="service-para"
-                                        style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut
-                                        incididunt
-                                        labore et dolore magna.</p>
-                                    <div class="your-balance-block">
-                                        <div class="balance-image-block">
-                                            <img src="./assets/images_new/audience-1-left.png" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.65625px" srcset="
-                                             ./assets/images_new/audience-1-left.png 500w,
-                                             ./assets/images_new/audience-1-left.png       612w
-                                         " alt="Growth" class="balance-image">
-                                            
+
+                                    <div class="analytics-inner">
+                                        <div class="services-title">
+                                            <div class="service-features-icon">
+                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb8c75b83703f4cebd26_Group%202490.svg"
+                                                    loading="lazy" alt="Save" class="feature-icon">
                                             </div>
+                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d9" class="bold-text"
+                                                style="color: rgb(34, 34, 34);">Self Service</div>
+                                        </div>
+                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22db" class="service-para"
+                                            style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut
+                                            incididunt labore et dolore magna.</p>
+                                        <div class="your-balance-block">
+                                            <div class="balance-image-block">
+                                                <img src="./assets/images_new/audience-1-left.png" loading="lazy"
+                                                    sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.65625px"
+                                                    srcset="./assets/images_new/audience-1-left.png 500w,
+                                                        ./assets/images_new/audience-1-left.png 612w" alt="Growth"
+                                                    class="balance-image">
+                                            </div>
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
+
+                            <!-- Card 2 -->
                             <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60-6c8f4e50"
                                 data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60" class="review"
-                                style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                style="opacity: 1; transform: none;">
                                 <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed-d8996253"
-                            data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed" class="analytics"
-                            style="background-color: rgb(255, 255, 255);">
-                            <div class="services-title">
-                                <div class="service-features-icon"><img
-                                        src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb90f0acdd8695d10564_Group%202493.svg"
-                                        loading="lazy" alt="Settings" class="feature-icon"></div>
-                                <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f1" class="bold-text"
-                                    style="color: rgb(34, 34, 34);">Managed Services</div>
-                            </div>
-                            <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f3" class="service-para"
-                                style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut incididunt
-                                labore et dolore magna.</p>
-                            <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f5-d8996253" class="your-balance-block">
-                                <div class="balance-image-block">
-                                    <img src="./assets/images_new/audience-1-center.png" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px" srcset="
-                                             ./assets/images_new/audience-1-center.png 500w,
-                                             ./assets/images_new/audience-1-center.png       612w
-                                         " alt="Target" class="balance-image">
+                                    data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed" class="analytics"
+                                    style="background-color: rgb(255, 255, 255);">
+
+                                    <div class="analytics-inner">
+                                        <div class="services-title">
+                                            <div class="service-features-icon">
+                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb90f0acdd8695d10564_Group%202493.svg"
+                                                    loading="lazy" alt="Settings" class="feature-icon">
+                                            </div>
+                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f1" class="bold-text"
+                                                style="color: rgb(34, 34, 34);">Managed Services</div>
+                                        </div>
+                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f3" class="service-para"
+                                            style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut
+                                            incididunt labore et dolore magna.</p>
+                                        <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f5-d8996253"
+                                            class="your-balance-block">
+                                            <div class="balance-image-block">
+                                                <img src="./assets/images_new/audience-1-center.png" loading="lazy"
+                                                    sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px"
+                                                    srcset="./assets/images_new/audience-1-center.png 500w,
+                                                        ./assets/images_new/audience-1-center.png 612w" alt="Target"
+                                                    class="balance-image">
+                                            </div>
+                                        </div>
                                     </div>
+
+                                </div>
                             </div>
-                        </div>
-                            </div>
+
+                            <!-- Card 3 -->
                             <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e-6c8f4e50"
                                 data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e" class="review"
-                                style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                style="opacity: 1; transform: none;">
                                 <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1-d8996253"
-                            data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1" class="analytics"
-                            style="background-color: rgb(255, 255, 255);">
-                            <div class="services-title">
-                                <div class="service-features-icon"><img
-                                        src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb8e4d0a0bf03087dc0a_Logo%20Two.svg"
-                                        loading="lazy" alt="Globe" class="feature-icon"></div>
-                                <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e5" class="bold-text"
-                                    style="color: rgb(34, 34, 34);">Api Sample</div>
-                            </div>
-                            <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e7" class="service-para"
-                                style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut incididunt
-                                labore et dolore magna.</p>
-                            <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e9-d8996253" class="your-balance-block">
-                                <div class="balance-image-block">
-                                    <img src="./assets/images_new/audience-1-right.png" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px" srcset="
-                                             ./assets/images_new/audience-1-right.png 500w,
-                                             ./assets/images_new/audience-1-right.png       612w
-                                         " alt="Analytics" class="balance-image">
+                                    data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1" class="analytics"
+                                    style="background-color: rgb(255, 255, 255);">
+
+                                    <div class="analytics-inner">
+                                        <div class="services-title">
+                                            <div class="service-features-icon">
+                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb8e4d0a0bf03087dc0a_Logo%20Two.svg"
+                                                    loading="lazy" alt="Globe" class="feature-icon">
+                                            </div>
+                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e5" class="bold-text"
+                                                style="color: rgb(34, 34, 34);">Api Sample</div>
+                                        </div>
+                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e7" class="service-para"
+                                            style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut
+                                            incididunt labore et dolore magna.</p>
+                                        <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e9-d8996253"
+                                            class="your-balance-block">
+                                            <div class="balance-image-block">
+                                                <img src="./assets/images_new/audience-1-right.png" loading="lazy"
+                                                    sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px"
+                                                    srcset="./assets/images_new/audience-1-right.png 500w,
+                                                        ./assets/images_new/audience-1-right.png 612w" alt="Analytics"
+                                                    class="balance-image">
+                                            </div>
+                                        </div>
                                     </div>
+
+                                </div>
                             </div>
-                        </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+                        </div><!-- .home-page-reviews -->
+                    </div><!-- .review-block -->
+                </div><!-- .review-block -->
+            </div><!-- .service-feature-main-block -->
+        </div><!-- .service-container -->
     </section>
-    
+
+
 
     <!-- <section class="home-new-technology-section-one wf-section"
         style="background-color:#fff;padding-top: 250px!important;background-image: url('./assets/images_new/bg4.png');background-size: cover;background-position: 0 0">
@@ -1207,11 +1209,10 @@ div[class="analytics"]:hover .service-para {
         <div class="about-page-review-container w-container">
             <div class="about-page-review-main-block background-change">
                 <h2 class="about-page-review-heading" style="text-align: center;">Sweet word from sweet people</h2>
-                <p class="about-page-review-para" 
-   style="max-width: 800px; margin: 0 auto; text-align: center;">
-    Lorem Ipsum is simply dummy text of the printing and typesetting has
-    been the industry’s standard dummy text. Magaliqua Quis ipsum suspe.
-</p>
+                <p class="about-page-review-para" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting has
+                    been the industry’s standard dummy text. Magaliqua Quis ipsum suspe.
+                </p>
 
                 <div class="review-block" style="margin-top: 50px;">
                     <div class="review-block">
