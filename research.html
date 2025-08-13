@@ -455,6 +455,83 @@
     color: #fff; /* white text when open */
 }
 
+.questions-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .question-main-image {
+            opacity: 0;
+            transform: translateX(50px) scale(0.9);
+            animation: slideInScale 1s ease-out 0.8s forwards;
+        }
+
+        .question-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .real-time-user {
+            position: absolute;
+            top: 50px;
+            left: 30px;
+            opacity: 0;
+            transform: translateX(-30px) scale(0.8);
+            animation: slideInScale 0.8s ease-out 1.2s forwards;    
+            z-index: 2;
+        }
+
+        .real-time-user-image {
+            width: 280px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            border: 4px solid white;
+        }
+
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInScale {
+            to {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .service-questions {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .questions-header {
+                font-size: 2rem;
+            }
+
+            .question-block {
+                padding: 20px;
+            }
+
+            .answer-paragraph {
+                padding: 0 20px 20px 20px;
+            }
+
+            .real-time-user {
+                position: static;
+                margin-top: 20px;
+                transform: translateX(0) scale(1);
+            }
+        }
 
     </style>
 
@@ -943,13 +1020,13 @@
                     </div>
                 </div>
                 <div class="questions-image">
-                    <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601fd" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="question-main-image">
-                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb924c81324ec8d8155b_Mask%20group%20(71).webp" loading="lazy" sizes="(max-width: 767px) 85vw, (max-width: 991px) 88vw, (max-width: 1439px) 42vw, 552.28125px" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb924c81324ec8d8155b_Mask%20group%20(71)-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb924c81324ec8d8155b_Mask%20group%20(71)-p-800.webp 800w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb924c81324ec8d8155b_Mask%20group%20(71).webp 916w" alt="Employee Image" class="question-image">
-                    </div>
-                    <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601ff" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="real-time-user">
-                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb9575b153ea962f73d9_Group%201231.webp" loading="lazy" sizes="(max-width: 479px) 45vw, (max-width: 767px) 46vw, (max-width: 991px) 47vw, (max-width: 1439px) 23vw, 306.375px" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb9575b153ea962f73d9_Group%201231-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb9575b153ea962f73d9_Group%201231.webp 528w" alt="User Count" class="real-time-user-image">
-                    </div>
+                <div class="question-main-image">
+                    <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb924c81324ec8d8155b_Mask%20group%20(71).webp" alt="Employee Image" class="question-image">
                 </div>
+                <div class="real-time-user">
+                    <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb9575b153ea962f73d9_Group%201231.webp" alt="User Count" class="real-time-user-image">
+                </div>
+            </div>
             </div>
         </div>
     </section>
