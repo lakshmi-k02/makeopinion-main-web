@@ -33,7 +33,12 @@
         .questions-text-block {
             opacity: 0;
             transform: translateY(30px);
-            animation: slideInUp 0.8s ease-out 0.2s forwards;
+            transition: all 0.8s ease-out;
+        }
+
+        .questions-text-block.animate {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .questions-header {
@@ -65,13 +70,12 @@
             transition: all 0.3s ease;
             opacity: 0;
             transform: translateY(20px);
-            animation: slideInUp 0.6s ease-out forwards;
         }
 
-        .questions-block:nth-child(1) { animation-delay: 0.3s; }
-        .questions-block:nth-child(2) { animation-delay: 0.4s; }
-        .questions-block:nth-child(3) { animation-delay: 0.5s; }
-        .questions-block:nth-child(4) { animation-delay: 0.6s; }
+        .questions-block.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         .questions-block:hover {
             transform: translateY(-2px);
@@ -181,7 +185,12 @@
         .question-main-image {
             opacity: 0;
             transform: translateX(50px) scale(0.9);
-            animation: slideInScale 1s ease-out 0.8s forwards;
+            transition: all 1s ease-out;
+        }
+
+        .question-main-image.animate {
+            opacity: 1;
+            transform: translateX(0) scale(1);
         }
 
         .question-image {
@@ -194,16 +203,16 @@
 
         .real-time-user {
             position: absolute;
-            top: 40px;
-            left: -50px;
+            top: -20px;
+            left: -20px;
             opacity: 0;
             transform: translateX(-30px) scale(0.8);
-            animation: slideInScale 0.8s ease-out 1.2s forwards;    
+            animation: slideInScale 0.8s ease-out 1.2s forwards;
             z-index: 2;
         }
 
         .real-time-user-image {
-            width: 280px;
+            width: 180px;
             height: auto;
             border-radius: 12px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
@@ -314,10 +323,10 @@
 
             <div class="questions-image">
                 <div class="question-main-image">
-                    <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb924c81324ec8d8155b_Mask%20group%20(71).webp" alt="Employee Image" class="question-image">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Employee Image" class="question-image">
                 </div>
                 <div class="real-time-user">
-                    <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb9575b153ea962f73d9_Group%201231.webp" alt="User Count" class="real-time-user-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="User Count" class="real-time-user-image">
                 </div>
             </div>
         </div>
