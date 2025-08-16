@@ -229,3 +229,13 @@
 .wf-force-outline-none[tabindex="-1"]:focus {
     outline: none;
 }
+
+
+   .option-images {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keeps aspect ratio */
+  /* fix aspect ration to 119X100 */
+    max-width: 119px; /* max width */
+    max-height: 100px; /* max height */
+}
