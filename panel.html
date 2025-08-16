@@ -3,7 +3,7 @@
 
 <html 
     data-wf-domain="makeopinion.com" 
-    data-wf-page="6444c2faeae6ea1ff3e30ed3" 
+    data-wf-page="64180ac3118cc5475656367e" 
     data-wf-site="64180342570b0dc26c6fd2d1"
     lang="en"
     class="w-mod-js w-mod-ix wf-inter-n4-active wf-inter-n5-active wf-inter-n6-active wf-plusjakartasans-n3-active wf-plusjakartasans-n4-active wf-plusjakartasans-n5-active wf-plusjakartasans-n6-active wf-plusjakartasans-n7-active wf-plusjakartasans-n8-active wf-active"
@@ -164,7 +164,82 @@
   }
 </style>
 
+<style>
+        .analytics {
+            position: relative;
+            overflow: hidden;
+            /* hide shadows/padding expansion */
+            border: 2px solid transparent;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            height: 100%;
+            /* in case cards are in a flex/grid */
+            min-height: 420px;
+            /* set to your tallest card height */
+            background-color: #fff;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
 
+        /* Inner wrapper for hover movement */
+        .analytics-inner {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* keeps layout stable */
+            transition: transform 0.3s ease;
+        }
+
+        /* Smooth text/icon color transition */
+        .analytics .bold-text,
+        .analytics .service-para,
+        .analytics .services-title,
+        .analytics h1,
+        .analytics h2,
+        .analytics h3,
+        .analytics p,
+        .analytics .feature-icon {
+            transition: color 0.3s ease, fill 0.3s ease;
+        }
+
+        /* Hover moves inner content, not outer */
+        .analytics:hover .analytics-inner {
+            transform: translateY(-8px) scale(1.02);
+        }
+
+        /* Remove hover padding/margin changes that break height */
+        .analytics .balance-image-block {
+            padding: 10px;
+            /* fixed padding at all times */
+        }
+
+        .analytics .services-title {
+            margin-bottom: 20px;
+            /* fixed margin at all times */
+        }
+
+        /* Text & icon color change on hover */
+        .analytics:hover .bold-text,
+        .analytics:hover .service-para,
+        .analytics:hover .services-title,
+        .analytics:hover h1,
+        .analytics:hover h2,
+        .analytics:hover h3,
+        .analytics:hover p {
+            color: #fff !important;
+        }
+
+        .analytics:hover .feature-icon {
+            fill: #fff !important;
+            /* for SVG icons */
+        }
+
+        /* Example gradient background on hover */
+        .analytics:hover {
+            background: linear-gradient(135deg, #0070E0 0%, #0070E0 100%);
+            color: white;
+        }
+    </style>
 
 <style>
         :root {
@@ -611,7 +686,7 @@
   }
 </style>
 
-<style>
+<!-- <style>
   @media (min-width: 768px) and (max-width: 991px) {
     .w-dyn-list2 .scroller .scroller-inner {
       gap: 50px;
@@ -667,7 +742,66 @@
     margin-top: 50px;
     overflow: hidden;
   }
-</style>
+</style> -->
+<style>
+        .marquee-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 160px;
+            /* taller for bigger logos */
+            background: transparent;
+            /* keep clean look */
+            padding: 0;
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 60s linear infinite;
+            /* smooth scroll */
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .marquee-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            min-width: 200px;
+            /* enough room per logo */
+            margin: 0 15px;
+            /* reduced spacing */
+            background: none;
+            box-shadow: none;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+        }
+
+        .logo {
+            height: 140px;
+            /* bigger logos */
+            width: auto;
+            /* keep aspect ratio */
+            object-fit: contain;
+            filter: grayscale(0.6) brightness(1.3);
+            transition: filter 0.3s ease;
+        }
+
+        .marquee-item:hover .logo {
+            filter: grayscale(0) brightness(1.6);
+        }
+    </style>
 
 <style>
   h1 {
@@ -2882,7 +3016,7 @@
 </section>
 
 
-<div class="pro-main-container w-container" style="padding-top: 50px">
+<!-- <div class="pro-main-container w-container" style="padding-top: 50px">
   <div>
     <div class="w-dyn-list">
       <div class="marquee" data-duration="10000" data-gap="0" data-duplicated="true">
@@ -2983,8 +3117,23 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
+<section class="Clientele-section" style="box-shadow: 0 10px 10px rgba(244, 241, 241, 0.05);">
+
+        <div class="pro-main-container w-container" style="padding-top: 50px; padding-bottom: 10px">
+            <h2 class="clientele-heading animate" style="color: #CBE5FF;"></h2>
+            <div>
+                <div class="w-dyn-list">
+                        <div class="marquee-container">
+            <div class="marquee-track" id="marqueeTrack">
+                <!-- JS will fill in -->
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <section class="questions-section">
   <div class="questions-conatiner w-container">
@@ -3151,12 +3300,14 @@
               </p>
             </div>
           </div>
-          <div class="creative-button-block">
-            <a data-w-id="a28730d8-4eae-1d5b-ec73-6082363f064d" href="/features" class="start-free-trial-button-block feature-block footer-buttons-start discover-more learn w-inline-block">
-              <div class="start-trial-text-block feature-text-block discover-text" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Learn More</div>
-              <div class="start-trial-text-block feature-text-block text-two discover-more-text" style="transform: translate3d(0px, 50px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Learn More</div>
-            </a>
-          </div>
+          <div class="hero-caption-buttons-one">
+                                <a role="button" data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee98" class="trial-button w-inline-block">
+                                    <div data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee99" class="trail-text-two-home" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Learn More</div>
+                                    <div data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee9b" class="trail-text-two" style="transform: translate3d(0px, 50px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Learn More</div>
+                                </a>
+                               
+                            </div>
+
         </div>
       </div>
       <div class="ideas-image-block">
@@ -3247,7 +3398,8 @@
 </section> -->
 
 
-<section class="home-new-technology-section-one wf-section" style="background-color:#fff;padding-top: 50px!important;background-image: url('./assets/images_new/bg4.png');background-size: cover;background-position: 0 0">
+<section class="home-new-technology-section-one wf-section"
+        style="background-color:#fff;padding-top: 50px!important;background-image: url('./assets/images_new/bg4.png');background-size: cover;background-position: 0 0">
         <div class="service-container w-container">
             <div class="service-feature-main-block">
                 <h2 class="about-page-review-heading">How we work with you?</h2>
@@ -3259,21 +3411,29 @@
 
                             <!-- Card 1 -->
                             <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50" class="review">
-                                <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d5-d8996253" data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d5" class="analytics" style="background-color: rgb(255, 255, 255);">
+                                <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d5-d8996253"
+                                    data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d5" class="analytics"
+                                    style="background-color: rgb(255, 255, 255);">
 
                                     <div class="analytics-inner">
                                         <div class="services-title">
                                             <div class="service-features-icon">
-                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb8c75b83703f4cebd26_Group%202490.svg" loading="lazy" alt="Save" class="feature-icon">
+                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb8c75b83703f4cebd26_Group%202490.svg"
+                                                    loading="lazy" alt="Save" class="feature-icon">
                                             </div>
-                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d9" class="bold-text" style="color: rgb(34, 34, 34);">Self Service</div>
+                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d9" class="bold-text"
+                                                style="color: rgb(34, 34, 34);">Self Service</div>
                                         </div>
-                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22db" class="service-para" style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut
+                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22db" class="service-para"
+                                            style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut
                                             incididunt labore et dolore magna.</p>
                                         <div class="your-balance-block">
                                             <div class="balance-image-block">
-                                                <img src="./assets/images_new/audience-1-left.png" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.65625px" srcset="./assets/images_new/audience-1-left.png 500w,
-                                                        ./assets/images_new/audience-1-left.png 612w" alt="Growth" class="balance-image">
+                                                <img src="./assets/images_new/audience-1-left.png" loading="lazy"
+                                                    sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.65625px"
+                                                    srcset="./assets/images_new/audience-1-left.png 500w,
+                                                        ./assets/images_new/audience-1-left.png 612w" alt="Growth"
+                                                    class="balance-image">
                                             </div>
                                         </div>
                                     </div>
@@ -3282,22 +3442,33 @@
                             </div>
 
                             <!-- Card 2 -->
-                            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60-6c8f4e50" data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60" class="review" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed-d8996253" data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed" class="analytics" style="background-color: rgb(255, 255, 255);">
+                            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60-6c8f4e50"
+                                data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60" class="review"
+                                style="opacity: 1; transform: none;">
+                                <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed-d8996253"
+                                    data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed" class="analytics"
+                                    style="background-color: rgb(255, 255, 255);">
 
                                     <div class="analytics-inner">
                                         <div class="services-title">
                                             <div class="service-features-icon">
-                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb90f0acdd8695d10564_Group%202493.svg" loading="lazy" alt="Settings" class="feature-icon">
+                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb90f0acdd8695d10564_Group%202493.svg"
+                                                    loading="lazy" alt="Settings" class="feature-icon">
                                             </div>
-                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f1" class="bold-text" style="color: rgb(34, 34, 34);">Managed Services</div>
+                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f1" class="bold-text"
+                                                style="color: rgb(34, 34, 34);">Managed Services</div>
                                         </div>
-                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f3" class="service-para" style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut
+                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f3" class="service-para"
+                                            style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut
                                             incididunt labore et dolore magna.</p>
-                                        <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f5-d8996253" class="your-balance-block">
+                                        <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f5-d8996253"
+                                            class="your-balance-block">
                                             <div class="balance-image-block">
-                                                <img src="./assets/images_new/audience-1-center.png" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px" srcset="./assets/images_new/audience-1-center.png 500w,
-                                                        ./assets/images_new/audience-1-center.png 612w" alt="Target" class="balance-image">
+                                                <img src="./assets/images_new/audience-1-center.png" loading="lazy"
+                                                    sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px"
+                                                    srcset="./assets/images_new/audience-1-center.png 500w,
+                                                        ./assets/images_new/audience-1-center.png 612w" alt="Target"
+                                                    class="balance-image">
                                             </div>
                                         </div>
                                     </div>
@@ -3306,22 +3477,33 @@
                             </div>
 
                             <!-- Card 3 -->
-                            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e-6c8f4e50" data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e" class="review" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1-d8996253" data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1" class="analytics" style="background-color: rgb(255, 255, 255);">
+                            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e-6c8f4e50"
+                                data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e" class="review"
+                                style="opacity: 1; transform: none;">
+                                <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1-d8996253"
+                                    data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1" class="analytics"
+                                    style="background-color: rgb(255, 255, 255);">
 
                                     <div class="analytics-inner">
                                         <div class="services-title">
                                             <div class="service-features-icon">
-                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb8e4d0a0bf03087dc0a_Logo%20Two.svg" loading="lazy" alt="Globe" class="feature-icon">
+                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb8e4d0a0bf03087dc0a_Logo%20Two.svg"
+                                                    loading="lazy" alt="Globe" class="feature-icon">
                                             </div>
-                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e5" class="bold-text" style="color: rgb(34, 34, 34);">Api Sample</div>
+                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e5" class="bold-text"
+                                                style="color: rgb(34, 34, 34);">Api Sample</div>
                                         </div>
-                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e7" class="service-para" style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut
+                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e7" class="service-para"
+                                            style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut
                                             incididunt labore et dolore magna.</p>
-                                        <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e9-d8996253" class="your-balance-block">
+                                        <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e9-d8996253"
+                                            class="your-balance-block">
                                             <div class="balance-image-block">
-                                                <img src="./assets/images_new/audience-1-right.png" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px" srcset="./assets/images_new/audience-1-right.png 500w,
-                                                        ./assets/images_new/audience-1-right.png 612w" alt="Analytics" class="balance-image">
+                                                <img src="./assets/images_new/audience-1-right.png" loading="lazy"
+                                                    sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px"
+                                                    srcset="./assets/images_new/audience-1-right.png 500w,
+                                                        ./assets/images_new/audience-1-right.png 612w" alt="Analytics"
+                                                    class="balance-image">
                                             </div>
                                         </div>
                                     </div>
@@ -3335,6 +3517,7 @@
             </div><!-- .service-feature-main-block -->
         </div><!-- .service-container -->
     </section>
+
 
 <section class="our-service-section">
   <div class="page-container w-container">
@@ -3562,55 +3745,107 @@
 </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const accordions = document.querySelectorAll(".questions-block");
+    document.addEventListener("DOMContentLoaded", function() {
+        const accordions = document.querySelectorAll(".questions-block");
 
-    // Accordion toggle
-    accordions.forEach(block => {
-      const header = block.querySelector(".question-block");
-      const answer = block.querySelector(".answers-block");
-      const plusIcon = block.querySelector(".plus-icon");
-      const minusIcon = block.querySelector(".minus-icon");
+        // Accordion toggle
+        accordions.forEach(block => {
+            const header = block.querySelector(".question-block");
+            const answer = block.querySelector(".answers-block");
+            const plusIcon = block.querySelector(".plus-icon");
+            const minusIcon = block.querySelector(".minus-icon");
 
-      header.addEventListener("click", () => {
-        const isOpen = answer.style.height && answer.style.height !== "0px";
+            header.addEventListener("click", () => {
+                const isOpen = answer.style.height && answer.style.height !== "0px";
 
-        // Close all
-        accordions.forEach(other => {
-          other.querySelector(".answers-block").style.height = "0px";
-          other.querySelector(".plus-icon").style.opacity = "1";
-          other.querySelector(".minus-icon").style.opacity = "0";
-          other.querySelector(".question-block").classList.remove("active");
+                // Close all
+                accordions.forEach(other => {
+                    other.querySelector(".answers-block").style.height = "0px";
+                    other.querySelector(".plus-icon").style.opacity = "1";
+                    other.querySelector(".minus-icon").style.opacity = "0";
+                    other.querySelector(".question-block").classList.remove("active");
+                });
+
+                // Open clicked if closed
+                if (!isOpen) {
+                    answer.style.height = answer.scrollHeight + "px";
+                    plusIcon.style.opacity = "0";
+                    minusIcon.style.opacity = "1";
+                    header.classList.add("active");
+                }
+            });
         });
 
-        // Open clicked if closed
-        if (!isOpen) {
-          answer.style.height = answer.scrollHeight + "px";
-          plusIcon.style.opacity = "0";
-          minusIcon.style.opacity = "1";
-          header.classList.add("active");
+        // ✅ Auto-expand the first section on load
+        if (accordions.length > 0) {
+            const first = accordions[0];
+            const firstAnswer = first.querySelector(".answers-block");
+            const firstHeader = first.querySelector(".question-block");
+            const firstPlus = first.querySelector(".plus-icon");
+            const firstMinus = first.querySelector(".minus-icon");
+
+            firstAnswer.style.height = firstAnswer.scrollHeight + "px";
+            firstPlus.style.opacity = "0";
+            firstMinus.style.opacity = "1";
+            firstHeader.classList.add("active");
         }
-      });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                    observer.unobserve(entry.target); // run once
+                }
+            });
+        }, {
+            threshold: 0.3
+        }); // trigger when 30% visible
+
+        // Watch the images
+        const animatedElements = document.querySelectorAll(".question-main-image, .real-time-user");
+        animatedElements.forEach(el => observer.observe(el));
     });
-
-    // Intersection Observer for animations
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate");
-          observer.unobserve(entry.target); // run once
-        }
-      });
-    }, {
-      threshold: 0.3
-    }); // trigger when 30% visible
-
-    // Watch the images
-    const animatedElements = document.querySelectorAll(".question-main-image, .real-time-user");
-    animatedElements.forEach(el => observer.observe(el));
-  });
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const logos = [
+            './assets/images_new/uni1.png',
+            './assets/images_new/uni2.png',
+            './assets/images_new/uni3.png',
+            './assets/images_new/uni4.png',
+            './assets/images_new/uni5.png',
+            './assets/images_new/uni6.png',
+            './assets/images_new/uni7.png',
+            './assets/images_new/uni8.png',
+            './assets/images_new/uni9.png',
+            './assets/images_new/uni10.png',
+            './assets/images_new/uni11.png',
+            './assets/images_new/uni12.png',
+            './assets/images_new/uni13.png',
+            './assets/images_new/uni14.png'
+        ];
+
+        const marqueeTrack = document.getElementById('marqueeTrack');
+
+        function createLogoElement(path) {
+            const item = document.createElement('div');
+            item.className = 'marquee-item';
+            const img = document.createElement('img');
+            img.className = 'logo';
+            img.src = path;
+            img.alt = 'Client Logo';
+            item.appendChild(img);
+            return item;
+        }
+
+        // Add logos twice for seamless loop
+        for (let i = 0; i < 2; i++) {
+            logos.forEach(path => marqueeTrack.appendChild(createLogoElement(path)));
+        }
+    });
+</script>
 <footer class="zeta-home-page-footer-section"
         style="margin-top: 0px;background-image: url('https://makeopinion.com/en/assets/images_new/footer-bg.png');background-size: cover;background-position: 0 0">
         <div class="zeta-home-page-footer-container-two w-container">
