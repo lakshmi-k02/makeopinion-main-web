@@ -1,0 +1,231 @@
+@media (min-width: 768px) and (max-width: 991px) {
+    .w-dyn-list2 .scroller .scroller-inner {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .w-dyn-list2 .scroller .scroller-inner {
+        gap: 30px;
+    }
+}
+
+.w-dyn-list2:hover .scroller .scroller-inner {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 40px));
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    @keyframes scroll {
+        to {
+            transform: translate(calc(-50% - 25px));
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    @keyframes scroll {
+        to {
+            transform: translate(calc(-50% - 15px));
+        }
+    }
+}
+
+
+
+/* Initial hidden state */
+.zoom-in-init {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+/* Trigger zoom-in animation */
+.zoom-in-animate {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.8s ease-out;
+}
+
+/* Optional stagger delay */
+.zoom-delay-1 {
+    transition-delay: 0.2s;
+}
+
+.zoom-delay-2 {
+    transition-delay: 0.4s;
+}
+
+/* Icon hover effect */
+.option-icon img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.option-icon img:hover {
+    transform: scale(1.15);
+    /* Adjust zoom level here */
+    filter: brightness(1.1);
+}
+
+.option-icon img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.option-icon img:hover {
+    transform: scale(1.15);
+    filter: brightness(1.1);
+}
+
+/* Heading styling */
+.clientele-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.clientele-heading.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image hover effect */
+.pro-main-image img {
+    transition: transform 0.4s ease;
+}
+
+.pro-main-image img:hover {
+    transform: scale(1.15);
+}
+
+/* Logo animation on load */
+.pro-main-image {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.6s ease;
+}
+
+.pro-main-image.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.heder-position-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.heder-position-center h1 {
+    text-align: center;
+    max-width: 900px;
+    /* optional to prevent super long lines */
+}
+
+.hero-para {
+    text-align: center !important;
+    max-width: 800px;
+    /* optional */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Style the service cards container */
+.options-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Style the service card */
+.options {
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+}
+
+/* Hover effect for the card */
+.options-list:hover .options {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    background: linear-gradient(135deg, #e8f2ff 0%, #f0f8ff 100%);
+}
+
+/* Style the arrow as a circular button */
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    text-decoration: none;
+}
+
+/* Show arrow when service item is hovered */
+.options-list:hover .arrow {
+    opacity: 1 !important;
+    transform: translateY(-10px);
+    /* Arrow moves up more on hover */
+}
+
+/* Arrow hover effect */
+.arrow:hover {
+    transform: translateY(-2px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* Arrow icon styling */
+.arrow img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    /* Makes the arrow white */
+}
+
+/* Change cursor on hover */
+.options-list:hover {
+    cursor: pointer;
+}
+
+/* Container for the cards */
+.provide-option {
+    display: flex;
+    justify-content: center;
+    /* Center cards */
+    gap: 40px;
+    /* Space between cards */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+}
+
+/* Each card wrapper */
+.options-list {
+    flex: 1 1 300px;
+    /* Grow, shrink, min width 300px */
+    max-width: 500px;
+    /* Prevent over-stretching */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wf-force-outline-none[tabindex="-1"]:focus {
+    outline: none;
+}

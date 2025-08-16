@@ -3,7 +3,7 @@
 
 <html 
     data-wf-domain="makeopinion.com" 
-    data-wf-page="6449eb1f25637063d8996253" 
+    data-wf-page="6444c2faeae6ea1ff3e30ed3" 
     data-wf-site="64180342570b0dc26c6fd2d1"
     lang="en"
     class="w-mod-js w-mod-ix wf-inter-n4-active wf-inter-n5-active wf-inter-n6-active wf-plusjakartasans-n3-active wf-plusjakartasans-n4-active wf-plusjakartasans-n5-active wf-plusjakartasans-n6-active wf-plusjakartasans-n7-active wf-plusjakartasans-n8-active wf-active"
@@ -165,378 +165,648 @@
 </style>
 
 
- <style>
-      
 
-        /* .feature-success-section {
-            padding: 80px 0;
-            background: white;
-            position: relative;
-            overflow: hidden;
+<style>
+        :root {
+            --dim-grey: #6b6b6b;
+            --alice-blue: #daf0fe;
+            --slate-blue: #0070E1;
+            --button-background: white;
+            --white-smoke-background: #f8f9fa;
+            --light-black: #1d1d21;
+            --white-smoke: #eef1f4;
         }
-
-        .feature-container {
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            color: #333;
+            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            background-color: #fff;
+        }
+        
+        .our-service-section {
+            background-color: #fff;
+            padding: 110px 15px;
+            padding-top: 50px !important;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: 0 0;
+            position: relative;
+        }
+        
+        .page-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .feature-success-main-block {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        } */
-
-        .feature-success-main-image {
-            position: relative;
-            height: 500px;
-        }
-
-        .success-image {
             position: relative;
             z-index: 2;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-
-        .success-image.animate {
-            opacity: 1;
-            transform: translateY(0);
+        
+        .our-service-main-block {
+            text-align: center;
+            padding: 0 15px;
         }
-
-        .success-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .revenue {
-            position: absolute;
-            top: 50px;
-            left: -30px;
-            z-index: 6;
-            opacity: 0;
-            transform: translateX(-30px) scale(0.8);
-            transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
-        }
-
-        .revenue.animate {
-            opacity: 1;
-            transform: translateX(0) scale(1);
-        }
-
-        .revenue img {
-            border-radius: 15px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-
-        .graphical-image-block {
-            position: absolute;
-            bottom: 50px;
-            right: -40px;
-            z-index: 5;
-            opacity: 0;
-            transform: translateY(40px) translateX(30px) rotate(5deg);
-            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s;
-        }
-
-        .graphical-image-block.animate {
-            opacity: 1;
-            transform: translateY(0) translateX(0) rotate(0deg);
-        }
-
-        .graphical-image-block img {
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-        }
-
-        .utilize-time {
-            position: absolute;
-            bottom: -60px;
-            right: -10px;
-            z-index: 4;
-            opacity: 0;
-            transform: translateX(40px) translateY(30px) rotate(3deg);
-            transition: all 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s;
-        }
-
-        .utilize-time.animate {
-            opacity: 1;
-            transform: translateX(0) translateY(0) rotate(0deg);
-        }
-
-        .utilize-time img {
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .feature-success-text-block {
-            padding-left: 20px;
-        }
-
-        .overflow-off {
-            overflow: hidden;
-        }
-
-        .feature-success-header {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2d3748;
+        
+        .our-service-heading {
+            font-size: 36px;
+            color: var(--light-black);
             margin-bottom: 20px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
-
-        .feature-success-header.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .feature-sucess-description {
-            font-size: 1.1rem;
-            color: #4a5568;
-            margin-bottom: 40px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
-        }
-
-        .feature-sucess-description.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .our-approachs {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .technology-check-list {
-            display: flex;
-            gap: 20px;
-            opacity: 0;
-            transform: translateX(-20px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .technology-check-list:first-child {
-            transition-delay: 0.7s;
-        }
-
-        .technology-check-list:last-child {
-            transition-delay: 0.9s;
-        }
-
-        .technology-check-list.animate {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .technology-checklist-icon {
-            flex-shrink: 0;
-            width: 24px;
-            height: 24px;
-            transform: scale(0);
-            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-
-        .technology-checklist-icon.animate {
-            transform: scale(1);
-        }
-
-        .technology-checklist-icon img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .technology-text-list-menu {
-            flex: 1;
-        }
-
-        .header-small {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #2d3748;
-        }
-
-        .margin-bottom-ten {
-            margin-bottom: 10px;
-        }
-
-        .technology-details {
-            color: #4a5568;
+        
+        .our-service-paragraph {
+            color: var(--dim-grey);
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 50px;
             line-height: 1.6;
         }
-
-        /* Removed continuous animations - only entrance animations now */
-
-        /* Responsive Design */
-        @media (max-width: 991px) {
-            .feature-success-main-block {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-            }
-            
-            .feature-success-text-block {
-                padding-left: 0;
-            }
-            
-            .feature-success-main-image {
-                order: 2;
-            }
+        
+        .our-service-block {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
         }
-
-        @media (max-width: 767px) {
-            .feature-success-header {
-                font-size: 2rem;
+        
+        .service {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 112, 225, 0.15);
+        }
+        
+        .service-topics {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .service-icons {
+            width: 60px;
+            height: 60px;
+            background-color: var(--alice-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .service-icon {
+            width: 30px;
+            height: 30px;
+        }
+        
+        .bold-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--light-black);
+            line-height: 1.4;
+        }
+        
+        .service p {
+            color: var(--dim-grey);
+            font-size: 16px;
+            line-height: 1.7;
+            margin-top: 15px;
+        }
+        
+        .section-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            z-index: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .our-service-section {
+                padding: 60px 15px;
             }
             
-            .feature-success-section {
-                padding: 60px 0;
+            .our-service-heading {
+                font-size: 28px;
+            }
+            
+            .our-service-paragraph {
+                font-size: 16px;
+            }
+            
+            .service {
+                padding: 30px;
             }
         }
     </style>
+<style>
+
+  .overflow-off,
+  .page-container,
+  .services-block,
+  .feature-success-text-block {
+    overflow: visible !important;
+  }
+
+  .feature-success-main-image {
+    position: relative;
+    height: 500px;
+  }
+
+  .success-image {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .success-image.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .success-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .revenue {
+    position: absolute;
+    top: 50px;
+    left: -30px;
+    z-index: 6;
+    opacity: 0;
+    transform: translateX(-30px) scale(0.8);
+    transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+  }
+
+  .revenue.animate {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+  .revenue img {
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .graphical-image-block {
+    position: absolute;
+    bottom: 50px;
+    right: -40px;
+    z-index: 5;
+    opacity: 0;
+    transform: translateY(40px) translateX(30px) rotate(5deg);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s;
+  }
+
+  .graphical-image-block.animate {
+    opacity: 1;
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+
+  .graphical-image-block img {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  }
+
+  .utilize-time {
+    position: absolute;
+    bottom: -60px;
+    right: -10px;
+    z-index: 4;
+    opacity: 0;
+    transform: translateX(40px) translateY(30px) rotate(3deg);
+    transition: all 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s;
+  }
+
+  .utilize-time.animate {
+    opacity: 1;
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+
+  .utilize-time img {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-success-text-block {
+    padding-left: 20px;
+  }
+
+  .overflow-off {
+    overflow: hidden;
+  }
+
+  .feature-success-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+  }
+
+  .feature-success-header.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .feature-sucess-description {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  }
+
+  .feature-sucess-description.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .our-approachs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .technology-check-list {
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .technology-check-list:first-child {
+    transition-delay: 0.7s;
+  }
+
+  .technology-check-list:last-child {
+    transition-delay: 0.9s;
+  }
+
+  .technology-check-list.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .technology-checklist-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    transform: scale(0);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .technology-checklist-icon.animate {
+    transform: scale(1);
+  }
+
+  .technology-checklist-icon img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .technology-text-list-menu {
+    flex: 1;
+  }
+
+  .header-small {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3748;
+  }
+
+  .margin-bottom-ten {
+    margin-bottom: 10px;
+  }
+
+  .technology-details {
+    color: #4a5568;
+    line-height: 1.6;
+  }
+
+  /* Removed continuous animations - only entrance animations now */
+
+  /* Responsive Design */
+  @media (max-width: 991px) {
+    .feature-success-main-block {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .feature-success-text-block {
+      padding-left: 0;
+    }
+
+    .feature-success-main-image {
+      order: 2;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .feature-success-header {
+      font-size: 2rem;
+    }
+
+    .feature-success-section {
+      padding: 60px 0;
+    }
+  }
+</style>
 <!-- customer review section -->
- <style>
-/* Base styles */
-.new-ideas-section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.new-ideas-section.animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Main image zoom-in */
-.idea-main-image {
-  transform: scale(0.8);
-  opacity: 0;
-  transition: transform 1.2s ease, opacity 1.2s ease;
-}
-
-.animate .idea-main-image {
-  transform: scale(1);
-  opacity: 1;
-}
-
-/* Smaller overlay images */
-.cusomer-image img,
-.idea-review-image img {
-  position: relative;
-  z-index: 2;
-  opacity: 0;
-  transform: scale(0.5);
-  transition: transform 1s ease, opacity 1s ease;
-}
-
-/* Animate small images in sequence */
-.animate .cusomer-image img {
-  opacity: 1;
-  transform: scale(1);
-  transition-delay: 0.6s;
-}
-
-.animate .idea-review-image img {
-  opacity: 1;
-  transform: scale(1);
-  transition-delay: 0.9s;
-}
-
-/* Keep small images over main image */
-.ideas-main-images {
-  position: relative;
-}
-
-.cusomer-image,
-.idea-review-image {
-  position: absolute;
-}
-
-.cusomer-image {
-  bottom: 20px;
-  left: 20px;
-}
-
-.idea-review-image {
-  top: 20px;
-  right: 20px;
-}
-</style>
- 
 <style>
-    @media (min-width: 768px) and (max-width: 991px) {
-        .w-dyn-list2 .scroller .scroller-inner {
-            gap: 50px;
-        }
+  /* Base styles */
+  .new-ideas-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .new-ideas-section.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Main image zoom-in */
+  .idea-main-image {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 1.2s ease, opacity 1.2s ease;
+  }
+
+  .animate .idea-main-image {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  /* Smaller overlay images */
+  .cusomer-image img,
+  .idea-review-image img {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform 1s ease, opacity 1s ease;
+  }
+
+  /* Animate small images in sequence */
+  .animate .cusomer-image img {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.6s;
+  }
+
+  .animate .idea-review-image img {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.9s;
+  }
+
+  /* Keep small images over main image */
+  .ideas-main-images {
+    position: relative;
+  }
+
+  .cusomer-image,
+  .idea-review-image {
+    position: absolute;
+  }
+
+  .cusomer-image {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .idea-review-image {
+    top: 20px;
+    right: 20px;
+  }
+</style>
+
+<style>
+  @media (min-width: 768px) and (max-width: 991px) {
+    .w-dyn-list2 .scroller .scroller-inner {
+      gap: 50px;
     }
-    @media (max-width: 767px) {
-        .w-dyn-list2 .scroller .scroller-inner {
-            gap: 30px;
-        }
+  }
+
+  @media (max-width: 767px) {
+    .w-dyn-list2 .scroller .scroller-inner {
+      gap: 30px;
     }
-    .w-dyn-list2:hover .scroller .scroller-inner {
-        animation-play-state: paused;
+  }
+
+  .w-dyn-list2:hover .scroller .scroller-inner {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 40px));
     }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
     @keyframes scroll {
-        to {
-            transform: translate(calc(-50% - 40px));
-        }
+      to {
+        transform: translate(calc(-50% - 25px));
+      }
     }
-    
-    @media (min-width: 768px) and (max-width: 991px) {
-        @keyframes scroll {
-        to {
-            transform: translate(calc(-50% - 25px));
-            }
-        }
+  }
+
+  @media (max-width: 767px) {
+    @keyframes scroll {
+      to {
+        transform: translate(calc(-50% - 15px));
+      }
     }
-    @media (max-width: 767px) {
-        @keyframes scroll {
-        to {
-            transform: translate(calc(-50% - 15px));
-            }
-        }
-    }
-    
-    .marquee-inner{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 80px;
-        margin-right: 80px;
-    }
-    
-    .w-dyn-list{
-        margin-top: 50px;
-        overflow: hidden;
-    }
-    
-    .w-dyn-list{
-        margin-top: 50px;
-        overflow: hidden;
-    }
+  }
+
+  .marquee-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 80px;
+    margin-right: 80px;
+  }
+
+  .w-dyn-list {
+    margin-top: 50px;
+    overflow: hidden;
+  }
+
+  .w-dyn-list {
+    margin-top: 50px;
+    overflow: hidden;
+  }
 </style>
 
 <style>
-    h1 {
-        font-size: 56px
+  h1 {
+    font-size: 56px
+  }
+</style>
+
+<style>
+  .answers-block {
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+
+  .plus-icon,
+  .minus-icon {
+    transition: opacity 0.2s ease;
+  }
+
+  .question-block {
+    background-color: #fff;
+    /* default */
+    transition: background-color 0.3s ease;
+  }
+
+  .question-block.active {
+    background-color: #0070E1 !important;
+    /* darker open state */
+  }
+
+  .question-block .bold-text.accordion {
+    color: #1d1d21;
+    /* default text color */
+    transition: color 0.3s ease;
+  }
+
+  .question-block.active .bold-text.accordion {
+    color: #fff;
+    /* white text when open */
+  }
+
+  .questions-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Initially hidden for viewport-triggered animation */
+  .question-main-image,
+  .real-time-user {
+    opacity: 0;
+    transform: translateX(50px) scale(0.9);
+  }
+
+  /* Animation only starts when .animate is added */
+  .question-main-image.animate {
+    animation: slideInScale 1s ease-out forwards;
+  }
+
+  .real-time-user.animate {
+    animation: popIn 0.8s ease-out forwards;
+    transform-style: preserve-3d;
+    /* keep the same 3D rendering style */
+  }
+
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: translate3d(0px, 0px, 0px) scale3d(0.8, 0.8, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     }
+
+    100% {
+      opacity: 1;
+      transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    }
+  }
+
+
+  .question-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
+
+  .real-time-user {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    z-index: 2;
+  }
+
+  .real-time-user-image {
+    width: 280px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border: 4px solid white;
+  }
+
+  @keyframes slideInScale {
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .service-questions {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .questions-header {
+      font-size: 2rem;
+    }
+
+    .question-block {
+      padding: 20px;
+    }
+
+    .answer-paragraph {
+      padding: 0 20px 20px 20px;
+    }
+
+    .real-time-user {
+      position: static;
+      margin-top: 20px;
+      transform: translateX(0) scale(1);
+    }
+  }
 </style>
 
 <section class="service-offer-section wf-section service-offer-section-padding">
   <div class="service-container w-container">
     <div class="service-offer-main-blosck">
       <h2 class="service-offer-heading"><span style="color:#0070DF">Worldwide</span> coverage for your sample needs</h2>
-      <p class="service-offer-paragraph" style="width:70%">We use the same sample quality standard to provide access to real respondents across the globe.<br>Contact us for any coverage questions you have!</p>
+      <p class="service-offer-paragraph" style="width:100%">We use the same sample quality standard to provide access to real respondents across the globe.<br>Contact us for any coverage questions you have!</p>
 
       <!-- Styles -->
       <style>
@@ -2612,265 +2882,253 @@
 </section>
 
 
- <div class="pro-main-container w-container" style="padding-top: 50px">
-     <div>
-         <div class="w-dyn-list">
-             <div class="marquee" data-duration="10000" data-gap="0" data-duplicated="true"><div style="width: 100000px; transform: translateX(0px); animation: 14.5504s linear 0s infinite normal none running marqueeAnimation-4596638;" class="js-marquee-wrapper"><div class="js-marquee" style="margin-right: 0px; float: left;">
-                 <div class="marquee-inner">
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni1.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni3.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni2.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni8.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni5.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni6.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni7.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni4.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni9.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni10.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni11.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni12.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni13.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni14.png" alt="" class="autofit">
-                     </div>
-                 </div>
-             </div><div class="js-marquee" style="margin-right: 0px; float: left;">
-                 <div class="marquee-inner">
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni1.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni3.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni2.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni8.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni5.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni6.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni7.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni4.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni9.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni10.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni11.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni12.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni13.png" alt="" class="autofit">
-                     </div>
-                     <div class="pro-main-image">
-                         <img height="96" width="96" src="./assets/images_new/uni14.png" alt="" class="autofit">
-                     </div>
-                 </div>
-             </div></div></div>
-         </div>
-     </div>
- </div>
+<div class="pro-main-container w-container" style="padding-top: 50px">
+  <div>
+    <div class="w-dyn-list">
+      <div class="marquee" data-duration="10000" data-gap="0" data-duplicated="true">
+        <div style="width: 100000px; transform: translateX(0px); animation: 14.5504s linear 0s infinite normal none running marqueeAnimation-4596638;" class="js-marquee-wrapper">
+          <div class="js-marquee" style="margin-right: 0px; float: left;">
+            <div class="marquee-inner">
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni1.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni3.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni2.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni8.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni5.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni6.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni7.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni4.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni9.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni10.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni11.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni12.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni13.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni14.png" alt="" class="autofit">
+              </div>
+            </div>
+          </div>
+          <div class="js-marquee" style="margin-right: 0px; float: left;">
+            <div class="marquee-inner">
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni1.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni3.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni2.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni8.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni5.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni6.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni7.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni4.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni9.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni10.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni11.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni12.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni13.png" alt="" class="autofit">
+              </div>
+              <div class="pro-main-image">
+                <img height="96" width="96" src="./assets/images_new/uni14.png" alt="" class="autofit">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <section class="questions-section">
-<div class="questions-conatiner w-container">
-  <div class="service-questions">
-    <div class="questions-text-block">
-      <h2 class="questions-header">Panel Quality</h2>
-      <p class="questions-paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text magaliqua suspe.</p>
-      <div class="questions">
-        <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601c8" class="questions-block">
-          <div class="question-block">
-            <div class="question-text">
-              <div class="bold-text accordion">Fraud & Bot-Farm Defense</div>
-            </div>
-            <div class="icon-accordion">
-              <div style="opacity: 1;" class="plus-icon">
-                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
+  <div class="questions-conatiner w-container">
+    <div class="service-questions">
+      <div class="questions-text-block">
+        <h2 class="questions-header">Understand Results</h2>
+        <p class="questions-paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text magaliqua suspe.</p>
+        <div class="questions">
+          <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601c8" class="questions-block">
+            <div class="question-block">
+              <div class="question-text">
+                <div class="bold-text accordion">Survey Insights</div>
+              </div>
+              <div class="icon-accordion">
+                <div style="opacity: 1;" class="plus-icon">
+                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
                 </div>
                 <div style="opacity: 0;" class="minus-icon">
                   <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
-                  </div>
                 </div>
-              </div>
-              <div style="height: 0px;" class="answers-block">
-                <p class="answer-paragraph">Combine anything worth nothing that you can combine anything you see on our services. The possibilities are unlimited!Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
               </div>
             </div>
-            <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601d5" class="questions-block">
-              <div class="question-block" style="background-color: rgb(255, 255, 255);">
-                <div>
-                  <div class="bold-text accordion" style="color: rgb(29, 29, 33);">Digital Fingerprinting</div>
+            <div style="height: 0px;" class="answers-block">
+              <p class="answer-paragraph">Combine anything worth nothing that you can combine anything you see on our services. The possibilities are unlimited!Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+          </div>
+
+          <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601e2" class="questions-block">
+            <div class="question-block">
+              <div>
+                <div class="bold-text accordion">Data Exporets</div>
+              </div>
+              <div class="icon-accordion">
+                <div style="opacity: 1;" class="plus-icon">
+                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
                 </div>
-                <div class="icon-accordion">
-                  <div style="opacity: 1;" class="plus-icon">
-                    <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
-                    </div>
-                    <div style="opacity: 0;" class="minus-icon">
-                      <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
-                      </div>
-                    </div>
-                  </div>
-                  <div style="width: 591.727px; height: 0px;" class="answers-block">
-                    <p class="answer-paragraph">Combine anything worth nothing that you can combine anything you see on our services. The possibilities are unlimited!Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                  </div>
+                <div style="opacity: 0;" class="minus-icon">
+                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
                 </div>
-                <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601e2" class="questions-block">
-                  <div class="question-block">
-                    <div>
-                      <div class="bold-text accordion">Answer Consistency Checks</div>
-                    </div>
-                    <div class="icon-accordion">
-                      <div style="opacity: 1;" class="plus-icon">
-                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
-                        </div>
-                        <div style="opacity: 0;" class="minus-icon">
-                          <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
-                          </div>
-                        </div>
-                      </div>
-                      <div style="height: 0px;" class="answers-block">
-                        <p class="answer-paragraph">Combine anything worth nothing that you can combine anything you see on our services. The possibilities are unlimited!Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                      </div>
-                    </div>
-                    <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601ef" class="questions-block">
-                      <div class="question-block">
-                        <div>
-                          <div class="bold-text accordion">Optional Third-Party Quality Tools:</div>
-                        </div>
-                        <div class="icon-accordion">
-                          <div style="opacity: 1;" class="plus-icon">
-                            <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
-                            </div>
-                            <div style="opacity: 0;" class="minus-icon">
-                              <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
-                              </div>
-                            </div>
-                          </div>
-                          <div style="height: 0px;" class="answers-block">
-                            <p class="answer-paragraph">Combine anything worth nothing that you can combine anything you see on our services. The possibilities are unlimited!Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="questions-image">
-                      <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601fd" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="question-main-image">
-                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb924c81324ec8d8155b_Mask%20group%20(71).webp" loading="lazy" sizes="(max-width: 767px) 85vw, (max-width: 991px) 88vw, (max-width: 1439px) 42vw, 552.28125px" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb924c81324ec8d8155b_Mask%20group%20(71)-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb924c81324ec8d8155b_Mask%20group%20(71)-p-800.webp 800w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb924c81324ec8d8155b_Mask%20group%20(71).webp 916w" alt="Employee Image" class="question-image">
-                        </div>
-                        <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601ff" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="real-time-user">
-                          <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb9575b153ea962f73d9_Group%201231.webp" loading="lazy" sizes="(max-width: 479px) 45vw, (max-width: 767px) 46vw, (max-width: 991px) 47vw, (max-width: 1439px) 23vw, 306.375px" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb9575b153ea962f73d9_Group%201231-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb9575b153ea962f73d9_Group%201231.webp 528w" alt="User Count" class="real-time-user-image">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
+              </div>
+            </div>
+            <div style="height: 0px;" class="answers-block">
+              <p class="answer-paragraph">Combine anything worth nothing that you can combine anything you see on our services. The possibilities are unlimited!Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+          </div>
+          <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601ef" class="questions-block">
+            <div class="question-block">
+              <div>
+                <div class="bold-text accordion">Insights Presentations</div>
+              </div>
+              <div class="icon-accordion">
+                <div style="opacity: 1;" class="plus-icon">
+                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
+                </div>
+                <div style="opacity: 0;" class="minus-icon">
+                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
+                </div>
+              </div>
+            </div>
+            <div style="height: 0px;" class="answers-block">
+              <p class="answer-paragraph">Combine anything worth nothing that you can combine anything you see on our services. The possibilities are unlimited!Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="questions-image">
+        <div class="question-main-image">
+          <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb924c81324ec8d8155b_Mask%20group%20(71).webp" alt="Employee Image" class="question-image">
+        </div>
+        <div class="real-time-user">
+          <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb9575b153ea962f73d9_Group%201231.webp" alt="User Count" class="real-time-user-image">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <section class="feature-success-section" id="animated-section">
-        <div class="feature-container w-container">
-            <div class="feature-success-main-block">
-                <div class="feature-success-main-image">
-                    <div class="success-image">
-                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/644b454a168e3ba0a9b4980a_Mask%20group%20(72).webp" loading="lazy" sizes="(max-width: 479px) 81vw, (max-width: 767px) 80vw, (max-width: 991px) 81vw, (max-width: 1439px) 38vw, 504.296875px" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b454a168e3ba0a9b4980a_Mask%20group%20(72)-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b454a168e3ba0a9b4980a_Mask%20group%20(72)-p-800.webp 800w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b454a168e3ba0a9b4980a_Mask%20group%20(72).webp 1050w" alt="Employee Image" class="success">
-                    </div>
-                    <div class="revenue">
-                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/644b4547ed4600ece7e736b2_Group%201124.webp" loading="lazy" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b4547ed4600ece7e736b2_Group%201124-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b4547ed4600ece7e736b2_Group%201124.webp 538w" sizes="(max-width: 479px) 37vw, (max-width: 767px) 38vw, (max-width: 991px) 39vw, (max-width: 1439px) 20vw, 265.71875px" alt="Graph" class="total-revenue-image">
-                    </div>
-                    <div class="graphical-image-block">
-                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/644b4548d2bf196543eeb744_Group%202050%20(1).webp" loading="lazy" sizes="(max-width: 479px) 47vw, (max-width: 991px) 48vw, (max-width: 1439px) 25vw, 332.140625px" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b4548d2bf196543eeb744_Group%202050%20(1)-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b4548d2bf196543eeb744_Group%202050%20(1).webp 672w" alt="Graphical" class="feature-graphical-image">
-                    </div>
-                    <div class="utilize-time">
-                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/644b45483ff65dd5ab9234ce_Group%202052%20(1).webp" loading="lazy" sizes="(max-width: 479px) 47vw, (max-width: 991px) 48vw, (max-width: 1439px) 25vw, 332.140625px" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b45483ff65dd5ab9234ce_Group%202052%20(1)-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b45483ff65dd5ab9234ce_Group%202052%20(1).webp 672w" alt="Feature" class="feature-utilize-image">
-                    </div>
-                </div>
-                <div class="feature-success-text-block">
-                    <div class="overflow-off">
-                        <h2 class="feature-success-header">Respondent Engagement</h2>
-                    </div>
-                    <div class="overflow-off">
-                        <p class="feature-sucess-description">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's standard. Dabore et dolore magaliqua.</p>
-                    </div>
-                    <div class="our-approachs overflow-off">
-                        <div class="technology-check-list feature-approachs">
-                            <div class="technology-checklist-icon">
-                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6419363dd9d751ef854fbfd1_Orange%20Check%20Icon.svg" loading="lazy" alt="Checked Icon" class="technology-text-list-icon">
-                            </div>
-                            <div class="technology-text-list-menu">
-                                <div class="header-small margin-bottom-ten">Responsive Panel Support</div>
-                                <p class="technology-details">Printing and typesetting has been the industry's standard dummy text.dabore et dolore magaliqua quis suspe.</p>
-                            </div>
-                        </div>
-                        <div class="technology-check-list feature-approachs">
-                            <div class="technology-checklist-icon">
-                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6419363dd9d751ef854fbfd1_Orange%20Check%20Icon.svg" loading="lazy" alt="Checked Icon" class="technology-text-list-icon">
-                            </div>
-                            <div class="technology-text-list-menu">
-                                <div class="header-small margin-bottom-ten">Fair Incentives</div>
-                                <p class="technology-details">Printing and typesetting has been the industry's standard dummy text.dabore et dolore magaliqua quis suspe.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="feature-container w-container">
+    <div class="feature-success-main-block">
+      <div class="feature-success-main-image">
+        <div class="success-image">
+          <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/644b454a168e3ba0a9b4980a_Mask%20group%20(72).webp" loading="lazy" sizes="(max-width: 479px) 81vw, (max-width: 767px) 80vw, (max-width: 991px) 81vw, (max-width: 1439px) 38vw, 504.296875px" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b454a168e3ba0a9b4980a_Mask%20group%20(72)-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b454a168e3ba0a9b4980a_Mask%20group%20(72)-p-800.webp 800w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b454a168e3ba0a9b4980a_Mask%20group%20(72).webp 1050w" alt="Employee Image" class="success">
         </div>
-    </section>
+        <div class="revenue">
+          <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/644b4547ed4600ece7e736b2_Group%201124.webp" loading="lazy" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b4547ed4600ece7e736b2_Group%201124-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b4547ed4600ece7e736b2_Group%201124.webp 538w" sizes="(max-width: 479px) 37vw, (max-width: 767px) 38vw, (max-width: 991px) 39vw, (max-width: 1439px) 20vw, 265.71875px" alt="Graph" class="total-revenue-image">
+        </div>
+        <div class="graphical-image-block">
+          <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/644b4548d2bf196543eeb744_Group%202050%20(1).webp" loading="lazy" sizes="(max-width: 479px) 47vw, (max-width: 991px) 48vw, (max-width: 1439px) 25vw, 332.140625px" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b4548d2bf196543eeb744_Group%202050%20(1)-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b4548d2bf196543eeb744_Group%202050%20(1).webp 672w" alt="Graphical" class="feature-graphical-image">
+        </div>
+        <div class="utilize-time">
+          <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/644b45483ff65dd5ab9234ce_Group%202052%20(1).webp" loading="lazy" sizes="(max-width: 479px) 47vw, (max-width: 991px) 48vw, (max-width: 1439px) 25vw, 332.140625px" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b45483ff65dd5ab9234ce_Group%202052%20(1)-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644b45483ff65dd5ab9234ce_Group%202052%20(1).webp 672w" alt="Feature" class="feature-utilize-image">
+        </div>
+      </div>
+      <div class="feature-success-text-block">
+        <div class="overflow-off">
+          <h2 class="feature-success-header">Respondent Engagement</h2>
+        </div>
+        <div class="overflow-off">
+          <p class="feature-sucess-description">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's standard. Dabore et dolore magaliqua.</p>
+        </div>
+        <div class="our-approachs overflow-off">
+          <div class="technology-check-list feature-approachs">
+            <div class="technology-checklist-icon">
+              <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6419363dd9d751ef854fbfd1_Orange%20Check%20Icon.svg" loading="lazy" alt="Checked Icon" class="technology-text-list-icon">
+            </div>
+            <div class="technology-text-list-menu">
+              <div class="header-small margin-bottom-ten">Responsive Panel Support</div>
+              <p class="technology-details">Printing and typesetting has been the industry's standard dummy text.dabore et dolore magaliqua quis suspe.</p>
+            </div>
+          </div>
+          <div class="technology-check-list feature-approachs">
+            <div class="technology-checklist-icon">
+              <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6419363dd9d751ef854fbfd1_Orange%20Check%20Icon.svg" loading="lazy" alt="Checked Icon" class="technology-text-list-icon">
+            </div>
+            <div class="technology-text-list-menu">
+              <div class="header-small margin-bottom-ten">Fair Incentives</div>
+              <p class="technology-details">Printing and typesetting has been the industry's standard dummy text.dabore et dolore magaliqua quis suspe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- Mobile Hero Section -->
 <section class="new-ideas-section">
-<div class="page-container w-container">
-  <div class="new-ideas-main-block">
-    <div class="ideas-text">
-      <div class="home-page-creative-text">
-        <div class="overflow-off">
-          <h2 data-w-id="a28730d8-4eae-1d5b-ec73-6082363f0632" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="why-creative-heading">Profiling and Recruitment</h2>
-        </div>
-        <div class="overflow-off">
-          <p data-w-id="a28730d8-4eae-1d5b-ec73-6082363f0634" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="why-creative-paragraph">bla</p>
-        </div>
-        <div class="why-choose-creative-check-list-block">
-          <div class="home-page-creative-list-block">
-            <div class="home-page-creative-check-icon">
-              <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c335b850973a060da427_Yellow%20Vector.svg" loading="lazy" alt="Check" class="checked-icon-blue-circle">
+  <div class="page-container w-container">
+    <div class="new-ideas-main-block">
+      <div class="ideas-text">
+        <div class="home-page-creative-text">
+          <div class="overflow-off">
+            <h2 data-w-id="a28730d8-4eae-1d5b-ec73-6082363f0632" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="why-creative-heading">Profiling and Recruitment</h2>
+          </div>
+          <div class="overflow-off">
+            <p data-w-id="a28730d8-4eae-1d5b-ec73-6082363f0634" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="why-creative-paragraph">bla</p>
+          </div>
+          <div class="why-choose-creative-check-list-block">
+            <div class="home-page-creative-list-block">
+              <div class="home-page-creative-check-icon">
+                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c335b850973a060da427_Yellow%20Vector.svg" loading="lazy" alt="Check" class="checked-icon-blue-circle">
               </div>
               <p class="creative-text-list-content">
                 <span class="creative-list-span-text-content">Continuous profiling</span> bla bla.
@@ -2879,53 +3137,53 @@
             <div class="home-page-creative-list-block">
               <div class="home-page-creative-check-icon">
                 <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c335b850973a060da427_Yellow%20Vector.svg" loading="lazy" alt="Check" class="checked-icon-blue-circle">
-                </div>
-                <p class="creative-text-list-content list-two">
-                  <span class="creative-list-span-text-content">Diverse recruitment sources</span> ssadsds.
-                </p>
               </div>
-              <div class="home-page-creative-list-block">
-                <div class="home-page-creative-check-icon">
-                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c335b850973a060da427_Yellow%20Vector.svg" loading="lazy" alt="Check" class="checked-icon-blue-circle">
-                  </div>
-                  <p class="creative-text-list-content list-three">
-                    <span class="creative-list-span-text-content">Profile Refresh:</span> sdfsdd.
-                  </p>
-                </div>
+              <p class="creative-text-list-content list-two">
+                <span class="creative-list-span-text-content">Diverse recruitment sources</span> ssadsds.
+              </p>
+            </div>
+            <div class="home-page-creative-list-block">
+              <div class="home-page-creative-check-icon">
+                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c335b850973a060da427_Yellow%20Vector.svg" loading="lazy" alt="Check" class="checked-icon-blue-circle">
               </div>
-              <div class="creative-button-block">
-                <a data-w-id="a28730d8-4eae-1d5b-ec73-6082363f064d" href="/features" class="start-free-trial-button-block feature-block footer-buttons-start discover-more learn w-inline-block">
-                  <div class="start-trial-text-block feature-text-block discover-text" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Learn More</div>
-                  <div class="start-trial-text-block feature-text-block text-two discover-more-text" style="transform: translate3d(0px, 50px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Learn More</div>
-                </a>
-              </div>
+              <p class="creative-text-list-content list-three">
+                <span class="creative-list-span-text-content">Profile Refresh:</span> sdfsdd.
+              </p>
             </div>
           </div>
-          <div class="ideas-image-block">
-            <div class="ideas-main-images">
-              <div class="idea-main-banner">
-                <img class="idea-main-image" src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c334ff07ae0c94bf2b00_Mask%20group%20(4).webp" alt="Girl Employee Image" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 90vw, (max-width: 1439px) 47vw, 630.28125px" data-w-id="a28730d8-4eae-1d5b-ec73-6082363f0655" loading="lazy" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6444c334ff07ae0c94bf2b00_Mask%20group%20(4)-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6444c334ff07ae0c94bf2b00_Mask%20group%20(4)-p-800.webp 800w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6444c334ff07ae0c94bf2b00_Mask%20group%20(4)-p-1080.webp 1080w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6444c334ff07ae0c94bf2b00_Mask%20group%20(4).webp 1152w">
-                  <div data-w-id="a28730d8-4eae-1d5b-ec73-6082363f0656" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="cusomer-image">
-                    <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3339f927242f15e3015_Group%201833.webp" loading="lazy" sizes="100vw" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6444c3339f927242f15e3015_Group%201833-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6444c3339f927242f15e3015_Group%201833-p-800.webp 800w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6444c3339f927242f15e3015_Group%201833.webp 810w" alt="User">
-                    </div>
-                  </div>
-                  <div data-w-id="a28730d8-4eae-1d5b-ec73-6082363f0658" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="idea-review-image">
-                    <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c333b7dd70ac900c4dc4_Group%202249.webp" loading="lazy" alt="Review" class="customer-review">
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="creative-button-block">
+            <a data-w-id="a28730d8-4eae-1d5b-ec73-6082363f064d" href="/features" class="start-free-trial-button-block feature-block footer-buttons-start discover-more learn w-inline-block">
+              <div class="start-trial-text-block feature-text-block discover-text" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Learn More</div>
+              <div class="start-trial-text-block feature-text-block text-two discover-more-text" style="transform: translate3d(0px, 50px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Learn More</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="ideas-image-block">
+        <div class="ideas-main-images">
+          <div class="idea-main-banner">
+            <img class="idea-main-image" src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c334ff07ae0c94bf2b00_Mask%20group%20(4).webp" alt="Girl Employee Image" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 90vw, (max-width: 1439px) 47vw, 630.28125px" data-w-id="a28730d8-4eae-1d5b-ec73-6082363f0655" loading="lazy" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6444c334ff07ae0c94bf2b00_Mask%20group%20(4)-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6444c334ff07ae0c94bf2b00_Mask%20group%20(4)-p-800.webp 800w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6444c334ff07ae0c94bf2b00_Mask%20group%20(4)-p-1080.webp 1080w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6444c334ff07ae0c94bf2b00_Mask%20group%20(4).webp 1152w">
+            <div data-w-id="a28730d8-4eae-1d5b-ec73-6082363f0656" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="cusomer-image">
+              <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3339f927242f15e3015_Group%201833.webp" loading="lazy" sizes="100vw" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6444c3339f927242f15e3015_Group%201833-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6444c3339f927242f15e3015_Group%201833-p-800.webp 800w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6444c3339f927242f15e3015_Group%201833.webp 810w" alt="User">
             </div>
-          </section>
+          </div>
+          <div data-w-id="a28730d8-4eae-1d5b-ec73-6082363f0658" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="idea-review-image">
+            <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c333b7dd70ac900c4dc4_Group%202249.webp" loading="lazy" alt="Review" class="customer-review">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-<section class="home-new-technology-section-one wf-section" style="background-color:#fff;padding-top: 50px!important;background-image: url('./assets/images_new/bg4.png');background-size: cover;background-position: 0 0">
+<!-- <section class="home-new-technology-section-one wf-section" style="background-color:#fff;padding-top: 50px!important;background-image: url('./assets/images_new/bg4.png');background-size: cover;background-position: 0 0">
   <div class="new-tech-container w-container">
     <div class="new-tech-main-section">
       <div class="overflow-off">
         <h2 data-w-id="df73abb0-29b0-e495-8811-9681fc95cc2a" style="width: 70%; opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="tech-heading-one"><span style="color:#0070DF"></span> Ways to get sample from us</h2>
       </div>
-      
+
       <div class="overflow-off">
         <p data-w-id="df73abb0-29b0-e495-8811-9681fc95cc2c" style="width: 58%!important; opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="tech-para">Access a large pool of quality respondents in over 130 countries.<br>We offer robust API integration, self serve platform or managed projects.</p>
       </div>
@@ -2986,86 +3244,175 @@
       </div>
     </div>
   </div>
+</section> -->
+
+
+<section class="home-new-technology-section-one wf-section" style="background-color:#fff;padding-top: 50px!important;background-image: url('./assets/images_new/bg4.png');background-size: cover;background-position: 0 0">
+        <div class="service-container w-container">
+            <div class="service-feature-main-block">
+                <h2 class="about-page-review-heading">How we work with you?</h2>
+                <p class="feature-service-paragraph">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit.</p>
+                <div class="review-block">
+                    <div class="review-block">
+                        <div class="home-page-reviews">
+
+                            <!-- Card 1 -->
+                            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50" class="review">
+                                <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d5-d8996253" data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d5" class="analytics" style="background-color: rgb(255, 255, 255);">
+
+                                    <div class="analytics-inner">
+                                        <div class="services-title">
+                                            <div class="service-features-icon">
+                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb8c75b83703f4cebd26_Group%202490.svg" loading="lazy" alt="Save" class="feature-icon">
+                                            </div>
+                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d9" class="bold-text" style="color: rgb(34, 34, 34);">Self Service</div>
+                                        </div>
+                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22db" class="service-para" style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut
+                                            incididunt labore et dolore magna.</p>
+                                        <div class="your-balance-block">
+                                            <div class="balance-image-block">
+                                                <img src="./assets/images_new/audience-1-left.png" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.65625px" srcset="./assets/images_new/audience-1-left.png 500w,
+                                                        ./assets/images_new/audience-1-left.png 612w" alt="Growth" class="balance-image">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60-6c8f4e50" data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60" class="review" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed-d8996253" data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed" class="analytics" style="background-color: rgb(255, 255, 255);">
+
+                                    <div class="analytics-inner">
+                                        <div class="services-title">
+                                            <div class="service-features-icon">
+                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb90f0acdd8695d10564_Group%202493.svg" loading="lazy" alt="Settings" class="feature-icon">
+                                            </div>
+                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f1" class="bold-text" style="color: rgb(34, 34, 34);">Managed Services</div>
+                                        </div>
+                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f3" class="service-para" style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut
+                                            incididunt labore et dolore magna.</p>
+                                        <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f5-d8996253" class="your-balance-block">
+                                            <div class="balance-image-block">
+                                                <img src="./assets/images_new/audience-1-center.png" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px" srcset="./assets/images_new/audience-1-center.png 500w,
+                                                        ./assets/images_new/audience-1-center.png 612w" alt="Target" class="balance-image">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e-6c8f4e50" data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e" class="review" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1-d8996253" data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1" class="analytics" style="background-color: rgb(255, 255, 255);">
+
+                                    <div class="analytics-inner">
+                                        <div class="services-title">
+                                            <div class="service-features-icon">
+                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb8e4d0a0bf03087dc0a_Logo%20Two.svg" loading="lazy" alt="Globe" class="feature-icon">
+                                            </div>
+                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e5" class="bold-text" style="color: rgb(34, 34, 34);">Api Sample</div>
+                                        </div>
+                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e7" class="service-para" style="color: rgb(107, 107, 107);">Consectetur adipiscing eiusmod tempor ut
+                                            incididunt labore et dolore magna.</p>
+                                        <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e9-d8996253" class="your-balance-block">
+                                            <div class="balance-image-block">
+                                                <img src="./assets/images_new/audience-1-right.png" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px" srcset="./assets/images_new/audience-1-right.png 500w,
+                                                        ./assets/images_new/audience-1-right.png 612w" alt="Analytics" class="balance-image">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div><!-- .home-page-reviews -->
+                    </div><!-- .review-block -->
+                </div><!-- .review-block -->
+            </div><!-- .service-feature-main-block -->
+        </div><!-- .service-container -->
+    </section>
+
+<section class="our-service-section">
+  <div class="page-container w-container">
+    <div class="our-service-main-block">
+      <h2 class="our-service-heading">Audience Features</h2>
+      <p class="our-service-paragraph">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit.</p>
+      <div class="our-service-block">
+        <div id="w-node-_9104910f-62a6-dc0c-724a-15eae74ba3a8-f3e30ed3" class="service">
+          <div class="service-topics">
+            <div class="service-icons">
+              <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3333896b5da7dee3dc3_Group%202221.svg" loading="lazy" alt="Menu" class="service-icon">
+            </div>
+            <div class="bold-text">Multi COuntry Support</div>
+          </div>
+          <p>There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
+        </div>
+        <div id="w-node-_9104910f-62a6-dc0c-724a-15eae74ba3b0-f3e30ed3" class="service">
+          <div class="service-topics">
+            <div class="service-icons">
+              <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c33374955c8bc8f0857a_Group%202222.svg" loading="lazy" alt="Statistic Icon" class="service-icon">
+            </div>
+            <div class="bold-text">Standard WScreeningg</div>
+          </div>
+          <p>There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
+        </div>
+        <div id="w-node-_9104910f-62a6-dc0c-724a-15eae74ba3b8-f3e30ed3" class="service">
+          <div class="service-topics">
+            <div class="service-icons">
+              <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3343896b50a4fee3dcd_server%205.svg" loading="lazy" alt="Business Planning " class="service-icon">
+            </div>
+            <div class="bold-text">Custom Screenuing</div>
+          </div>
+          <p>There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
+        </div>
+        <div id="w-node-_9104910f-62a6-dc0c-724a-15eae74ba3c0-f3e30ed3" class="service">
+          <div class="service-topics">
+            <div class="service-icons">
+              <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c333619574103d47f9fd_Group%202225.svg" loading="lazy" alt="File Icon" class="service-icon">
+            </div>
+            <div class="bold-text">Eliminations</div>
+          </div>
+          <p>There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
+        </div>
+        <div id="w-node-_9104910f-62a6-dc0c-724a-15eae74ba3c8-f3e30ed3" class="service">
+          <div class="service-topics">
+            <div class="service-icons">
+              <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3339325965a9b82c79d_award%201.svg" loading="lazy" alt="Achievement Icon" class="service-icon">
+            </div>
+            <div class="bold-text">Recall</div>
+          </div>
+          <p>There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
+        </div>
+        <div id="w-node-_9104910f-62a6-dc0c-724a-15eae74ba3d0-f3e30ed3" class="service">
+          <div class="service-topics">
+            <div class="service-icons">
+              <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c333932596958182c79e_Group%202227.svg" loading="lazy" alt="Message Icon" class="service-icon">
+            </div>
+            <div class="bold-text">Scheduling Options</div>
+          </div>
+          <p>There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
-<section class="our-service-section">
-<div class="page-container w-container">
-    <div class="our-service-main-block">
-        <h2 class="our-service-heading">Audience Features</h2>
-        <p class="our-service-paragraph">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit.</p>
-        <div class="our-service-block">
-            <div id="w-node-_9104910f-62a6-dc0c-724a-15eae74ba3a8-f3e30ed3" class="service">
-                <div class="service-topics">
-                    <div class="service-icons">
-                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3333896b5da7dee3dc3_Group%202221.svg" loading="lazy" alt="Menu" class="service-icon">
-                        </div>
-                        <div class="bold-text">Multi COuntry Support</div>
-                    </div>
-                    <p>There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
-                </div>
-                <div id="w-node-_9104910f-62a6-dc0c-724a-15eae74ba3b0-f3e30ed3" class="service">
-                    <div class="service-topics">
-                        <div class="service-icons">
-                            <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c33374955c8bc8f0857a_Group%202222.svg" loading="lazy" alt="Statistic Icon" class="service-icon">
-                            </div>
-                            <div class="bold-text">Standard WScreeningg</div>
-                        </div>
-                        <p>There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
-                    </div>
-                    <div id="w-node-_9104910f-62a6-dc0c-724a-15eae74ba3b8-f3e30ed3" class="service">
-                        <div class="service-topics">
-                            <div class="service-icons">
-                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3343896b50a4fee3dcd_server%205.svg" loading="lazy" alt="Business Planning " class="service-icon">
-                                </div>
-                                <div class="bold-text">Custom Screenuing</div>
-                            </div>
-                            <p>There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
-                        </div>
-                        <div id="w-node-_9104910f-62a6-dc0c-724a-15eae74ba3c0-f3e30ed3" class="service">
-                            <div class="service-topics">
-                                <div class="service-icons">
-                                    <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c333619574103d47f9fd_Group%202225.svg" loading="lazy" alt="File Icon" class="service-icon">
-                                    </div>
-                                    <div class="bold-text">Eliminations</div>
-                                </div>
-                                <p>There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
-                            </div>
-                            <div id="w-node-_9104910f-62a6-dc0c-724a-15eae74ba3c8-f3e30ed3" class="service">
-                                <div class="service-topics">
-                                    <div class="service-icons">
-                                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3339325965a9b82c79d_award%201.svg" loading="lazy" alt="Achievement Icon" class="service-icon">
-                                        </div>
-                                        <div class="bold-text">Recall</div>
-                                    </div>
-                                    <p>There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
-                                </div>
-                                <div id="w-node-_9104910f-62a6-dc0c-724a-15eae74ba3d0-f3e30ed3" class="service">
-                                    <div class="service-topics">
-                                        <div class="service-icons">
-                                            <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c333932596958182c79e_Group%202227.svg" loading="lazy" alt="Message Icon" class="service-icon">
-                                            </div>
-                                            <div class="bold-text">Scheduling Options</div>
-                                        </div>
-                                        <p>There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-
 <section class="about-page-review-section">
-<div class="about-page-review-container w-container">
-  <div class="about-page-review-main-block background-change">
-    <h2 class="about-page-review-heading">Sweet word from sweet people</h2>
-    <p class="about-page-review-para">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text.Magaliqua Quis ipsum suspe.</p>
-    <div class="review-block">
+  <div class="about-page-review-container w-container">
+    <div class="about-page-review-main-block background-change">
+      <h2 class="about-page-review-heading">Sweet word from sweet people</h2>
+      <p class="about-page-review-para">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text.Magaliqua Quis ipsum suspe.</p>
       <div class="review-block">
-        <div class="home-page-reviews">
-          <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50" class="review">
-            <div class="home-page-quotes-block">
-              <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6422b89a3271b5175628814a_Mask%20group%20(12).svg" loading="lazy" alt="Review Quotes" class="quotes-icon">
+        <div class="review-block">
+          <div class="home-page-reviews">
+            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50" class="review">
+              <div class="home-page-quotes-block">
+                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6422b89a3271b5175628814a_Mask%20group%20(12).svg" loading="lazy" alt="Review Quotes" class="quotes-icon">
               </div>
               <div class="paragraph-block">
                 <p class="review-text">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text.Magaliqua Quis ipsum suspe.</p>
@@ -3077,142 +3424,193 @@
                 </div>
                 <div class="profile-image-block-one">
                   <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642a65dddcf107711ef8db9d_Review%20User%20One.webp" loading="lazy" alt="Review One Image">
-                  </div>
-                </div>
-              </div>
-              <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60-6c8f4e50" data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60" class="review" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                <div class="home-page-quotes-block">
-                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6422b89a3271b5175628814a_Mask%20group%20(12).svg" loading="lazy" alt="Review Quotes" class="quotes-icon">
-                  </div>
-                  <div class="paragraph-block">
-                    <p class="review-text">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text.Magaliqua Quis ipsum suspe.</p>
-                  </div>
-                  <div class="people-name-and-image">
-                    <div class="name-block">
-                      <div class="header-small heading-small">Selena Miller</div>
-                      <p class="job-role">Operations Director</p>
-                    </div>
-                    <div class="profile-image-block-one">
-                      <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642a65dc5288622882dd492f_Review%20User%20Two.webp" loading="lazy" alt="Review Two Image" class="girl">
-                      </div>
-                    </div>
-                  </div>
-                  <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e-6c8f4e50" data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e" class="review" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                    <div class="home-page-quotes-block">
-                      <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6422b89a3271b5175628814a_Mask%20group%20(12).svg" loading="lazy" alt="Review Quotes" class="quotes-icon">
-                      </div>
-                      <div class="paragraph-block">
-                        <p class="review-text">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text.Magaliqua Quis ipsum suspe.</p>
-                      </div>
-                      <div class="people-name-and-image">
-                        <div class="name-block">
-                          <div class="header-small heading-small">Keith Anderson</div>
-                          <p class="job-role">Premium Customer</p>
-                        </div>
-                        <div class="profile-image-block-one">
-                          <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642a65e4164f5ff6492b5f93_Review%20User%20Three.webp" loading="lazy" alt="Review Three Image" class="boy-two">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
-          </section>
+            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60-6c8f4e50" data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60" class="review" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+              <div class="home-page-quotes-block">
+                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6422b89a3271b5175628814a_Mask%20group%20(12).svg" loading="lazy" alt="Review Quotes" class="quotes-icon">
+              </div>
+              <div class="paragraph-block">
+                <p class="review-text">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text.Magaliqua Quis ipsum suspe.</p>
+              </div>
+              <div class="people-name-and-image">
+                <div class="name-block">
+                  <div class="header-small heading-small">Selena Miller</div>
+                  <p class="job-role">Operations Director</p>
+                </div>
+                <div class="profile-image-block-one">
+                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642a65dc5288622882dd492f_Review%20User%20Two.webp" loading="lazy" alt="Review Two Image" class="girl">
+                </div>
+              </div>
+            </div>
+            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e-6c8f4e50" data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e" class="review" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+              <div class="home-page-quotes-block">
+                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6422b89a3271b5175628814a_Mask%20group%20(12).svg" loading="lazy" alt="Review Quotes" class="quotes-icon">
+              </div>
+              <div class="paragraph-block">
+                <p class="review-text">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text.Magaliqua Quis ipsum suspe.</p>
+              </div>
+              <div class="people-name-and-image">
+                <div class="name-block">
+                  <div class="header-small heading-small">Keith Anderson</div>
+                  <p class="job-role">Premium Customer</p>
+                </div>
+                <div class="profile-image-block-one">
+                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642a65e4164f5ff6492b5f93_Review%20User%20Three.webp" loading="lazy" alt="Review Three Image" class="boy-two">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-          <script>
-        // Intersection Observer for scroll-triggered animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Main section is visible, trigger all animations
-                    triggerAnimations();
-                    // Stop observing once animations are triggered
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        function triggerAnimations() {
-            // Animate images
-            const successImage = document.querySelector('.success-image');
-            const revenue = document.querySelector('.revenue');
-            const graphicalImage = document.querySelector('.graphical-image-block');
-            const utilizeTime = document.querySelector('.utilize-time');
-            
-            // Animate text elements
-            const header = document.querySelector('.feature-success-header');
-            const description = document.querySelector('.feature-sucess-description');
-            const checkLists = document.querySelectorAll('.technology-check-list');
-            const checkIcons = document.querySelectorAll('.technology-checklist-icon');
-
-            // Add animate class to trigger CSS transitions
-            setTimeout(() => successImage?.classList.add('animate'), 100);
-            setTimeout(() => revenue?.classList.add('animate'), 200);
-            setTimeout(() => header?.classList.add('animate'), 300);
-            setTimeout(() => graphicalImage?.classList.add('animate'), 400);
-            setTimeout(() => description?.classList.add('animate'), 500);
-            setTimeout(() => utilizeTime?.classList.add('animate'), 800);
-            
-            // Animate check lists
-            checkLists.forEach((list, index) => {
-                setTimeout(() => list.classList.add('animate'), 700 + (index * 200));
-            });
-            
-            // Animate check icons with stagger
-            checkIcons.forEach((icon, index) => {
-                setTimeout(() => icon.classList.add('animate'), 900 + (index * 200));
-            });
-        }
-
-        // Start observing the section
-        document.addEventListener('DOMContentLoaded', () => {
-            const section = document.getElementById('animated-section');
-            if (section) {
-                observer.observe(section);
-            }
-        });
-
-        // Add subtle hover effects only
-        document.querySelectorAll('.technology-check-list').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateX(5px)';
-                this.style.transition = 'transform 0.2s ease';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateX(0)';
-            });
-        });
-    </script>
 <script>
-// Trigger animation on scroll
-document.addEventListener("DOMContentLoaded", function () {
-  const section = document.querySelector(".new-ideas-section");
+  // Intersection Observer for scroll-triggered animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
 
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          section.classList.add("animate");
-          observer.unobserve(section); // Run only once
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Main section is visible, trigger all animations
+        triggerAnimations();
+        // Stop observing once animations are triggered
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  function triggerAnimations() {
+    // Animate images
+    const successImage = document.querySelector('.success-image');
+    const revenue = document.querySelector('.revenue');
+    const graphicalImage = document.querySelector('.graphical-image-block');
+    const utilizeTime = document.querySelector('.utilize-time');
+
+    // Animate text elements
+    const header = document.querySelector('.feature-success-header');
+    const description = document.querySelector('.feature-sucess-description');
+    const checkLists = document.querySelectorAll('.technology-check-list');
+    const checkIcons = document.querySelectorAll('.technology-checklist-icon');
+
+    // Add animate class to trigger CSS transitions
+    setTimeout(() => successImage?.classList.add('animate'), 100);
+    setTimeout(() => revenue?.classList.add('animate'), 200);
+    setTimeout(() => header?.classList.add('animate'), 300);
+    setTimeout(() => graphicalImage?.classList.add('animate'), 400);
+    setTimeout(() => description?.classList.add('animate'), 500);
+    setTimeout(() => utilizeTime?.classList.add('animate'), 800);
+
+    // Animate check lists
+    checkLists.forEach((list, index) => {
+      setTimeout(() => list.classList.add('animate'), 700 + (index * 200));
+    });
+
+    // Animate check icons with stagger
+    checkIcons.forEach((icon, index) => {
+      setTimeout(() => icon.classList.add('animate'), 900 + (index * 200));
+    });
+  }
+
+  // Start observing the section
+  document.addEventListener('DOMContentLoaded', () => {
+    const section = document.getElementById('animated-section');
+    if (section) {
+      observer.observe(section);
+    }
+  });
+
+  // Add subtle hover effects only
+  document.querySelectorAll('.technology-check-list').forEach(item => {
+    item.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateX(5px)';
+      this.style.transition = 'transform 0.2s ease';
+    });
+
+    item.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateX(0)';
+    });
+  });
+</script>
+<script>
+  // Trigger animation on scroll
+  document.addEventListener("DOMContentLoaded", function() {
+    const section = document.querySelector(".new-ideas-section");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            section.classList.add("animate");
+            observer.unobserve(section); // Run only once
+          }
+        });
+      }, {
+        threshold: 0.2
+      }
+    );
+
+    observer.observe(section);
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const accordions = document.querySelectorAll(".questions-block");
+
+    // Accordion toggle
+    accordions.forEach(block => {
+      const header = block.querySelector(".question-block");
+      const answer = block.querySelector(".answers-block");
+      const plusIcon = block.querySelector(".plus-icon");
+      const minusIcon = block.querySelector(".minus-icon");
+
+      header.addEventListener("click", () => {
+        const isOpen = answer.style.height && answer.style.height !== "0px";
+
+        // Close all
+        accordions.forEach(other => {
+          other.querySelector(".answers-block").style.height = "0px";
+          other.querySelector(".plus-icon").style.opacity = "1";
+          other.querySelector(".minus-icon").style.opacity = "0";
+          other.querySelector(".question-block").classList.remove("active");
+        });
+
+        // Open clicked if closed
+        if (!isOpen) {
+          answer.style.height = answer.scrollHeight + "px";
+          plusIcon.style.opacity = "0";
+          minusIcon.style.opacity = "1";
+          header.classList.add("active");
         }
       });
-    },
-    { threshold: 0.2 }
-  );
+    });
 
-  observer.observe(section);
-});
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          observer.unobserve(entry.target); // run once
+        }
+      });
+    }, {
+      threshold: 0.3
+    }); // trigger when 30% visible
+
+    // Watch the images
+    const animatedElements = document.querySelectorAll(".question-main-image, .real-time-user");
+    animatedElements.forEach(el => observer.observe(el));
+  });
 </script>
-    
+
 <footer class="zeta-home-page-footer-section"
         style="margin-top: 0px;background-image: url('https://makeopinion.com/en/assets/images_new/footer-bg.png');background-size: cover;background-position: 0 0">
         <div class="zeta-home-page-footer-container-two w-container">

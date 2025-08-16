@@ -2088,7 +2088,7 @@ textarea.w-input, textarea.w-select {
 :root {
   --dim-grey: #6b6b6b;
   --alice-blue: #daf0fe;
-  --slate-blue: #3f53d8;
+  --slate-blue: #0070E1;
   --button-background: white;
   --white-smoke-background: #f8f9fa;
   --light-black: #1d1d21;
@@ -3720,7 +3720,7 @@ blockquote {
 }
 
 .button-text.business-button-text {
-  color: #3f53d8;
+  color: #0070DF;
 }
 
 .popular-block {
@@ -3846,8 +3846,8 @@ blockquote {
 .button {
   color: #fff;
   cursor: pointer;
-  background-color: #3f53d8;
-  border: 1px #3f53d8;
+  background-color: #0070DF;
+  border: 1px #0070DF;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
@@ -3923,7 +3923,7 @@ blockquote {
 }
 
 .learn-more {
-  color: #3f53d8;
+  color: #0070DF;
   font-family: Inter, sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -4499,8 +4499,8 @@ blockquote {
 .zeta-home-page-trial-button {
   color: #fff;
   cursor: pointer;
-  background-color: #3f53d8;
-  border: 1px #3f53d8;
+  background-color: #0070DF;
+  border: 1px #0070DF;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
@@ -4538,7 +4538,7 @@ blockquote {
 }
 
 .zeta-home-page-trial-button.home-four-start-free-trial {
-  background-color: #3f53d8;
+  background-color: #0070DF;
   border-style: none;
   border-color: #fff;
   margin-left: auto;
@@ -5655,7 +5655,7 @@ blockquote {
   background-color: var(--slate-blue);
   color: #fff;
   cursor: pointer;
-  border: 1px #3f53d8;
+  border: 1px #0070DF;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
@@ -5708,7 +5708,7 @@ blockquote {
 
 .trial-button.start-free-trial-button-block.home-five-button {
   color: #fff;
-  background-color: #3f53d8;
+  background-color: #0070DF;
 }
 
 .trial-button.start-free-trial-button-block.home-five-button.padding {
@@ -6892,7 +6892,7 @@ blockquote {
 .service-image-and-text-block {
   grid-column-gap: 60px;
   grid-row-gap: 60px;
-  background-color: #3f53d8;
+  background-color: #0070DF;
   border-radius: 20px;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
@@ -7530,7 +7530,7 @@ blockquote {
 }
 
 .pricing-plans.business-plan {
-  background-color: #3f53d8;
+  background-color: #0070DF;
   padding-top: 30px;
 }
 
@@ -7583,7 +7583,7 @@ blockquote {
 }
 
 .get-start-button {
-  background-color: #3f53d8;
+  background-color: #0070DF;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
@@ -7869,7 +7869,7 @@ blockquote {
 
 .tab-link-tab-4.w--current {
   background-color: #fff;
-  border-bottom-color: #3f53d8;
+  border-bottom-color: #0070DF;
 }
 
 .tab-main-image-block {
@@ -7896,7 +7896,7 @@ blockquote {
 
 .tab-link-tab-2.w--current {
   background-color: #fff;
-  border-bottom-color: #3f53d8;
+  border-bottom-color: #0070DF;
 }
 
 .tab-icons {
@@ -7954,7 +7954,7 @@ blockquote {
 .tab-link-tab-1.w--current {
   background-color: #fff;
   border: 1px #000;
-  border-bottom: 2px solid #3f53d8;
+  border-bottom: 2px solid #0070DF;
 }
 
 .tabs-menu {
@@ -8424,7 +8424,7 @@ blockquote {
 
 .submit-button-three {
   color: #fff;
-  background-color: #3f53d8;
+  background-color: #0070DF;
   border-radius: 0 4px 4px 0;
   padding: .73rem 23px;
   font-family: Inter, sans-serif;
@@ -9117,7 +9117,7 @@ blockquote {
 }
 
 .about-page-mission-section {
-  background-color: #3f53d8;
+  background-color: #0070DF;
   padding: 110px 15px;
 }
 
@@ -9451,7 +9451,7 @@ blockquote {
 
 .team-social-icon-block {
   grid-column-gap: 18px;
-  background-color: #3f53d8;
+  background-color: #0070DF;
   border-radius: 4px;
   justify-content: space-around;
   align-items: center;
@@ -9777,7 +9777,7 @@ blockquote {
 }
 
 .subscribe-button {
-  background-color: #3f53d8;
+  background-color: #0070DF;
   border-radius: 4px;
   width: 100%;
   padding-top: 20px;
@@ -9832,7 +9832,7 @@ blockquote {
 }
 
 .category {
-  background-color: #3f53d8;
+  background-color: #0070DF;
   border-radius: 4px;
   padding: 5px 17px;
   position: absolute;
@@ -10085,7 +10085,7 @@ blockquote {
 }
 
 .contact-us-submit {
-  background-color: #3f53d8;
+  background-color: #0070DF;
   border-radius: 4px;
   padding: 14px 38px;
   font-family: Plus Jakarta Sans, sans-serif;
@@ -10467,7 +10467,7 @@ blockquote {
 }
 
 .sign-up-submit {
-  background-color: #3f53d8;
+  background-color: #0070DF;
   border-radius: 4px;
   width: 100%;
   margin-bottom: 10px;
@@ -10643,7 +10643,7 @@ blockquote {
 }
 
 .author {
-  color: #3f53d8;
+  color: #0070DF;
   font-size: 1.25rem;
   line-height: 1.875rem;
   text-decoration: none;
@@ -11678,7 +11678,7 @@ blockquote {
 }
 
 .arrow {
-  background-color: #3f53d8;
+  background-color: #0070DF;
   border-radius: 50px;
   justify-content: center;
   align-items: center;
@@ -11780,7 +11780,7 @@ blockquote {
 }
 
 .our-service-section {
-  /* background-color: #3f53d8; */
+  /* background-color: #0070DF; */
   padding: 110px 15px;
 }
 
@@ -12292,7 +12292,7 @@ blockquote {
 }
 
 .service-technology {
-  background-color: #3f53d8;
+  background-color: #0070DF;
   padding: 110px 15px 100px;
   display: block;
 }
@@ -12632,7 +12632,7 @@ blockquote {
 }
 
 .new-ideas.bg-blue {
-  background-color: #3f53d8;
+  background-color: #0070DF;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -13091,7 +13091,7 @@ blockquote {
 }
 
 .heading-scroll-text {
-  color: #3f53d8;
+  color: #0070DF;
   margin-top: 0%;
   font-family: Inter, sans-serif;
   font-size: 3.875rem;
@@ -13152,8 +13152,8 @@ blockquote {
 .trial-button-two {
   color: #fff;
   cursor: pointer;
-  background-color: #3f53d8;
-  border: 1px #3f53d8;
+  background-color: #0070DF;
+  border: 1px #0070DF;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
@@ -13174,7 +13174,7 @@ blockquote {
 
 .trial-button-two.start-free-trial-button-block.home-five-button {
   color: #fff;
-  background-color: #3f53d8;
+  background-color: #0070DF;
 }
 
 .service-banner-float-image {
@@ -13952,7 +13952,7 @@ blockquote {
 }
 
 .feature-success-section {
-  background-color: #fff7ef;
+  /* background-color: #fff7ef; */
   padding: 120px 15px;
   display: block;
 }
@@ -14252,7 +14252,7 @@ blockquote {
 }
 
 .style-guide-color-pallette-block-color.blue {
-  background-color: #3f53d8;
+  background-color: #0070DF;
 }
 
 .style-guide-color-pallette-block-color.sky-blue {
@@ -14373,7 +14373,7 @@ blockquote {
 }
 
 .licence-link {
-  color: #3f53d8;
+  color: #0070DF;
   font-size: 1rem;
   text-decoration: none;
 }

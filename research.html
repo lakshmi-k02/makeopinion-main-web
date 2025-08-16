@@ -159,20 +159,174 @@
             <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
         </div>
     </header>
+
+    <style>
+        :root {
+            --dim-grey: #6b6b6b;
+            --alice-blue: #daf0fe;
+            --slate-blue: #0070E1;
+            --button-background: white;
+            --white-smoke-background: #f8f9fa;
+            --light-black: #1d1d21;
+            --white-smoke: #eef1f4;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            color: #333;
+            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            background-color: #fff;
+        }
+        
+        .our-service-section {
+            background-color: #fff;
+            padding: 110px 15px;
+            padding-top: 50px !important;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: 0 0;
+            position: relative;
+        }
+        
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .our-service-main-block {
+            text-align: center;
+            padding: 0 15px;
+        }
+        
+        .our-service-heading {
+            font-size: 36px;
+            color: var(--light-black);
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        .our-service-paragraph {
+            color: var(--dim-grey);
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            line-height: 1.6;
+        }
+        
+        .our-service-block {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .service {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 112, 225, 0.15);
+        }
+        
+        .service-topics {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .service-icons {
+            width: 60px;
+            height: 60px;
+            background-color: var(--alice-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .service-icon {
+            width: 30px;
+            height: 30px;
+        }
+        
+        .bold-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--light-black);
+            line-height: 1.4;
+        }
+        
+        .service p {
+            color: var(--dim-grey);
+            font-size: 16px;
+            line-height: 1.7;
+            margin-top: 15px;
+        }
+        
+        .section-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            z-index: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .our-service-section {
+                padding: 60px 15px;
+            }
+            
+            .our-service-heading {
+                font-size: 28px;
+            }
+            
+            .our-service-paragraph {
+                font-size: 16px;
+            }
+            
+            .service {
+                padding: 30px;
+            }
+        }
+    </style>
     <style>
         .homepage-hero-section {
-  padding-bottom: 220px; /* enough space for cards without overlap */
-  position: relative;
-}
+            padding-bottom: 220px;
+            /* enough space for cards without overlap */
+            position: relative;
+        }
 
-.provide-section {
-  /* position: absolute; */
-  bottom: -80px; /* half of the card height so it sits nicely */
-  left: 0;
-  width: 100%;
-  z-index: 2;
-}
-
+        .provide-section {
+            /* position: absolute; */
+            bottom: -80px;
+            /* half of the card height so it sits nicely */
+            left: 0;
+            width: 100%;
+            z-index: 2;
+        }
     </style>
     <style>
         .heder-position-center {
@@ -216,7 +370,7 @@
 
         /* Hover effect for the card */
         .options-list:hover .options {
-            transform: translateY(-5px);
+            /* transform: translateY(-5px); */
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
             background: linear-gradient(135deg, #e8f2ff 0%, #f0f8ff 100%);
         }
@@ -334,6 +488,7 @@
         .w-dyn-list {
             margin-top: 50px;
             overflow: hidden;
+
         }
 
         .w-dyn-list {
@@ -346,15 +501,18 @@
         h1 {
             font-size: 56px
         }
-        .provide-section {
-  margin-top:-10px; /* match reference file */
-  position: relative;
-  z-index: 2; /* make sure it’s above the background */
-}
-.homepage-hero-section {
-  padding-bottom: 100px;
-}
 
+        .provide-section {
+            margin-top: -10px;
+            /* match reference file */
+            position: relative;
+            z-index: 2;
+            /* make sure it’s above the background */
+        }
+
+        .homepage-hero-section {
+            padding-bottom: 100px;
+        }
     </style>
     <style>
         h1 {
@@ -546,145 +704,263 @@
             color: white;
         }
     </style>
+
+
     <style>
-        .answers-block {
-            overflow: hidden;
-            transition: height 0.3s ease;
-        }
+  .answers-block {
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
 
-        .plus-icon,
-        .minus-icon {
-            transition: opacity 0.2s ease;
-        }
+  .plus-icon,
+  .minus-icon {
+    transition: opacity 0.2s ease;
+  }
 
-        .question-block {
-            background-color: #fff;
-            /* default */
-            transition: background-color 0.3s ease;
-        }
+  .question-block {
+    background-color: #fff;
+    /* default */
+    transition: background-color 0.3s ease;
+  }
 
-        .question-block.active {
-            background-color: #3f53d8;
-            /* open state color */
-        }
+  .question-block.active {
+    background-color: #0070E1 !important;
+    /* darker open state */
+  }
 
-        .answers-block {
-            overflow: hidden;
-            transition: height 0.3s ease;
-        }
+  .question-block .bold-text.accordion {
+    color: #1d1d21;
+    /* default text color */
+    transition: color 0.3s ease;
+  }
 
-        .plus-icon,
-        .minus-icon {
-            transition: opacity 0.2s ease;
-        }
+  .question-block.active .bold-text.accordion {
+    color: #fff;
+    /* white text when open */
+  }
 
-        .question-block {
-            background-color: #fff;
-            /* default */
-            transition: background-color 0.3s ease;
-        }
+  .questions-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-        .question-block.active {
-            background-color: #0070E1;
-            /* darker open state */
-        }
+  /* Initially hidden for viewport-triggered animation */
+  .question-main-image,
+  .real-time-user {
+    opacity: 0;
+    transform: translateX(50px) scale(0.9);
+  }
 
-        .question-block .bold-text.accordion {
-            color: #1d1d21;
-            /* default text color */
-            transition: color 0.3s ease;
-        }
+  /* Animation only starts when .animate is added */
+  .question-main-image.animate {
+    animation: slideInScale 1s ease-out forwards;
+  }
 
-        .question-block.active .bold-text.accordion {
-            color: #fff;
-            /* white text when open */
-        }
+  .real-time-user.animate {
+    animation: popIn 0.8s ease-out forwards;
+    transform-style: preserve-3d;
+    /* keep the same 3D rendering style */
+  }
 
-        .questions-image {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: translate3d(0px, 0px, 0px) scale3d(0.8, 0.8, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    }
 
-        .question-main-image {
-            opacity: 0;
-            transform: translateX(50px) scale(0.9);
-            animation: slideInScale 1s ease-out 0.8s forwards;
-        }
+    100% {
+      opacity: 1;
+      transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    }
+  }
 
-        .question-image {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-        }
 
-        .real-time-user {
-            position: absolute;
-            top: 40px;
-            left: 1x0px;
-            opacity: 0;
-            transform: translateX(-30px) scale(0.8);
-            animation: slideInScale 0.8s ease-out 1.2s forwards;
-            z-index: 2;
-        }
+  .question-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
 
-        .real-time-user-image {
-            width: 280px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            border: 4px solid white;
-        }
+  .real-time-user {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    z-index: 2;
+  }
 
-        @keyframes slideInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+  .real-time-user-image {
+    width: 280px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border: 4px solid white;
+  }
 
-        @keyframes slideInScale {
-            to {
-                opacity: 1;
-                transform: translateX(0) scale(1);
-            }
-        }
+  @keyframes slideInScale {
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
 
-        @media (max-width: 768px) {
-            .service-questions {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
+  @media (max-width: 768px) {
+    .service-questions {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
 
-            .questions-header {
-                font-size: 2rem;
-            }
+    .questions-header {
+      font-size: 2rem;
+    }
 
-            .question-block {
-                padding: 20px;
-            }
+    .question-block {
+      padding: 20px;
+    }
 
-            .answer-paragraph {
-                padding: 0 20px 20px 20px;
-            }
+    .answer-paragraph {
+      padding: 0 20px 20px 20px;
+    }
 
-            .real-time-user {
-                position: static;
-                margin-top: 20px;
-                transform: translateX(0) scale(1);
-            }
-        }
-    </style>
+    .real-time-user {
+      position: static;
+      margin-top: 20px;
+      transform: translateX(0) scale(1);
+    }
+  }
+</style>
 
+    <style>
+
+
+/* Initial hidden state for animation */
+.provided-solutions {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+/* Visible state after animation trigger */
+.provided-solutions.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover effect */
+.provided-solutions:hover {
+  background-color: #0070DF !important;
+}
+
+.provided-solutions:hover .provide-options,
+.provided-solutions:hover .provided-solutions-paragraph {
+  color: #fff !important;
+}
+
+/* Base state before animation */
+.provided-solutions {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 
+    opacity 0.6s ease,
+    transform 0.6s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Animated state after scroll trigger */
+.provided-solutions.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover state */
+.provided-solutions:hover {
+  background-color: #0070DF !important;
+}
+
+.provided-solutions:hover .provide-options,
+.provided-solutions:hover .provided-solutions-paragraph {
+  color: #fff !important;
+}
+/* Base state before animation */
+.provided-solutions {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 
+    opacity 0.6s ease,
+    transform 0.6s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Animated state after scroll trigger */
+.provided-solutions.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover state */
+.provided-solutions:hover {
+  background-color: #0070DF !important;
+}
+
+.provided-solutions:hover .provide-options,
+.provided-solutions:hover .provided-solutions-paragraph {
+  color: #fff !important;
+}
+
+/* Base state before animation */
+/* Base state before animation */
+.provided-solutions {
+  opacity: 0;
+  transform: scale(1.12) translateX(0);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Hover style */
+.provided-solutions:hover {
+  background-color: #0070DF !important;
+}
+.provided-solutions:hover .provide-options,
+.provided-solutions:hover .provided-solutions-paragraph {
+  color: #fff !important;
+}
+.provided-solutions:hover .provide-solutions-icon {
+  filter: invert(100%) !important;
+}
+
+/* Keyframes for left tile */
+@keyframes zoomOutLeft {
+  0%   { opacity: 0; transform: scale(1.12) translateX(-28px); }
+  100% { opacity: 1; transform: scale(1) translateX(0); }
+}
+
+/* Keyframes for right tile */
+@keyframes zoomOutRight {
+  0%   { opacity: 0; transform: scale(1.12) translateX(28px); }
+  100% { opacity: 1; transform: scale(1) translateX(0); }
+}
+
+/* Active animation states */
+.animate-left {
+  animation: zoomOutLeft 4s cubic-bezier(0.25, 1, 0.3, 1) forwards;
+}
+.animate-right {
+  animation: zoomOutRight 4s cubic-bezier(0.25, 1, 0.3, 1) forwards;
+}
+
+
+
+</style>
     <!-- Desktop Hero Section -->
     <section class="homepage-hero-section hero desktop-only"
         style="background: #fff; padding-bottom: 100px; padding-top: 130px; background-color: #FFF; background-image: url('./assets/images_new/bg5.png'); background-size: cover; background-position: 0 0">
 
         <!-- Container for Hero Content -->
-        <div class="homepage-hero-container w-container" style= "padding-bottom: 50px;">
+        <div class="homepage-hero-container w-container" style="padding-bottom: 50px;">
 
             <!-- Main Block for Hero Content -->
             <div class="homepage-main-block desktop-only">
@@ -755,52 +1031,52 @@
 
         </div>
         <div id="w-node-b80b60ec-434c-8789-2101-36ebbc2ddd0e-29476037"
-                    class="hero-image-block home-three-hero-image-block" style="margin-top: -60px;">
+            class="hero-image-block home-three-hero-image-block" style="margin-top: -60px;">
 
-                    <section class="provide-section" style="padding-top: 10px;margin-top: 0px;top: 20px;">
-                        <div class="page-container w-container">
-                            <div class="provide-main-block">
-                                <div class="provide-option">
-                                    <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
-                                        class="options-list">
-                                        <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edb9-f3e30ed3"
-                                            style="background-color: rgb(255, 255, 255);" class="options">
-                                            <div class="option-icon"><img
-                                                    src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3330a2c09d732d3f687_Group%202216.svg"
-                                                    loading="lazy"
-                                                    id="w-node-f87f6d2a-8256-0570-f306-218c1132edbb-f3e30ed3"
-                                                    alt="Pricing Logo" class="option-images"></div>
-                                            <div class="bold-text margin-bottom center">Do It Yourself</div>
-                                            <p class="provide-caption">Define audiences, launch surveys, and get clear results, all in one place.</p>
-                                        </div>
-                                        <a style="opacity: 0;" href="/service-one" class="arrow w-inline-block"><img
-                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
-                                                loading="lazy" alt="White Arrow"></a>
-                                    </div>
-                                    <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
-                                        style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-                                        class="options-list">
-                                        <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edc3-f3e30ed3"
-                                            data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60"
-                                            style="background-color: rgb(255, 255, 255);" class="options">
-                                            <div class="option-icon"><img
-                                                    src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c33310e2ffdd0a454149_Group%202215.svg"
-                                                    loading="lazy"
-                                                    id="w-node-f87f6d2a-8256-0570-f306-218c1132edc5-f3e30ed3"
-                                                    alt="Business Collaboration" class="option-images"></div>
-                                            <div class="bold-text margin-bottom center">Full Service
-</div>
-                                            <p class="provide-caption">From survey design to final insights, our team runs the entire process for you.</p>
-                                        </div>
-                                        <a style="opacity: 0;" href="/service-two" class="arrow w-inline-block"><img
-                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
-                                                loading="lazy" alt="White Arrow"></a>
-                                    </div>
+            <section class="provide-section" style="padding-top: 10px;margin-top: 0px;top: 20px;">
+                <div class="page-container w-container">
+                    <div class="provide-main-block">
+                        <div class="provide-option">
+                            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
+                                class="options-list">
+                                <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edb9-f3e30ed3"
+                                    style="background-color: rgb(255, 255, 255);" class="options">
+                                    <div class="option-icon"><img
+                                            src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3330a2c09d732d3f687_Group%202216.svg"
+                                            loading="lazy"
+                                            id="w-node-f87f6d2a-8256-0570-f306-218c1132edbb-f3e30ed3"
+                                            alt="Pricing Logo" class="option-images"></div>
+                                    <div class="bold-text margin-bottom center">Do It Yourself</div>
+                                    <p class="provide-caption">Define audiences, launch surveys, and get clear results, all in one place.</p>
                                 </div>
+                                <a style="opacity: 0;" href="/service-one" class="arrow w-inline-block"><img
+                                        src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                        loading="lazy" alt="White Arrow"></a>
+                            </div>
+                            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
+                                style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                                class="options-list">
+                                <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edc3-f3e30ed3"
+                                    data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60"
+                                    style="background-color: rgb(255, 255, 255);" class="options">
+                                    <div class="option-icon"><img
+                                            src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c33310e2ffdd0a454149_Group%202215.svg"
+                                            loading="lazy"
+                                            id="w-node-f87f6d2a-8256-0570-f306-218c1132edc5-f3e30ed3"
+                                            alt="Business Collaboration" class="option-images"></div>
+                                    <div class="bold-text margin-bottom center">Full Service
+                                    </div>
+                                    <p class="provide-caption">From survey design to final insights, our team runs the entire process for you.</p>
+                                </div>
+                                <a style="opacity: 0;" href="/service-two" class="arrow w-inline-block"><img
+                                        src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                        loading="lazy" alt="White Arrow"></a>
                             </div>
                         </div>
-                    </section>
+                    </div>
                 </div>
+            </section>
+        </div>
 
     </section>
 
@@ -909,9 +1185,46 @@
         </div>
     </section>
 
+    <section class="features-provide-section">
+        <div class="feature-container w-container">
+            <div class="feature-provide-main-block">
+                <h2 class="feature-provide-heading">We provide complete end-to-end solutions</h2>
+                <p class="feature-provide-paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text.Which don’t look even of available</p>
+                <div class="provides-main-block">
+                    <div id="w-node-_101fe978-167a-8cf0-fd60-a01db7e5e949-c65badb0" data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e949" style="opacity: 1; background-color: rgb(255, 255, 255); transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="provided-solutions">
+                        <div class="provided-solutions-icon"><img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3333896b5da7dee3dc3_Group%202221.svg" loading="lazy" width="64" height="32" alt="Menu" data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e94b" class="provide-solutions-icon" style="filter: invert(0%);"></div>
+                        <div class="provided-solutions-text">
+                            <div data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e94d" class="provide-options margin-bottom-twenty" style="color: rgb(29, 29, 33);">Software Development</div>
+                            <p data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e94f" class="provided-solutions-paragraph" style="color: rgb(107, 107, 107);">There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
+                        </div>
+                    </div>
+                    <div id="w-node-_101fe978-167a-8cf0-fd60-a01db7e5e951-c65badb0" data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e951" style="opacity: 1; background-color: rgb(255, 255, 255); transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="provided-solutions">
+                        <div class="provided-solutions-icon"><img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c33374955c8bc8f0857a_Group%202222.svg" loading="lazy" width="64" height="32" alt="Statistic Icon" data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e953" class="provide-solutions-icon" style="filter: invert(0%);"></div>
+                        <div class="provided-solutions-text">
+                            <div data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e955" class="provide-options margin-bottom-twenty" style="color: rgb(29, 29, 33);">Branding Strategy</div>
+                            <p data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e957" class="provided-solutions-paragraph" style="color: rgb(107, 107, 107);">There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
+                        </div>
+                    </div>
+                    <div id="w-node-_101fe978-167a-8cf0-fd60-a01db7e5e959-c65badb0" data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e959" style="opacity: 1; background-color: rgb(255, 255, 255); transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="provided-solutions">
+                        <div class="provided-solutions-icon"><img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c333619574103d47f9fd_Group%202225.svg" loading="lazy" width="64" height="32" alt="File Icon" data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e95b" class="provide-solutions-icon" style="filter: invert(0%);"></div>
+                        <div class="provided-solutions-text">
+                            <div data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e95d" class="provide-options margin-bottom-twenty" style="color: rgb(29, 29, 33);">Data management</div>
+                            <p data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e95f" class="provided-solutions-paragraph" style="color: rgb(107, 107, 107);">There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
+                        </div>
+                    </div>
+                    <div id="w-node-_101fe978-167a-8cf0-fd60-a01db7e5e961-c65badb0" data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e961" style="opacity: 1; background-color: rgb(255, 255, 255); transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="provided-solutions">
+                        <div class="provided-solutions-icon"><img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3339325965a9b82c79d_award%201.svg" loading="lazy" width="64" height="32" alt="Achievement Icon" data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e963" class="provide-solutions-icon" style="filter: invert(0%);"></div>
+                        <div class="provided-solutions-text">
+                            <div data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e965" class="provide-options margin-bottom-twenty" style="color: rgb(29, 29, 33);">Digital transformation</div>
+                            <p data-w-id="101fe978-167a-8cf0-fd60-a01db7e5e967" class="provided-solutions-paragraph" style="color: rgb(107, 107, 107);">There are many variations of passages of Ipsum available, but have suffered dolor sit amet consectetur. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-    <section class="strategy-section" style="background-color:#fff;padding-top: 50px!important;background-image: url('./assets/images_new/bg4.png');background-size: cover;background-position: 0 0">
+    <!-- <section class="strategy-section" style="background-color:#fff;padding-top: 50px!important;background-image: url('./assets/images_new/bg4.png');background-size: cover;background-position: 0 0">
         <div class="page-container w-container">
             <div class="services-block">
                 <h2 class="strategy-heading">End to end Market Research Services</h2>
@@ -978,7 +1291,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- <section class="features-provide-section">
         <div class="feature-container w-container">
             <div class="feature-provide-main-block">
@@ -1083,7 +1396,7 @@
             <div class="our-service-main-block">
                 <h2 class="our-service-heading">Survey Designer</h2>
                 <p class="our-service-paragraph">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit.</p>
-                <div class="our-service-block">
+                <div class="our-service-block" style="margin-top: unset;">
                     <div id="w-node-_9104910f-62a6-dc0c-724a-15eae74ba3a8-f3e30ed3" class="service">
                         <div class="service-topics">
                             <div class="service-icons">
@@ -1148,81 +1461,81 @@
 
 
 
-    <section class="questions-section" >
-        <div class="questions-conatiner w-container">
-            <div class="service-questions">
-                <div class="questions-text-block">
-                    <h2 class="questions-header">Understand Results</h2>
-                    <p class="questions-paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text magaliqua suspe.</p>
-                    <div class="questions">
-                        <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601c8" class="questions-block">
-                            <div class="question-block">
-                                <div class="question-text">
-                                    <div class="bold-text accordion">Survey Insights</div>
-                                </div>
-                                <div class="icon-accordion">
-                                    <div style="opacity: 1;" class="plus-icon">
-                                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
-                                    </div>
-                                    <div style="opacity: 0;" class="minus-icon">
-                                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="height: 0px;" class="answers-block">
-                                <p class="answer-paragraph">Combine anything worth nothing that you can combine anything you see on our services. The possibilities are unlimited!Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            </div>
-                        </div>
-
-                        <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601e2" class="questions-block">
-                            <div class="question-block">
-                                <div>
-                                    <div class="bold-text accordion">Data Exporets</div>
-                                </div>
-                                <div class="icon-accordion">
-                                    <div style="opacity: 1;" class="plus-icon">
-                                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
-                                    </div>
-                                    <div style="opacity: 0;" class="minus-icon">
-                                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="height: 0px;" class="answers-block">
-                                <p class="answer-paragraph">Combine anything worth nothing that you can combine anything you see on our services. The possibilities are unlimited!Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            </div>
-                        </div>
-                        <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601ef" class="questions-block">
-                            <div class="question-block">
-                                <div>
-                                    <div class="bold-text accordion">Insights Presentations</div>
-                                </div>
-                                <div class="icon-accordion">
-                                    <div style="opacity: 1;" class="plus-icon">
-                                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
-                                    </div>
-                                    <div style="opacity: 0;" class="minus-icon">
-                                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="height: 0px;" class="answers-block">
-                                <p class="answer-paragraph">Combine anything worth nothing that you can combine anything you see on our services. The possibilities are unlimited!Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            </div>
-                        </div>
-                    </div>
+    <section class="questions-section">
+  <div class="questions-conatiner w-container">
+    <div class="service-questions">
+      <div class="questions-text-block">
+        <h2 class="questions-header">Understand Results</h2>
+        <p class="questions-paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text magaliqua suspe.</p>
+        <div class="questions">
+          <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601c8" class="questions-block">
+            <div class="question-block">
+              <div class="question-text">
+                <div class="bold-text accordion">Survey Insights</div>
+              </div>
+              <div class="icon-accordion">
+                <div style="opacity: 1;" class="plus-icon">
+                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
                 </div>
-                <div class="questions-image">
-                    <div class="question-main-image">
-                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb924c81324ec8d8155b_Mask%20group%20(71).webp" alt="Employee Image" class="question-image">
-                    </div>
-                    <div class="real-time-user">
-                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb9575b153ea962f73d9_Group%201231.webp" alt="User Count" class="real-time-user-image">
-                    </div>
+                <div style="opacity: 0;" class="minus-icon">
+                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
                 </div>
+              </div>
             </div>
+            <div style="height: 0px;" class="answers-block">
+              <p class="answer-paragraph">Combine anything worth nothing that you can combine anything you see on our services. The possibilities are unlimited!Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+          </div>
+
+          <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601e2" class="questions-block">
+            <div class="question-block">
+              <div>
+                <div class="bold-text accordion">Data Exporets</div>
+              </div>
+              <div class="icon-accordion">
+                <div style="opacity: 1;" class="plus-icon">
+                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
+                </div>
+                <div style="opacity: 0;" class="minus-icon">
+                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
+                </div>
+              </div>
+            </div>
+            <div style="height: 0px;" class="answers-block">
+              <p class="answer-paragraph">Combine anything worth nothing that you can combine anything you see on our services. The possibilities are unlimited!Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+          </div>
+          <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601ef" class="questions-block">
+            <div class="question-block">
+              <div>
+                <div class="bold-text accordion">Insights Presentations</div>
+              </div>
+              <div class="icon-accordion">
+                <div style="opacity: 1;" class="plus-icon">
+                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
+                </div>
+                <div style="opacity: 0;" class="minus-icon">
+                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
+                </div>
+              </div>
+            </div>
+            <div style="height: 0px;" class="answers-block">
+              <p class="answer-paragraph">Combine anything worth nothing that you can combine anything you see on our services. The possibilities are unlimited!Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="questions-image">
+        <div class="question-main-image">
+          <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb924c81324ec8d8155b_Mask%20group%20(71).webp" alt="Employee Image" class="question-image">
+        </div>
+        <div class="real-time-user">
+          <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb9575b153ea962f73d9_Group%201231.webp" alt="User Count" class="real-time-user-image">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>  
 
     <section class="help-center-section" style="background-color:#fff;padding-top: 50px!important;background-image: url('./assets/images_new/bg4.png');background-size: cover;background-position: 0 0">
         <div class="page-container w-container">
@@ -1412,38 +1725,77 @@
 
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const accordions = document.querySelectorAll(".questions-block");
+// Wait until DOM is ready
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".provided-solutions");
 
-            accordions.forEach(block => {
-                const header = block.querySelector(".question-block");
-                const answer = block.querySelector(".answers-block");
-                const plusIcon = block.querySelector(".plus-icon");
-                const minusIcon = block.querySelector(".minus-icon");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add directional animation based on index
+        if (Array.from(cards).indexOf(entry.target) % 2 === 0) {
+          entry.target.classList.add("animate-left");
+        } else {
+          entry.target.classList.add("animate-right");
+        }
+        observer.unobserve(entry.target); // run once
+      }
+    });
+  }, { threshold: 0.4 });
 
-                header.addEventListener("click", () => {
-                    const isOpen = answer.style.height && answer.style.height !== "0px";
+  cards.forEach(card => observer.observe(card));
+});
+</script>
 
-                    // Close all
-                    accordions.forEach(other => {
-                        other.querySelector(".answers-block").style.height = "0px";
-                        other.querySelector(".plus-icon").style.opacity = "1";
-                        other.querySelector(".minus-icon").style.opacity = "0";
-                        other.querySelector(".question-block").classList.remove("active");
-                    });
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const accordions = document.querySelectorAll(".questions-block");
 
-                    // Open clicked if closed
-                    if (!isOpen) {
-                        answer.style.height = answer.scrollHeight + "px";
-                        plusIcon.style.opacity = "0";
-                        minusIcon.style.opacity = "1";
-                        header.classList.add("active");
-                    }
-                });
-            });
+    // Accordion toggle
+    accordions.forEach(block => {
+      const header = block.querySelector(".question-block");
+      const answer = block.querySelector(".answers-block");
+      const plusIcon = block.querySelector(".plus-icon");
+      const minusIcon = block.querySelector(".minus-icon");
+
+      header.addEventListener("click", () => {
+        const isOpen = answer.style.height && answer.style.height !== "0px";
+
+        // Close all
+        accordions.forEach(other => {
+          other.querySelector(".answers-block").style.height = "0px";
+          other.querySelector(".plus-icon").style.opacity = "1";
+          other.querySelector(".minus-icon").style.opacity = "0";
+          other.querySelector(".question-block").classList.remove("active");
         });
-    </script>
 
+        // Open clicked if closed
+        if (!isOpen) {
+          answer.style.height = answer.scrollHeight + "px";
+          plusIcon.style.opacity = "0";
+          minusIcon.style.opacity = "1";
+          header.classList.add("active");
+        }
+      });
+    });
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          observer.unobserve(entry.target); // run once
+        }
+      });
+    }, {
+      threshold: 0.3
+    }); // trigger when 30% visible
+
+    // Watch the images
+    const animatedElements = document.querySelectorAll(".question-main-image, .real-time-user");
+    animatedElements.forEach(el => observer.observe(el));
+  });
+</script>
 
 
 
