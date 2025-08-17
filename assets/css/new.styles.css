@@ -231,11 +231,60 @@
 }
 
 
-   .option-images {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* keeps aspect ratio */
-  /* fix aspect ration to 119X100 */
-    max-width: 119px; /* max width */
-    max-height: 100px; /* max height */
+.option-images {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* keeps aspect ratio */
+    /* fix aspect ration to 119X100 */
+    max-width: 119px;
+    /* max width */
+    max-height: 100px;
+    /* max height */
+}
+
+.provided-solutions-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* keeps aspect ratio */
+    max-width: 32px;
+    /* max width */
+    max-height: 36px;
+    /* max height */
+}
+
+.service-features-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* keeps aspect ratio */
+    max-width: 54px;
+    /* max width */
+    max-height: 54px;
+    /* max height */
+}
+
+.service-icons {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* keeps aspect ratio */
+    max-width: 32px;
+    /* max width */
+    max-height: 32px;
+    /* max height */
+    margin-right: unset;
+
+}
+
+.icon-block {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* keeps aspect ratio */
+    max-width: 38px;
+    /* max width */
+    max-height: 38px;
+    /* max height */
 }
