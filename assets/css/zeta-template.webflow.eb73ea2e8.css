@@ -18316,10 +18316,10 @@ blockquote {
     width: 100%;
   }
 
-  .help {
+  /* .help {
     grid-row-gap: 25px;
     flex-direction: column;
-  }
+  } */
 
   .help-center-section {
     padding-bottom: 60px;
@@ -22016,6 +22016,8 @@ blockquote {
   .help {
     padding-left: 20px;
     padding-right: 40px;
+    /* make these sections center aligned to the screen */
+    text-align: center;
   }
 
   .online-list-items {

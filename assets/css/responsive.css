@@ -519,7 +519,7 @@ h1.home-hero-heading.v2 br {
       display: inline-block;
     }
     .w-dyn-item {
-      max-width: 250px;
+      /* max-width: 250px; */
       display: inline-block;
     }
     
@@ -1087,7 +1087,7 @@ div#chartdiv {
             padding-bottom: 20px;
         }
     }
-}
+
 
 @media (max-width: 767px) {
     .desktop-only {
@@ -1231,8 +1231,9 @@ section.question-section {
 /* Feature button variant (if needed) */
 /* .trial-button.feature-button {
     background-color: transparent !important;
-    border: 2px solid #0070DF !important;  /* Assuming this is your brand color */
+    border: 2px solid #0070DF !important;  /* Assuming this is your brand color 
 } */
+
 
 /* Hover effects */
 /* .trial-button:hover {
