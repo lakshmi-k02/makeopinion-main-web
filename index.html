@@ -161,7 +161,14 @@
         </div>
     </header>
     <style>
-     
+     .mobile-only { display: block; }
+.desktop-only { display: none; }
+
+@media (min-width: 768px) {
+  .mobile-only { display: none; }
+  .desktop-only { display: block; }
+}
+
     </style>
     <style>
         .w-dyn-list2:hover .scroller .scroller-inner {
@@ -218,7 +225,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-    </style> -->
+    </style> 
     <style>
         .marquee-container {
             position: relative;
@@ -371,7 +378,7 @@
             display: flex;
             justify-content: center;
             /* Center cards */
-            gap: 40px;
+            gap: 20px;
             /* Space between cards */
             flex-wrap: wrap;
             /* Allow wrapping on smaller screens */
@@ -487,9 +494,100 @@
             color: white;
         }
     </style>
+    <style>
+        @media (max-width: 767px) {
+            .home-three-hero-section.mobile-only {
+                padding-top: 40px !important;
+                padding-bottom: 10px !important;
+                background-position: center top !important;
+            }
+            .home-three-hero-section.mobile-only .home-four-hero-caption {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .home-three-hero-section.mobile-only .heder-position-center h1 {
+                font-size: 28px;
+                line-height: 1.2;
+                letter-spacing: 0;
+                margin: 0 16px 8px;
+            }
+            .home-three-hero-section.mobile-only .hero-para {
+                font-size: 16px;
+                line-height: 1.5;
+                /* margin: 0 16px 12px; */
+                text-align: center !important;
+            }
+            .home-three-hero-section.mobile-only .home-four-hero-caption-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                margin-top: 8px !important;
+                justify-content: center;
+                /* width: 100%; */
+            }
+            .home-three-hero-section.mobile-only .trial-button {
+                width: 100%;
+                max-width: 340px;
+                padding: 12px 16px;
+                border-radius: 10px;
+                text-align: center;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            .home-three-hero-section.mobile-only .feature-button {
+                margin-left: 0 !important;
+            }
+            .home-three-hero-section.mobile-only .trail-text-one.home-four-text,
+            .home-three-hero-section.mobile-only .trail-text-one.home-four-text-two {
+                font-size: 16px;
+            }
+            .home-three-hero-section.mobile-only .hero-image-block {
+                margin-top: -20px !important;
+            }
+            .home-three-hero-section.mobile-only .provide-section {
+                padding-top: 16px !important;
+            }
+            .home-three-hero-section.mobile-only .options {
+                padding: 20px 16px;
+            }
+            .home-three-hero-section.mobile-only .option-images {
+                max-width: 52px;
+                height: auto;
+            }
+            .home-three-hero-section.mobile-only .bold-text.center {
+                font-size: 18px;
+            }
+            .home-three-hero-section.mobile-only .provide-caption {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            .home-three-hero-section.mobile-only .arrow {
+                display: none !important;
+            }
+
+            /* Reduce large gap before Clientele section only on mobile */
+            .Clientele-section .pro-main-container {
+                padding-top: 60px !important;
+                padding-bottom: 10px !important;
+            }
+            .options-list {
+            flex: 1 1 300px;
+            min-width: 350px;
+            /* Grow, shrink, min width 300px */
+            max-width: 350px !important;
+            /* Prevent over-stretching */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        }
+    </style>
 
     <!-- Desktop Hero Section -->
-    <section class="home-page-hero-section home-three-hero-section"
+    <section class="home-page-hero-section home-three-hero-section desktop-only"
         style="background-image: url('./assets/images_new/bg5.png'); background-size: cover; background-position: 0 0; padding-bottom: 100px">
         <div class="container-large w-container">
             <div class="hero-section-main-block home-three-hero-main-block" style="padding-top: 10px;">
@@ -537,6 +635,101 @@
                                 <div class="provide-option">
                                     <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
                                         class="options-list">
+                                        <a href="panel.php" class="options-link" style="text-decoration: none;" >
+
+                                        <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edb9-f3e30ed3"
+                                            style="background-color: rgb(255, 255, 255);" class="options">
+                                            <div class="option-icon">
+                                                <img
+                                                    src="./assets/new_icons/Group 2357.png"
+                                                    loading="lazy"
+                                                    id="w-node-f87f6d2a-8256-0570-f306-218c1132edbb-f3e30ed3"
+                                                    alt="Pricing Logo" class="option-images">
+                                            </div>
+                                            <div class="bold-text margin-bottom center">Make Opinion Access Panel</div>
+                                            <p class="provide-caption">High-quality respondents in 150+ countries, with targeting that works.</p>
+                                        </div>
+                                        <a style="opacity: 0;" href="panel.php" class="arrow w-inline-block"><img
+                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                                loading="lazy" alt="White Arrow"></a>
+                                    </div>
+    </a>                           <a href="research.php" class="options-link" style="text-decoration: none;" >
+                                    <div id="card-2"
+                                        style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                                        class="options-list swipe-right-animation">
+                                        <div id="card-2-inner"
+                                            style="background-color: rgb(255, 255, 255);" class="options">
+                                            <div class="option-icon"><img
+                                                    src="./assets/new_icons/Group 2358.png"
+                                                    loading="lazy"
+                                                    id="w-node-f87f6d2a-8256-0570-f306-218c1132edc5-f3e30ed3"
+                                                    alt="Business Collaboration" class="option-images"></div>
+                                            <div class="bold-text margin-bottom center">Make Opinion Research</div>
+                                            <p class="provide-caption">All-in-one stop for fast, clear survey design, fieldwork, and insights.</p>
+                                        </div>
+                                        <a style="opacity: 0;" href="research.php" class="arrow w-inline-block"><img
+                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                                loading="lazy" alt="White Arrow"></a>
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-page-hero-section home-three-hero-section mobile-only"
+        style="background-image: url('./assets/images_new/bg5.png'); background-size: cover; background-position: 0 0;padding-top: 50px; padding-bottom:10px">
+        <div class="container-large w-container">
+            <div class="hero-section-main-block home-three-hero-main-block" style="padding-top: 10px;">
+                <div id="w-node-b80b60ec-434c-8789-2101-36ebbc2ddcfe-29476037"
+                    class="hero-caption-block home-three-hero-caption"></div>
+                <div id="w-node-_817e41e4-9b96-eb12-20c0-1aa247e9126e-f33e3c0e" class="home-four-hero-caption">
+                    <div class="overflow-off">
+                        <div class="heder-position-center">
+                            <h1 data-w-id="817e41e4-9b96-eb12-20c0-1aa247e9126f" style="opacity: 0; color: #0070E0;"
+                                class="align-center">
+                                Global Panel Access and Agile Research
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="overflow-off ">
+
+                        <p data-w-id="817e41e4-9b96-eb12-20c0-1aa247e91271" style="opacity: 0; text-align: center; margin-bottom: 10px;"
+                            class="hero-para home-three-hero-para padding-top-ten">
+                            Access real people in 150+ countries with a 2.8% reconciliation rate.
+                            Design surveys, get clear results, and move fast with or without our help.
+                        </p>
+                    </div>
+                    <div class="zeta-home-page-hero-caption-buttons home-four-hero-caption-buttons padding-top-thirty"
+                        style="justify-content: center;">
+                        <a data-w-id="817e41e4-9b96-eb12-20c0-1aa247e91274"
+                            class="trial-button w-inline-block">
+                            <div class="trail-text-one home-four-text">Download Panel Books</div>
+                            <div class="trail-text-two home-four-text">Download Panel Books</div>
+                        </a>
+                        <a data-w-id="817e41e4-9b96-eb12-20c0-1aa247e91279" href="/features"
+                            class="trial-button feature-button w-inline-block start-free-trial-button-block feature-block footer-buttons-start discover-more learn w-inline-block"
+                            style="background-color: white; color: #0070E1; border: 1px solid #0070E0; margin-left: 12px; ">
+                            <div class="trail-text-one home-four-text-two">Have a chat with us</div>
+                            <div class="trail-text-two home-four-text-two desktop-only">Have a chat with us</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="w-node-b80b60ec-434c-8789-2101-36ebbc2ddd0e-29476037"
+                    class="hero-image-block home-three-hero-image-block" style="margin-top: -60px;">
+
+
+                    <section class="provide-section" style="padding-top: 10px;margin-top: 0px;top: 20px;">
+                        <div class="page-container w-container">
+                            <div class="provide-main-block">
+                                <div class="provide-option">
+                                <a href="panel.php" class="options-link" style="text-decoration: none;" >
+                                    <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
+                                        class="options-list">
                                         <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edb9-f3e30ed3"
                                             style="background-color: rgb(255, 255, 255);" class="options">
                                             <div class="option-icon">
@@ -553,6 +746,8 @@
                                                 src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
                                                 loading="lazy" alt="White Arrow"></a>
                                     </div>
+                                    </a>
+                                    <a href="research.php" class="options-link" style="text-decoration: none;" >
                                     <div id="card-2"
                                         style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
                                         class="options-list swipe-right-animation">
@@ -570,6 +765,7 @@
                                                 src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
                                                 loading="lazy" alt="White Arrow"></a>
                                     </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -704,10 +900,10 @@
                                             style="color: rgb(107, 107, 107);">Build and launch projects yourself in our platform, with optional free support whenever you need it.</p>
                                         <div class="your-balance-block">
                                             <div class="balance-image-block">
-                                                <img src="./assets/images_new/audience-1-left.png" loading="lazy"
+                                                <img src="./assets/new_icons/Frame 11.png" loading="lazy"
                                                     sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.65625px"
-                                                    srcset="./assets/images_new/audience-1-left.png 500w,
-                                                        ./assets/images_new/audience-1-left.png 612w" alt="Growth"
+                                                    srcset="./assets/new_icons/Frame 11.png 500w,
+                                                        ./assets/new_icons/Frame 11.png 612w" alt="Growth"
                                                     class="balance-image">
                                             </div>
                                         </div>
@@ -738,10 +934,10 @@
                                         <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f5-d8996253"
                                             class="your-balance-block">
                                             <div class="balance-image-block">
-                                                <img src="./assets/images_new/audience-1-center.png" loading="lazy"
+                                                <img src="./assets/new_icons/Group 2348.png" loading="lazy"
                                                     sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px"
-                                                    srcset="./assets/images_new/audience-1-center.png 500w,
-                                                        ./assets/images_new/audience-1-center.png 612w" alt="Target"
+                                                    srcset="./assets/new_icons/Group 2348.png 500w,
+                                                        ./assets/new_icons/Group 2348.png 612w" alt="Target"
                                                     class="balance-image">
                                             </div>
                                         </div>
@@ -772,10 +968,10 @@
                                         <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e9-d8996253"
                                             class="your-balance-block">
                                             <div class="balance-image-block">
-                                                <img src="./assets/images_new/audience-1-right.png" loading="lazy"
+                                                <img src="./assets/new_icons/Group 2350.png" loading="lazy"
                                                     sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px"
-                                                    srcset="./assets/images_new/audience-1-right.png 500w,
-                                                        ./assets/images_new/audience-1-right.png 612w" alt="Analytics"
+                                                    srcset="./assets/new_icons/Group 2350.png 500w,
+                                                        ./assets/new_icons/Group 2350.png 612w" alt="Analytics"
                                                     class="balance-image">
                                             </div>
                                         </div>
