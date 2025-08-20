@@ -3,7 +3,7 @@
 
 <html 
     data-wf-domain="makeopinion.com" 
-    data-wf-page="64180ac3118cc5475656367e" 
+    data-wf-page="default_page_id" 
     data-wf-site="64180342570b0dc26c6fd2d1"
     lang="en"
     class="w-mod-js w-mod-ix wf-inter-n4-active wf-inter-n5-active wf-inter-n6-active wf-plusjakartasans-n3-active wf-plusjakartasans-n4-active wf-plusjakartasans-n5-active wf-plusjakartasans-n6-active wf-plusjakartasans-n7-active wf-plusjakartasans-n8-active wf-active"
@@ -1274,11 +1274,11 @@
     </style>
     <!-- Mobile Hero Section   -->
 
-    <section class="homepage-hero-section hero mobile-only"
+    <section class="homepage-hero-section hero mobile-only overflow-off"
         style="background: #fff; padding-bottom: 100px; padding-top: 130px; background-color: #FFF; background-image: url('./assets/images_new/bg5.png'); background-size: cover; background-position: 0 0">
 
         <!-- Container for Hero Content -->
-        <div class="homepage-hero-container w-container" style="padding-bottom: 50px;">
+        <div class="homepage-hero-container w-container" style="padding-bottom: 50px; padding-top: 10px;">
 
             <!-- Main Block for Hero Content -->
             <div class="homepage-main-block">
@@ -1293,7 +1293,7 @@
                                 <div data-w-id="1fd6d305-6679-7cb9-fb3a-46939f11c7c4" style="color: #03080eff;opacity: 1;  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; margin-bottom: 20px;;" class="heading-scroll w-clearfix">
                                     <h1 class="home-hero-heading">
                                         <div class="heading-top-text">
-                                            <span class="sub-text" style="color: #03080eff">
+                                            <span class="sub-text" style="color: #03080eff; margin-top: 50px;">
                                                 <span style="color: #0070DF">Create</span> Surveys.
                                                 <span style="color: #0070DF">Reach</span> People.
                                                 <span style="color: #0070DF">Understand</span> Results.
@@ -1973,6 +1973,108 @@ margin-top: unset;">
         });
     </script>
 
+    <style>
+        /* Mobile polish inspired by index.php */
+        @media (max-width: 767px) {
+            /* Consistent horizontal padding */
+            .page-container,
+            .service-container,
+            .feature-container,
+            .questions-conatiner,
+            .pricing-page-solutions-container,
+            .container-small,
+            .container-large {
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+                box-sizing: border-box;
+            }
+
+            /* Section spacing */
+            .our-service-section,
+            .features-provide-section,
+            .service-featured-section,
+            .questions-section,
+            .help-center-section,
+            .about-page-review-section,
+            .ask-for-demo-hero-section {
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+            }
+
+            /* Headings and paragraphs */
+            .our-service-heading,
+            .feature-provide-heading,
+            .feature-service-heading,
+            .questions-header,
+            .helo-center-heading,
+            .about-page-review-heading,
+            .pricing-solutions-heading,
+            .demo-heading {
+                font-size: 28px !important;
+                line-height: 1.2 !important;
+                text-align: center !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            .our-service-paragraph,
+            .feature-provide-paragraph,
+            .feature-service-paragraph,
+            .questions-paragraph,
+            .help-center-description,
+            .about-page-review-para,
+            .demo-para {
+                font-size: 16px !important;
+                line-height: 1.5 !important;
+                text-align: center !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            /* Service cards */
+            .our-service-block { grid-template-columns: 1fr !important; gap: 16px !important; }
+            .service { padding: 20px 16px !important; }
+            .service-icons { max-width: 42px !important; max-height: 42px !important; }
+
+            /* Provide/Options cards */
+            .provide-section .options { padding: 20px 16px !important; }
+            .provide-section .option-images { max-width: 52px !important; height: auto !important; }
+            .provide-section .bold-text.center { font-size: 18px !important; }
+            .provide-section .provide-caption { font-size: 14px !important; line-height: 1.5 !important; }
+
+            /* DIY features cards */
+            .features-services { display: grid; grid-template-columns: 1fr !important; gap: 16px !important; }
+            .analytics { min-height: unset !important; }
+            .balance-image-block img.balance-image { max-width: 100% !important; height: auto !important; }
+
+            /* Questions block layout */
+            .service-questions { grid-template-columns: 1fr !important; gap: 16px !important; }
+            .questions-text-block { padding: 0 4px !important; }
+            .questions-image { align-items: center !important; }
+            .question-main-image, .real-time-user { opacity: 1 !important; transform: none !important; }
+            /* .real-time-user { position: static !important; margin-top: 12px !important; } */
+            /* .real-time-user-image { max-width: 280px !important; width: 70% !important; height: auto !important; } */
+
+            /* Help center tiles */
+            .knowledge-base-list-two { display: grid; grid-template-columns: 1fr !important; gap: 12px !important; }
+            .help-text .learn-more-block { display: flex !important; justify-content: center !important; }
+
+            /* Reviews grid */
+            .home-page-reviews { grid-auto-columns: 1fr !important; }
+
+            /* Clientele spacing */
+            .Clientele-section .pro-main-container { padding-top: 60px !important; padding-bottom: 10px !important; }
+
+            /* Demo form section */
+            .ask-for-demo-hero-section { padding-bottom: 260px !important; }
+            .sign-up-image-main-block { display: none !important; }
+            .demo-form-block { gap: 0 !important; }
+            .trial-button,
+            .contact-us-submit,
+            .demo-submit,
+            .w-button { width: 100% !important; max-width: 340px !important; margin-left: auto !important; margin-right: auto !important; }
+        }
+    </style>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -2012,6 +2114,53 @@ margin-top: unset;">
             }
         });
     </script>
+
+    <style>
+        /* Additional mobile hardening: alignment, gaps, and no horizontal scroll */
+        @media (max-width: 767px) {
+            html, body { overflow-x: hidden !important; }
+            [class*="w-container"], .w-container { max-width: 100% !important; width: 100% !important; overflow-x: hidden !important; }
+            img, svg, video, iframe { max-width: 100% !important; height: auto !important; }
+
+            .page-container,
+            .service-container,
+            .feature-container,
+            .questions-conatiner,
+            .pricing-page-solutions-container,
+            .container-small,
+            .container-large {
+                width: 100% !important;
+                max-width: 100% !important;
+                overflow-x: hidden !important;
+            }
+
+            /* Normalize hero block offsets */
+            .hero-image-block,
+            .home-three-hero-image-block { margin-top: 0 !important; }
+
+            /* Tight, consistent spacing */
+            .our-service-heading,
+            .feature-provide-heading,
+            .feature-service-heading,
+            .questions-header,
+            .helo-center-heading,
+            .about-page-review-heading,
+            .pricing-solutions-heading,
+            .demo-heading { margin-bottom: 8px !important; }
+
+            .our-service-paragraph,
+            .feature-provide-paragraph,
+            .feature-service-paragraph,
+            .questions-paragraph,
+            .help-center-description,
+            .about-page-review-para,
+            .demo-para { margin-bottom: 24px !important; }
+
+            /* Ensure options/cards never overflow */
+            .provide-section .provide-option { gap: 20px !important; justify-content: center !important; }
+            .provide-section .options-list { width: 100% !important; max-width: 520px !important; min-width: 0 !important; }
+        }
+    </style>
 
     <footer class="zeta-home-page-footer-section"
         style="margin-top: 0px;background-image: url('https://makeopinion.com/en/assets/images_new/footer-bg.png');background-size: cover;background-position: 0 0">
