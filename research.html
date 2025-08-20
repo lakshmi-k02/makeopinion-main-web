@@ -183,6 +183,14 @@
 
         }
     </style>
+    <style>
+        .mobile-only { display: none; }
+        .desktop-only { display: block; }
+        @media (max-width: 767px) {
+            .mobile-only { display: block; }
+            .desktop-only { display: none; }
+        }
+    </style>
 
     <style>
         :root {
@@ -334,6 +342,11 @@
             .service {
                 padding: 30px;
             }
+
+            .audi-P h1.home-hero-heading
+                {
+                line-height: 2.375rem;
+                }
         }
     </style>
     <style>
@@ -719,6 +732,7 @@
                 padding: 0 8px;
                 min-height: 42px;
                 display: -webkit-box;
+                line-clamp: 2;
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
@@ -1072,7 +1086,7 @@
         }
     </style>
     <!-- Desktop Hero Section -->
-    <section class="homepage-hero-section hero"
+    <section class="homepage-hero-section hero desktop-only"
         style="background: #fff; padding-bottom: 100px; padding-top: 130px; background-color: #FFF; background-image: url('./assets/images_new/bg5.png'); background-size: cover; background-position: 0 0">
 
         <!-- Container for Hero Content -->
@@ -1199,8 +1213,198 @@
 
     </section>
 
-    <section class="Clientele-section" style="box-shadow: 0 10px 10px rgba(244, 241, 241, 0.05);">
+    <style>
+        @media (max-width: 767px) {
+            .homepage-hero-section.hero.mobile-only {
+                padding-top: 56px !important;
+                padding-bottom: 16px !important;
+                background-position: center top !important;
+            }
+            .homepage-hero-section.hero.mobile-only .homepage-hero-container {
+                padding-bottom: 10px !important;
+            }
+            .homepage-hero-section.hero.mobile-only .home-hero-heading {
+                font-size: 28px;
+                line-height: 1.2;
+                margin: 0 16px 8px;
+                text-align: center;
+            }
+            .homepage-hero-section.hero.mobile-only .hero-para-two {
+                font-size: 16px;
+                line-height: 1.5;
+                margin: 0 16px 12px;
+                text-align: center !important;
+            }
+            .homepage-hero-section.hero.mobile-only .hero-caption-buttons-one {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                margin-top: 8px !important;
+            }
+            .homepage-hero-section.hero.mobile-only .hero-caption-buttons-one .trial-button {
+                width: 100%;
+                max-width: 340px;
+                text-align: center;
+                border-radius: 10px;
+                padding: 12px 16px;
+            }
+            .homepage-hero-section.hero.mobile-only .provide-option {
+                gap: 20px;
+            }
+            .homepage-hero-section.hero.mobile-only .options {
+                padding: 20px 16px;
+            }
+            .homepage-hero-section.hero.mobile-only .option-images {
+                max-width: 52px;
+                height: auto;
+            }
+            .homepage-hero-section.hero.mobile-only .bold-text.margin-bottom.center {
+                font-size: 18px;
+            }
+            .homepage-hero-section.hero.mobile-only .provide-caption {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            .Clientele-section .pro-main-container {
+                padding-top: 60px !important;
+                padding-bottom: 10px !important;
+            }
+        }
+    </style>
+    <!-- Mobile Hero Section   -->
 
+    <section class="homepage-hero-section hero mobile-only"
+        style="background: #fff; padding-bottom: 100px; padding-top: 130px; background-color: #FFF; background-image: url('./assets/images_new/bg5.png'); background-size: cover; background-position: 0 0">
+
+        <!-- Container for Hero Content -->
+        <div class="homepage-hero-container w-container" style="padding-bottom: 50px;">
+
+            <!-- Main Block for Hero Content -->
+            <div class="homepage-main-block">
+                <div class="home-two-hero-block">
+
+                    <!-- Text Block within Hero Section -->
+                    <div id="w-node-c6ec9241-5ff0-3228-1768-d91359094d68-1a84dfe0" class="hero-section-text-block">
+
+                        <!-- Header Section with Hero Heading -->
+                        <div class="overflow-off">
+                            <div class="overflow-off">
+                                <div data-w-id="1fd6d305-6679-7cb9-fb3a-46939f11c7c4" style="color: #03080eff;opacity: 1;  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; margin-bottom: 20px;;" class="heading-scroll w-clearfix">
+                                    <h1 class="home-hero-heading">
+                                        <div class="heading-top-text">
+                                            <span class="sub-text" style="color: #03080eff">
+                                                <span style="color: #0070DF">Create</span> Surveys.
+                                                <span style="color: #0070DF">Reach</span> People.
+                                                <span style="color: #0070DF">Understand</span> Results.
+                                            </span>
+                                        </div>
+
+                                        <!-- Subheading Lines to Emphasize Key Actions -->
+                                        <span style="color: #03080eff">
+                                            <span style="color:#0070DF">Know</span> your customers.<br />
+                                            <span style="color:#0070DF">Build</span> better products.<br />
+                                            <span style="color:#0070DF">Sell</span> more.
+                                        </span>
+                                    </h1>
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hero Paragraph Section -->
+                        <div class="overflow-off desktop-only">
+                            <p data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee95" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="hero-para-two">
+                                We designed a complete Market Research platform, so you can gather the insights you need to grow your business in no time.</p>
+                        </div>
+                        <div class="overflow-off mobile-only">
+                            <p data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee95" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;text-align:center" class="hero-para-two">
+                                We designed a complete Market Research platform, so you can gather the insights you need to grow your business in no time.</p>
+                        </div>
+
+                        <!-- Buttons Section for User Actions -->
+                        <div class="overflow-off">
+                            <div class="hero-caption-buttons-one">
+                                <a role="button" data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee98" href="/demo" class="trial-button w-inline-block">
+                                    <div data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee99" class="trail-text-two-home" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Start
+                                        Free Trial</div>
+                                    <div data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee9b" class="trail-text-two" style="transform: translate3d(0px, 50px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Start Free
+                                        Trial</div>
+                                </a>
+                                <a role="button" data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee9d" href="/features" class="trial-button feature-button w-inline-block">
+                                    <div data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee9e" class="trail-text-two-home" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Book a demo</div>
+                                    <div data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0eea0" class="trail-text-two" style="transform: translate3d(0px, 50px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Book a demo</div>
+                                </a>
+                            </div>
+                            <div class="home-hero-image-block">
+                        <div data-w-id="b3ab55ef-0bde-ad3e-dba8-997bea786104" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                            <div class="home-hero-image-block">
+                                <div class="banner-girl-image-block"><img src="./assets/images_new/hero-bg-alt.png" loading="lazy" sizes="(max-width: 479px) 94vw, (max-width: 767px) 56vw, (max-width: 991px) 54vw, (max-width: 1439px) 26vw, 347.671875px" srcset="./assets/images_new/hero-bg-alt.png 500w, ./assets/images_new/hero-bg-alt.png 770w" alt="Banner Girl Image" class="hero-main-image"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+
+        </div>
+        <div id="w-node-b80b60ec-434c-8789-2101-36ebbc2ddd0e-29476037"
+            class="hero-image-block home-three-hero-image-block" style="margin-top: -60px;">
+
+            <section class="provide-section" style="padding-top: 10px;margin-top: 0px;top: 20px;">
+                <div class="page-container w-container">
+                    <div class="provide-main-block">
+                        <div class="provide-option">
+                            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
+                                class="options-list" style="
+    margin-top: 30px;">
+                                <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edb9-f3e30ed3"
+                                    style="background-color: rgb(255, 255, 255);" class="options">
+                                    <div class="option-icon"><img
+                                            src="./assets/new_icons/Group 2365.png"
+                                            loading="lazy"
+                                            id="w-node-f87f6d2a-8256-0570-f306-218c1132edbb-f3e30ed3"
+                                            alt="Pricing Logo" class="option-images"></div>
+                                    <div class="bold-text margin-bottom center">Do It Yourself</div>
+                                    <p class="provide-caption">Define audiences, launch surveys, and get clear results, all in one place.</p>
+                                </div>
+                                <a style="opacity: 0;" href="/service-one" class="arrow w-inline-block"><img
+                                        src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                        loading="lazy" alt="White Arrow"></a>
+                            </div>
+                            <div id="card-2"
+                                style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                                class="options-list swipe-right-animation">
+                                <div id="card-2-inner"
+                                    style="background-color: rgb(255, 255, 255);" class="options">
+                                    <div class="option-icon"><img
+                                            src="./assets/new_icons/Layer_1.png"
+                                            loading="lazy"
+                                            id="w-node-f87f6d2a-8256-0570-f306-218c1132edc5-f3e30ed3"
+                                            alt="Business Collaboration" class="option-images"></div>
+                                    <div class="bold-text margin-bottom center">Full Service
+                                    </div>
+                                    <p class="provide-caption">From survey design to final insights, our team runs the entire process for you.</p>
+                                </div>
+                                <a style="opacity: 0;" href="/service-two" class="arrow w-inline-block"><img
+                                        src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                        loading="lazy" alt="White Arrow"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </section>
+    
+
+    <section class="Clientele-section" style="box-shadow: 0 10px 10px rgba(244, 241, 241, 0.05);">
         <div class="pro-main-container w-container" style="padding-top: 250px; padding-bottom: 10px">
             <h2 class="clientele-heading animate" style="color: #CBE5FF;"></h2>
             <div>
@@ -1270,7 +1474,7 @@
                             </div>
                             <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22db" class="service-para" style="color: rgb(107, 107, 107);">Build questionnaires with AI-assisted design, logic tools, and media support for clear, engaging surveys.</p>
                             <div class="your-balance-block">
-                                <div class="balance-image-block"><img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb9043a686d5b319b49c_Group%201122%20(1).webp" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.65625px" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb9043a686d5b319b49c_Group%201122%20(1)-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb9043a686d5b319b49c_Group%201122%20(1).webp 612w" alt="Growth" class="balance-image"></div>
+                                <div class="balance-image-block"><img src="./assets/new_icons/Group 2163.png" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.65625px" srcset="./assets/new_icons/Group 2163.png 500w, ./assets/new_icons/Group 2163.png 612w" alt="Growth" class="balance-image"></div>
                             </div>
                         </div>
                     </div>
@@ -1282,7 +1486,7 @@
                             </div>
                             <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e7" class="service-para" style="color: rgb(107, 107, 107);">Target the right audience in 150+ countries, with real-time feasibility and quota control.</p>
                             <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e9-d8996253" class="your-balance-block">
-                                <div class="balance-image-block"><img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb9761f340581be3fbc9_Group%201715.webp" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb9761f340581be3fbc9_Group%201715-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb9761f340581be3fbc9_Group%201715.webp 612w" alt="Target" class="balance-image"></div>
+                                <div class="balance-image-block"><img src="./assets/new_icons/rect_74.png" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px" srcset="./assets/new_icons/rect_74.png 500w, ./assets/new_icons/rect_74.png 612w" alt="Target" class="balance-image"></div>
                             </div>
                         </div>
                     </div>
@@ -1294,7 +1498,7 @@
                             </div>
                             <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f3" class="service-para" style="color: rgb(107, 107, 107);">View live dashboards, filter responses, and export data in formats ready for stakeholders.</p>
                             <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f5-d8996253" class="your-balance-block">
-                                <div class="balance-image-block"><img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb90256370986c9967e0_Group%201770.webp" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px" srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb90256370986c9967e0_Group%201770-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/6449eb90256370986c9967e0_Group%201770.webp 612w" alt="Analytics" class="balance-image"></div>
+                                <div class="balance-image-block"><img src="./assets/new_icons/Group 2250.png" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px" srcset="./assets/new_icons/Group 2250.png 500w, ./assets/new_icons/Group 2250.png 612w" alt="Analytics" class="balance-image"></div>
                             </div>
                         </div>
                     </div>

@@ -3795,7 +3795,7 @@ blockquote {
 }
 
 .home-page-hero-section.home-three-hero-section {
-  padding: 120px 15px 0;
+  padding: 100px 15px 0;
 }
 
 .hero-image-block {
@@ -17328,9 +17328,9 @@ blockquote {
     width: 100%;
   }
 
-  .case-study-main-block {
+  /* .case-study-main-block {
     align-items: flex-start;
-  }
+  } */
 
   .case-study-heading {
     text-align: left;
@@ -19136,7 +19136,7 @@ blockquote {
   }
 
   .feature-provide-heading {
-    text-align: left;
+    /* text-align: left; */
     width: 100%;
     font-size: 2.6rem;
     line-height: 3.1rem;
@@ -22359,7 +22359,7 @@ blockquote {
   }
 
   .feature-service-paragraph, .feature-service-heading {
-    text-align: left;
+    text-align: center;
   }
 
   .analytics {
@@ -22457,7 +22457,7 @@ blockquote {
 
   .provided-solutions {
     grid-row-gap: 20px;
-    flex-direction: column;
+    /* flex-direction: column; */
     padding-left: 10px;
     padding-right: 10px;
   }

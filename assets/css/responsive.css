@@ -552,9 +552,9 @@ h1.home-hero-heading.v2 br {
     
     
     
-    h1 {
+    /* h1 {
         line-height: 1.8;
-    }
+    } */
 
     .hero-section-button-block {
         flex-direction: column;
@@ -670,7 +670,7 @@ h1.home-hero-heading.v2 br {
     .service-offer-heading, .tech-heading-one {
         text-align: center;
         margin-inline: auto;
-        font-size: 24px;
+        /* font-size: 24px; */
     }
 
     p.service-offer-paragraph {
@@ -960,7 +960,7 @@ h1.home-hero-heading.v2 br {
     }
 
     .audi-P h1.home-hero-heading span:first-child {
-    font-size: 15px !important;
+    /* font-size: 15px !important; */
     line-height: 1;
     }
     .audi-P .home-hero-container-large.w-container{
