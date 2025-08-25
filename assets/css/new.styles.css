@@ -744,3 +744,22 @@ These classes provide:
 
   
 }
+
+  .customer-review {
+    box-shadow: 0 4px 12px rgba(234, 231, 231, 0.15);
+    /* x-offset | y-offset | blur | color */
+  }
+  /* mobile view */
+  @media (max-width: 767px) {
+    .accordion,.minus-icon,.plus-icon{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .our-approachs,.feature-sucess-description,.feature-success-header {
+      padding-left: 20px;
+    }
+    .revenue {
+      margin-left: 30px;
+    }
+    
+  }
