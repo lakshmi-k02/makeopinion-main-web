@@ -12180,7 +12180,7 @@ blockquote {
 }
 
 .ideas-main-image-block {
-  background-image: url("https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/64460d50f5bdb372638aafc1_Rectangle%202875.webp");
+  /* background-image: url("../web_icons/64460d50f5bdb372638aafc1_Rectangle 2875.png"); */
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 80%;
@@ -12216,7 +12216,7 @@ blockquote {
 }
 
 .ideas {
-  background-image: url("https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/64460d4e47bf1a0651919940_Group%202490.webp");
+  background-image: url("../new_icons/background_div_ymo.png");
   background-position: 100% 18%;
   background-repeat: no-repeat;
   background-size: 25%;
@@ -22165,9 +22165,9 @@ blockquote {
     padding-left: 20px;
   }
 
-  .creative-check-icon {
+  /* .creative-check-icon {
     width: 31%;
-  }
+  } */
 
   .ideas {
     background-image: none;

@@ -26,11 +26,11 @@
 
 
     <!-- javascript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/jquery.fancybox.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./assets/css/jquery.fancybox.min.css" />
     <link href="assets/css/zeta-template.webflow.eb73ea2e8.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
@@ -316,21 +316,12 @@
             gap: 20px;
         }
 
-        /* Style the service card */
+        /* Style the service card - now using enhanced-card class from new.styles.css */
         .options {
-            border-radius: 12px;
-            padding: 30px 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            background-color: #ffffff;
+            /* Enhanced styling moved to new.styles.css */
         }
 
-        /* Hover effect for the card */
-        .options-list:hover .options {
-            /* transform: translateY(-5px); */
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-            background: linear-gradient(135deg, #e8f2ff 0%, #f0f8ff 100%);
-        }
+        /* Enhanced hover effects now handled by enhanced-card class in new.styles.css */
 
         /* Style the arrow as a circular button */
         .arrow {
@@ -354,11 +345,7 @@
             /* Arrow moves up more on hover */
         }
 
-        /* Arrow hover effect */
-        .arrow:hover {
-            transform: translateY(-2px) scale(1.1);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-        }
+        /* Enhanced arrow hover effect now handled by enhanced-arrow class in new.styles.css */
 
         /* Arrow icon styling */
         .arrow img {
@@ -368,10 +355,7 @@
             /* Makes the arrow white */
         }
 
-        /* Change cursor on hover */
-        .options-list:hover {
-            cursor: pointer;
-        }
+        /* Enhanced hover effects now handled by enhanced-card-wrapper class in new.styles.css */
 
         /* Container for the cards */
         .provide-option {
@@ -636,11 +620,11 @@
                             <div class="provide-main-block">
                                 <div class="provide-option">
                                     <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
-                                        class="options-list">
+                                        class="options-list enhanced-card-wrapper">
                                         <a href="panel.php" class="options-link" style="text-decoration: none;" >
 
                                         <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edb9-f3e30ed3"
-                                            style="background-color: rgb(255, 255, 255);" class="options">
+                                            style="background-color: rgb(255, 255, 255);" class="options enhanced-card">
                                             <div class="option-icon">
                                                 <img
                                                     src="./assets/new_icons/Group 2357.png"
@@ -651,8 +635,8 @@
                                             <div class="bold-text margin-bottom center">Make Opinion Access Panel</div>
                                             <p class="provide-caption">High-quality respondents in 150+ countries, with targeting that works.</p>
                                         </div>
-                                        <a style="opacity: 0;" href="panel.php" class="arrow w-inline-block"><img
-                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                        <a style="opacity: 0;" href="panel.php" class="arrow enhanced-arrow w-inline-block"><img
+                                                src="./assets/web_icons/6444c3323d12ee055500e663_Arrow_149.svg"
                                                 loading="lazy" alt="White Arrow"></a>
                                     </div>
     </a>                           <a href="research.php" class="options-link" style="text-decoration: none;" >
@@ -660,7 +644,7 @@
                                         style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
                                         class="options-list swipe-right-animation">
                                         <div id="card-2-inner"
-                                            style="background-color: rgb(255, 255, 255);" class="options">
+                                            style="background-color: rgb(255, 255, 255);" class="options enhanced-card">
                                             <div class="option-icon"><img
                                                     src="./assets/new_icons/Group 2358.png"
                                                     loading="lazy"
@@ -669,8 +653,8 @@
                                             <div class="bold-text margin-bottom center">Make Opinion Research</div>
                                             <p class="provide-caption">All-in-one stop for fast, clear survey design, fieldwork, and insights.</p>
                                         </div>
-                                        <a style="opacity: 0;" href="research.php" class="arrow w-inline-block"><img
-                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                        <a style="opacity: 0;" href="research.php" class="arrow enhanced-arrow w-inline-block"><img
+                                                src="./assets/web_icons/6444c3323d12ee055500e663_Arrow_149.svg"
                                                 loading="lazy" alt="White Arrow"></a>
                                     </div>
                                     </a>
@@ -731,9 +715,9 @@
                                 <div class="provide-option">
                                 <a href="panel.php" class="options-link" style="text-decoration: none;" >
                                     <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50"
-                                        class="options-list">
+                                        class="options-list enhanced-card-wrapper">
                                         <div id="w-node-f87f6d2a-8256-0570-f306-218c1132edb9-f3e30ed3"
-                                            style="background-color: rgb(255, 255, 255);" class="options">
+                                            style="background-color: rgb(255, 255, 255);" class="options enhanced-card">
                                             <div class="option-icon">
                                                 <img
                                                     src="./assets/new_icons/Group 2357.png"
@@ -745,16 +729,16 @@
                                             <p class="provide-caption">High-quality respondents in 150+ countries, with targeting that works.</p>
                                         </div>
                                         <!-- <a style="opacity: 0;" href="panel.php" class="arrow w-inline-block"><img
-                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                                src="./assets/web_icons/6444c3323d12ee055500e663_Arrow_149.svg"
                                                 loading="lazy" alt="White Arrow"></a> -->
                                     </div>
                                     </a>
                                     <a href="research.php" class="options-link" style="text-decoration: none;" >
                                     <div id="card-2"
                                         style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-                                        class="options-list swipe-right-animation">
+                                        class="options-list swipe-right-animation enhanced-card-wrapper">
                                         <div id="card-2-inner"
-                                            style="background-color: rgb(255, 255, 255);" class="options">
+                                            style="background-color: rgb(255, 255, 255);" class="options enhanced-card">
                                             <div class="option-icon"><img
                                                     src="./assets/new_icons/Group 2358.png"
                                                     loading="lazy"
@@ -764,7 +748,7 @@
                                             <p class="provide-caption">All-in-one stop for fast, clear survey design, fieldwork, and insights.</p>
                                         </div>
                                         <!-- <a style="opacity: 0;" href="research.php" class="arrow w-inline-block"><img
-                                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c3323d12ee055500e663_Arrow%20149.svg"
+                                                src="./assets/web_icons/6444c3323d12ee055500e663_Arrow_149.svg"
                                                 loading="lazy" alt="White Arrow"></a> -->
                                     </div>
                                     </a>
@@ -804,7 +788,8 @@
                             <img src="./assets/new_icons/why-make-opinion-main.png" loading="lazy"
                                 sizes="(max-width: 479px) 81vw, (max-width: 767px) 70vw, (max-width: 991px) 75vw, (max-width: 1439px) 37vw, 496.1458435058594px"
                                 srcset="./assets/images_new/pricing-2-back.png 500w, ./assets/new_icons/why-make-opinion-main.png 800w, ./assets/new_icons/why-make-opinion-main.png 996w"
-                                alt="Employee Image" class="ideas-main-image">
+                                alt="Employee Image" class="ideas-main-image" style="
+    margin-bottom: 20px;">
                         </div>
                     </div>
                     <div data-w-id="817e41e4-9b96-eb12-20c0-1aa247e9126f" style="opacity: 0;
@@ -892,7 +877,7 @@
                                     <div class="analytics-inner">
                                         <div class="services-title">
                                             <div class="service-features-icon">
-                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb8c75b83703f4cebd26_Group%202490.svg"
+                                                <img src="./assets/web_icons/6449eb8c75b83703f4cebd26_Group_2490.svg"
                                                     loading="lazy" alt="Save" class="feature-icon">
                                             </div>
                                             <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d9" class="bold-text"
@@ -925,7 +910,7 @@
                                     <div class="analytics-inner">
                                         <div class="services-title">
                                             <div class="service-features-icon">
-                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb90f0acdd8695d10564_Group%202493.svg"
+                                                <img src="./assets/web_icons/6449eb90f0acdd8695d10564_Group_2493.svg"
                                                     loading="lazy" alt="Settings" class="feature-icon">
                                             </div>
                                             <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f1" class="bold-text"
@@ -959,7 +944,7 @@
                                     <div class="analytics-inner">
                                         <div class="services-title">
                                             <div class="service-features-icon">
-                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb8e4d0a0bf03087dc0a_Logo%20Two.svg"
+                                                <img src="./assets/web_icons/6449eb8e4d0a0bf03087dc0a_Logo_Two.svg"
                                                     loading="lazy" alt="Globe" class="feature-icon">
                                             </div>
                                             <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e5" class="bold-text"
@@ -1061,10 +1046,10 @@
                 <div class="case-study-plans-block">
                     <div id="w-node-_20aeb673-811e-f9dd-ddff-7345c1504e6f-1a84dfe0" class="case-study-image-block">
                         <div class="case-image-block"><img
-                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642bc7af8990757dcc7e2d88_Case%20Study%20Image%20One.webp"
+                                src="./assets/web_icons/642bc7af8990757dcc7e2d88_Case_Study_Image_One.webp"
                                 loading="lazy"
                                 sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 991px) 97vw, (max-width: 1439px) 31vw, 408.65625px"
-                                srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/642bc7af8990757dcc7e2d88_Case%20Study%20Image%20One-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/642bc7af8990757dcc7e2d88_Case%20Study%20Image%20One-p-800.webp 800w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/642bc7af8990757dcc7e2d88_Case%20Study%20Image%20One.webp 818w"
+                                srcset="./assets/web_icons/642bc7af8990757dcc7e2d88_Case_Study_Image_One.webp 500w, ./assets/web_icons/642bc7af8990757dcc7e2d88_Case_Study_Image_One.webp 800w, ./assets/web_icons/642bc7af8990757dcc7e2d88_Case_Study_Image_One.webp 818w"
                                 alt="Case Study Image" class="case-images"></div><a
                             data-w-id="20aeb673-811e-f9dd-ddff-7345c1504e72" href="/service-one"
                             class="case-study-text-block w-inline-block" style="background-color: rgb(255, 255, 255);">
@@ -1074,11 +1059,11 @@
                             </div>
                             <div class="arrow-icon-one">
                                 <div class="arrow-icon-block"><img
-                                        src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642bc7adc1ed2220bd842328_Arrow%20Blue.svg"
+                                        src="./assets/web_icons/642bc7adc1ed2220bd842328_Arrow_Blue.svg"
                                         loading="lazy" alt="Blue Arrow" class="black-arrow"></div>
                                 <div data-w-id="20aeb673-811e-f9dd-ddff-7345c1504e7b" class="hover-arrow-block"
                                     style="opacity: 0;"><img
-                                        src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642bc7aaec49bb721b4ff3b3_Arrow%20Black.svg"
+                                        src="./assets/web_icons/642bc7aaec49bb721b4ff3b3_Arrow_Black.svg"
                                         loading="lazy" alt="Black Arrow"></div>
                             </div>
                         </a>
@@ -1088,10 +1073,10 @@
                         style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
                         class="case-study-image-block">
                         <div class="case-image-block"><img
-                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642bc7ae95612bb7618a604d_Case%20Study%20Two.webp"
+                                src="./assets/web_icons/642bc7ae95612bb7618a604d_Case_Study_Two.webp"
                                 loading="lazy"
                                 sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 991px) 97vw, (max-width: 1439px) 31vw, 408.671875px"
-                                srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/642bc7ae95612bb7618a604d_Case%20Study%20Two-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/642bc7ae95612bb7618a604d_Case%20Study%20Two-p-800.webp 800w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/642bc7ae95612bb7618a604d_Case%20Study%20Two.webp 818w"
+                                srcset="./assets/web_icons/642bc7ae95612bb7618a604d_Case_Study_Two.webp 500w, ./assets/web_icons/642bc7ae95612bb7618a604d_Case_Study_Two.webp 800w, ./assets/web_icons/642bc7ae95612bb7618a604d_Case_Study_Two.webp 818w"
                                 alt="Case Study Image" class="case-images"></div><a
                             data-w-id="20aeb673-811e-f9dd-ddff-7345c1504e80" href="/service-two"
                             class="case-study-text-block software w-inline-block"
@@ -1102,11 +1087,11 @@
                             </div>
                             <div class="arrow-icon-one">
                                 <div><img
-                                        src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642bc7adc1ed2220bd842328_Arrow%20Blue.svg"
+                                        src="./assets/web_icons/642bc7adc1ed2220bd842328_Arrow_Blue.svg"
                                         loading="lazy" alt="Blue Arrow"></div>
                                 <div data-w-id="20aeb673-811e-f9dd-ddff-7345c1504e89" class="hover-arrow-block"
                                     style="opacity: 0;"><img
-                                        src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642bc7aaec49bb721b4ff3b3_Arrow%20Black.svg"
+                                        src="./assets/web_icons/642bc7aaec49bb721b4ff3b3_Arrow_Black.svg"
                                         loading="lazy" alt="Black Arrow"></div>
                             </div>
                         </a>
@@ -1116,10 +1101,10 @@
                         style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
                         class="case-study-image-block">
                         <div class="case-image-block"><img
-                                src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642bc7ae899075805e7e2d69_Case%20Study%20Three.webp"
+                                src="./assets/web_icons/642bc7ae899075805e7e2d69_Case_Study_Three.webp"
                                 loading="lazy"
                                 sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 991px) 97vw, (max-width: 1439px) 31vw, 408.671875px"
-                                srcset="https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/642bc7ae899075805e7e2d69_Case%20Study%20Three-p-500.webp 500w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/642bc7ae899075805e7e2d69_Case%20Study%20Three-p-800.webp 800w, https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/642bc7ae899075805e7e2d69_Case%20Study%20Three.webp 818w"
+                                srcset="./assets/web_icons/642bc7ae899075805e7e2d69_Case_Study_Three.webp 500w, ./assets/web_icons/642bc7ae899075805e7e2d69_Case_Study_Three.webp 800w, ./assets/web_icons/642bc7ae899075805e7e2d69_Case_Study_Three.webp 818w"
                                 alt="Solutions Image" class="case-images"></div><a
                             data-w-id="20aeb673-811e-f9dd-ddff-7345c1504e8e" href="/service-one"
                             class="case-study-text-block research w-inline-block"
@@ -1130,11 +1115,11 @@
                             </div>
                             <div class="arrow-icon-one">
                                 <div><img
-                                        src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642bc7adc1ed2220bd842328_Arrow%20Blue.svg"
+                                        src="./assets/web_icons/642bc7adc1ed2220bd842328_Arrow_Blue.svg"
                                         loading="lazy" alt="Blue Arrow"></div>
                                 <div data-w-id="20aeb673-811e-f9dd-ddff-7345c1504e97" class="hover-arrow-block"
                                     style="opacity: 0;"><img
-                                        src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642bc7aaec49bb721b4ff3b3_Arrow%20Black.svg"
+                                        src="./assets/web_icons/642bc7aaec49bb721b4ff3b3_Arrow_Black.svg"
                                         loading="lazy" alt="Black Arrow"></div>
                             </div>
                         </a>
@@ -1159,7 +1144,7 @@
                         <div class="home-page-reviews">
                             <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50" class="review">
                                 <div class="home-page-quotes-block">
-                                    <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6422b89a3271b5175628814a_Mask%20group%20(12).svg"
+                                    <img src="./assets/web_icons/6422b89a3271b5175628814a_Mask_group_(12).svg"
                                         loading="lazy" alt="Review Quotes" class="quotes-icon">
                                 </div>
                                 <div class="paragraph-block">
@@ -1173,7 +1158,7 @@
                                         <p class="job-role">Premium Customer</p>
                                     </div>
                                     <div class="profile-image-block-one">
-                                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642a65dddcf107711ef8db9d_Review%20User%20One.webp"
+                                        <img src="./assets/web_icons/642a65dddcf107711ef8db9d_Review_User_One.webp"
                                             loading="lazy" alt="Review One Image">
                                     </div>
                                 </div>
@@ -1182,7 +1167,7 @@
                                 data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60" class="review"
                                 style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
                                 <div class="home-page-quotes-block">
-                                    <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6422b89a3271b5175628814a_Mask%20group%20(12).svg"
+                                    <img src="./assets/web_icons/6422b89a3271b5175628814a_Mask_group_(12).svg"
                                         loading="lazy" alt="Review Quotes" class="quotes-icon">
                                 </div>
                                 <div class="paragraph-block">
@@ -1196,7 +1181,7 @@
                                         <p class="job-role">Operations Director</p>
                                     </div>
                                     <div class="profile-image-block-one">
-                                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642a65dc5288622882dd492f_Review%20User%20Two.webp"
+                                        <img src="./assets/web_icons/642a65dc5288622882dd492f_Review_User_Two.webp"
                                             loading="lazy" alt="Review Two Image" class="girl">
                                     </div>
                                 </div>
@@ -1205,7 +1190,7 @@
                                 data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e" class="review"
                                 style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
                                 <div class="home-page-quotes-block">
-                                    <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6422b89a3271b5175628814a_Mask%20group%20(12).svg"
+                                    <img src="./assets/web_icons/6422b89a3271b5175628814a_Mask_group_(12).svg"
                                         loading="lazy" alt="Review Quotes" class="quotes-icon">
                                 </div>
                                 <div class="paragraph-block">
@@ -1219,7 +1204,7 @@
                                         <p class="job-role">Premium Customer</p>
                                     </div>
                                     <div class="profile-image-block-one">
-                                        <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642a65e4164f5ff6492b5f93_Review%20User%20Three.webp"
+                                        <img src="./assets/web_icons/642a65e4164f5ff6492b5f93_Review_User_Three.webp"
                                             loading="lazy" alt="Review Three Image" class="boy-two">
                                     </div>
                                 </div>
@@ -1267,7 +1252,7 @@
                                         <input type="hidden" name="phoneNumber" data-name="phoneNumber" value="" id="phoneNumber">
 
 
-                                        <label class="w-checkbox checkbox-field"><input type="checkbox" id="terms1" name="terms" data-name="Checkbox" class="w-checkbox-input"><span class="google-sign-up-text w-form-label" for="checkbox">I accept the<a href="https://app.makeopinion.com/Make%20Opinion%20DIY%20Terms%20and%20Conditions.pdf" class="privacy" target="_blank" style="color:#0070DF"> terms</a></span></label>
+                                        <label class="w-checkbox checkbox-field"><input type="checkbox" id="terms1" name="terms" data-name="Checkbox" class="w-checkbox-input"><span class="google-sign-up-text w-form-label" for="checkbox">I accept the<a href="https://app.makeopinion.com/Make_Opinion_DIY_Terms_and_Conditions.pdf" class="privacy" target="_blank" style="color:#0070DF"> terms</a></span></label>
 
                                         <input type="submit" value="Create free account" data-wait="Please wait..." class="contact-us-submit demo-submit w-button">
                                     </form>

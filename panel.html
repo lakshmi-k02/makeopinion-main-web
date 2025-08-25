@@ -26,11 +26,11 @@
 
 
     <!-- javascript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/jquery.fancybox.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./assets/css/jquery.fancybox.min.css" />
     <link href="assets/css/zeta-template.webflow.eb73ea2e8.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
@@ -166,238 +166,239 @@
 </style>
 
 <style>
-        .analytics {
-            position: relative;
-            overflow: hidden;
-            /* hide shadows/padding expansion */
-            border: 2px solid transparent;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-            height: 100%;
-            /* in case cards are in a flex/grid */
-            min-height: 420px;
-            /* set to your tallest card height */
-            background-color: #fff;
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-        }
+  .analytics {
+    position: relative;
+    overflow: hidden;
+    /* hide shadows/padding expansion */
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    height: 100%;
+    /* in case cards are in a flex/grid */
+    min-height: 420px;
+    /* set to your tallest card height */
+    background-color: #fff;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
 
-        /* Inner wrapper for hover movement */
-        .analytics-inner {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            /* keeps layout stable */
-            transition: transform 0.3s ease;
-        }
+  /* Inner wrapper for hover movement */
+  .analytics-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* keeps layout stable */
+    transition: transform 0.3s ease;
+  }
 
-        /* Smooth text/icon color transition */
-        .analytics .bold-text,
-        .analytics .service-para,
-        .analytics .services-title,
-        .analytics h1,
-        .analytics h2,
-        .analytics h3,
-        .analytics p,
-        .analytics .feature-icon {
-            transition: color 0.3s ease, fill 0.3s ease;
-        }
+  /* Smooth text/icon color transition */
+  .analytics .bold-text,
+  .analytics .service-para,
+  .analytics .services-title,
+  .analytics h1,
+  .analytics h2,
+  .analytics h3,
+  .analytics p,
+  .analytics .feature-icon {
+    transition: color 0.3s ease, fill 0.3s ease;
+  }
 
-        /* Hover moves inner content, not outer */
-        .analytics:hover .analytics-inner {
-            transform: translateY(-8px) scale(1.02);
-        }
+  /* Hover moves inner content, not outer */
+  .analytics:hover .analytics-inner {
+    transform: translateY(-8px) scale(1.02);
+  }
 
-        /* Remove hover padding/margin changes that break height */
-        .analytics .balance-image-block {
-            padding: 10px;
-            /* fixed padding at all times */
-        }
+  /* Remove hover padding/margin changes that break height */
+  .analytics .balance-image-block {
+    padding: 10px;
+    /* fixed padding at all times */
+  }
 
-        .analytics .services-title {
-            margin-bottom: 20px;
-            /* fixed margin at all times */
-        }
+  .analytics .services-title {
+    margin-bottom: 20px;
+    /* fixed margin at all times */
+  }
 
-        /* Text & icon color change on hover */
-        .analytics:hover .bold-text,
-        .analytics:hover .service-para,
-        .analytics:hover .services-title,
-        .analytics:hover h1,
-        .analytics:hover h2,
-        .analytics:hover h3,
-        .analytics:hover p {
-            color: #fff !important;
-        }
+  /* Text & icon color change on hover */
+  .analytics:hover .bold-text,
+  .analytics:hover .service-para,
+  .analytics:hover .services-title,
+  .analytics:hover h1,
+  .analytics:hover h2,
+  .analytics:hover h3,
+  .analytics:hover p {
+    color: #fff !important;
+  }
 
-        .analytics:hover .feature-icon {
-            fill: #fff !important;
-            /* for SVG icons */
-        }
+  .analytics:hover .feature-icon {
+    fill: #fff !important;
+    /* for SVG icons */
+  }
 
-        /* Example gradient background on hover */
-        .analytics:hover {
-            background: linear-gradient(135deg, #0070E0 0%, #0070E0 100%);
-            color: white;
-        }
-    </style>
+  /* Example gradient background on hover */
+  .analytics:hover {
+    background: linear-gradient(135deg, #0070E0 0%, #0070E0 100%);
+    color: white;
+  }
+</style>
 
 <style>
-        :root {
-            --dim-grey: #6b6b6b;
-            --alice-blue: #daf0fe;
-            --slate-blue: #0070E1;
-            --button-background: white;
-            --white-smoke-background: #f8f9fa;
-            --light-black: #1d1d21;
-            --white-smoke: #eef1f4;
-        }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            color: #333;
-            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-            font-size: 14px;
-            line-height: 20px;
-            background-color: #fff;
-        }
-        
-        .our-service-section {
-            background-color: #fff;
-            padding: 110px 15px;
-            padding-top: 50px !important;
-            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80');
-            background-size: cover;
-            background-position: 0 0;
-            position: relative;
-        }
-        
-        .page-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .our-service-main-block {
-            text-align: center;
-            padding: 0 15px;
-        }
-        
-        .our-service-heading {
-            font-size: 36px;
-            color: var(--light-black);
-            margin-bottom: 20px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-        
-        .our-service-paragraph {
-            color: var(--dim-grey);
-            font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto 50px;
-            line-height: 1.6;
-        }
-        
-        .our-service-block {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-        
-        .service {
-            background-color: #fff;
-            border-radius: 20px;
-            padding: 40px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
-        .service:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 112, 225, 0.15);
-        }
-        
-        .service-topics {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .service-icons {
-            width: 60px;
-            height: 60px;
-            background-color: var(--alice-blue);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            flex-shrink: 0;
-        }
-        
-        .service-icon {
-            width: 30px;
-            height: 30px;
-        }
-        
-        .bold-text {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--light-black);
-            line-height: 1.4;
-            /* align left */
-            text-align: left;
-        }
-        
-        .service p {
-            color: var(--dim-grey);
-            font-size: 16px;
-            line-height: 1.7;
-            margin-top: 15px;
-        }
-        
-        .section-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.85);
-            z-index: 1;
-        }
-        
-        @media (max-width: 768px) {
-            .our-service-section {
-                padding: 60px 15px;
-            }
-            
-            .our-service-heading {
-                font-size: 28px;
-            }
-            
-            .our-service-paragraph {
-                font-size: 16px;
-            }
-            
-            .service {
-                padding: 30px;
-            }
-        }
-    </style>
-<style>
+  :root {
+    --dim-grey: #6b6b6b;
+    --alice-blue: #daf0fe;
+    --slate-blue: #0070E1;
+    --button-background: white;
+    --white-smoke-background: #f8f9fa;
+    --light-black: #1d1d21;
+    --white-smoke: #eef1f4;
+  }
 
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    color: #333;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #fff;
+  }
+
+  .our-service-section {
+    background-color: #fff;
+    padding: 110px 15px;
+    padding-top: 50px !important;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: 0 0;
+    position: relative;
+  }
+
+  .page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .our-service-main-block {
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .our-service-heading {
+    font-size: 36px;
+    color: var(--light-black);
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .our-service-paragraph {
+    color: var(--dim-grey);
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+  }
+
+  .our-service-block {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .service {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 112, 225, 0.15);
+  }
+
+  .service-topics {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .service-icons {
+    width: 60px;
+    height: 60px;
+    background-color: var(--alice-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  .service-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .bold-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--light-black);
+    line-height: 1.4;
+    /* align left */
+    text-align: left;
+  }
+
+  .service p {
+    color: var(--dim-grey);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-top: 15px;
+  }
+
+  .section-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 1;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .our-service-section {
+      padding: 60px 15px;
+    }
+
+    .our-service-heading {
+      font-size: 28px;
+    }
+
+    .our-service-paragraph {
+      font-size: 16px;
+    }
+
+    .service {
+      padding: 30px;
+    }
+  }
+</style>
+<style>
   .overflow-off,
   .page-container,
   .services-block,
@@ -653,6 +654,8 @@
     opacity: 0;
     transform: scale(0.5);
     transition: transform 1s ease, opacity 1s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+
   }
 
   /* Animate small images in sequence */
@@ -684,127 +687,90 @@
   }
 
   .idea-review-image {
-    top: 20px;
+    top: 0px;
     right: 20px;
   }
 </style>
-
-<!-- <style>
-  @media (min-width: 768px) and (max-width: 991px) {
-    .w-dyn-list2 .scroller .scroller-inner {
-      gap: 50px;
-    }
-  }
-
-  @media (max-width: 767px) {
-    .w-dyn-list2 .scroller .scroller-inner {
-      gap: 30px;
-    }
-  }
-
-  .w-dyn-list2:hover .scroller .scroller-inner {
-    animation-play-state: paused;
-  }
-
-  @keyframes scroll {
-    to {
-      transform: translate(calc(-50% - 40px));
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 991px) {
-    @keyframes scroll {
-      to {
-        transform: translate(calc(-50% - 25px));
-      }
-    }
-  }
-
-  @media (max-width: 767px) {
-    @keyframes scroll {
-      to {
-        transform: translate(calc(-50% - 15px));
-      }
-    }
-  }
-
-  .marquee-inner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 80px;
-    margin-right: 80px;
-  }
-
-  .w-dyn-list {
-    margin-top: 50px;
-    overflow: hidden;
-  }
-
-  .w-dyn-list {
-    margin-top: 50px;
-    overflow: hidden;
-  }
-</style> -->
 <style>
-        .marquee-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: 160px;
-            /* taller for bigger logos */
-            background: transparent;
-            /* keep clean look */
-            padding: 0;
-        }
+  .customer-review {
+    box-shadow: 0 4px 12px rgba(234, 231, 231, 0.15);
+    /* x-offset | y-offset | blur | color */
+  }
+  /* mobile view */
+  @media (max-width: 767px) {
+    .accordion,.minus-icon,.plus-icon{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .our-approachs,.feature-sucess-description,.feature-success-header {
+      padding-left: 20px;
+    }
+    .revenue {
+      margin-left: 30px;
+    }
+    
+  }
+</style>
 
-        .marquee-track {
-            display: flex;
-            width: max-content;
-            animation: marquee 60s linear infinite;
-            /* smooth scroll */
-        }
+<style>
+  .marquee-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 160px;
+    /* taller for bigger logos */
+    background: transparent;
+    /* keep clean look */
+    padding: 0;
+  }
 
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 60s linear infinite;
+    /* smooth scroll */
+  }
 
-            100% {
-                transform: translateX(-50%);
-            }
-        }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
 
-        .marquee-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            min-width: 200px;
-            /* enough room per logo */
-            margin: 0 15px;
-            /* reduced spacing */
-            background: none;
-            box-shadow: none;
-            border: none;
-            border-radius: 0;
-            padding: 0;
-        }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 
-        .logo {
-            height: 140px;
-            /* bigger logos */
-            width: auto;
-            /* keep aspect ratio */
-            object-fit: contain;
-            filter: grayscale(0.6) brightness(1.3);
-            transition: filter 0.3s ease;
-        }
+  .marquee-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 200px;
+    /* enough room per logo */
+    margin: 0 15px;
+    /* reduced spacing */
+    background: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
 
-        .marquee-item:hover .logo {
-            filter: grayscale(0) brightness(1.6);
-        }
-    </style>
+  .logo {
+    height: 140px;
+    /* bigger logos */
+    width: auto;
+    /* keep aspect ratio */
+    object-fit: contain;
+    filter: grayscale(0.6) brightness(1.3);
+    transition: filter 0.3s ease;
+  }
+
+  .marquee-item:hover .logo {
+    filter: grayscale(0) brightness(1.6);
+  }
+</style>
 
 <style>
   h1 {
@@ -903,7 +869,7 @@
     height: auto;
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    border: 4px solid white;
+    /* border: 4px solid white; */
   }
 
   @keyframes slideInScale {
@@ -1224,10 +1190,10 @@
       </style>
 
       <!-- Resources -->
-      <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-      <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-      <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
-      <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+      <script src="./assets/js/index.js"></script>
+      <script src="./assets/js/map.js"></script>
+      <script src="./assets/js/worldLow.js"></script>
+      <script src="./assets/js/Animated.js"></script>
 
       <!-- Chart code -->
       <script>
@@ -2947,6 +2913,24 @@
 
           legend.valueLabels.template.set("forceHidden", true)
 
+          // Mobile-only legend vertical offset to avoid overlap on small screens
+          function setLegendMobileOffset() {
+            try {
+              if (window.matchMedia && window.matchMedia("(max-width: 768px)").matches) {
+                // push legend slightly down on mobile
+                legend.set("dy", 10);
+              } else {
+                // default desktop offset
+                legend.set("dy", -20);
+              }
+            } catch (e) {
+              // ignore errors in older browsers
+            }
+          }
+          // initial set and on resize
+          setLegendMobileOffset();
+          window.addEventListener("resize", setLegendMobileOffset);
+
 
           // Create series for each group
           var colors = am5.ColorSet.new(root, {
@@ -3124,29 +3108,29 @@
 
 <section class="Clientele-section" style="box-shadow: 0 10px 10px rgba(244, 241, 241, 0.05);">
 
-        <div class="pro-main-container w-container" style="padding-top: 50px; padding-bottom: 10px">
-            <h2 class="clientele-heading animate" style="color: #CBE5FF;"></h2>
-            <div>
-                <div class="w-dyn-list">
-                        <div class="marquee-container">
-            <div class="marquee-track" id="marqueeTrack">
-                <!-- JS will fill in -->
-            </div>
+  <div class="pro-main-container w-container" style="padding-top: 50px; padding-bottom: 10px">
+    <h2 class="clientele-heading animate" style="color: #CBE5FF;"></h2>
+    <div>
+      <div class="w-dyn-list">
+        <div class="marquee-container">
+          <div class="marquee-track" id="marqueeTrack">
+            <!-- JS will fill in -->
+          </div>
         </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="questions-section">
   <div class="questions-conatiner w-container" style="
     border-bottom-width: 100px;
     margin-bottom: 100px;
-    " >
+    ">
     <div class="service-questions">
       <div class="questions-text-block">
         <h2 class="questions-header">Panel Quality</h2>
-        <p class="questions-paragraph">Quality is built into every layer of our process, delivering one of the industry’s lowest reconciliation rates at 2.8%.</p>
+        <p class="questions-paragraph">Quality is built into every layer of our process, delivering one of the industry's lowest reconciliation rates at 2.8%.</p>
         <div class="questions">
           <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601c8" class="questions-block">
             <div class="question-block">
@@ -3155,15 +3139,15 @@
               </div>
               <div class="icon-accordion">
                 <div style="opacity: 1;" class="plus-icon">
-                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
+                  <img src="./assets/web_icons/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
                 </div>
                 <div style="opacity: 0;" class="minus-icon">
-                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
+                  <img src="./assets/web_icons/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
                 </div>
               </div>
             </div>
             <div style="height: 0px;" class="answers-block">
-              <p class="answer-paragraph">We automatically check VPNs, proxies, and suspicious IPs throughout a respondent’s lifetime to prevent fraud from the start.</p>
+              <p class="answer-paragraph">We automatically check VPNs, proxies, and suspicious IPs throughout a respondent's lifetime to prevent fraud from the start.</p>
             </div>
           </div>
 
@@ -3174,15 +3158,15 @@
               </div>
               <div class="icon-accordion">
                 <div style="opacity: 1;" class="plus-icon">
-                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
+                  <img src="./assets/web_icons/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
                 </div>
                 <div style="opacity: 0;" class="minus-icon">
-                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
+                  <img src="./assets/web_icons/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
                 </div>
               </div>
             </div>
             <div style="height: 0px;" class="answers-block">
-              <p class="answer-paragraph">Our team reviews system-flagged respondents to make real-world judgment calls that tech can’t match.</p>
+              <p class="answer-paragraph">Our team reviews system-flagged respondents to make real-world judgment calls that tech can't match.</p>
             </div>
           </div>
           <div data-w-id="dd086df6-da6b-d626-6e50-8c3edb5601ef" class="questions-block">
@@ -3192,10 +3176,10 @@
               </div>
               <div class="icon-accordion">
                 <div style="opacity: 1;" class="plus-icon">
-                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
+                  <img src="./assets/web_icons/64378d48b792010acbb751a2_+.svg" loading="lazy" alt="Accordion Open">
                 </div>
                 <div style="opacity: 0;" class="minus-icon">
-                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
+                  <img src="./assets/web_icons/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
                 </div>
               </div>
             </div>
@@ -3210,10 +3194,10 @@
               </div>
               <div class="icon-accordion">
                 <div style="opacity: 1;" class="plus-icon">
-                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
+                  <img src="./assets/web_icons/64378d48b792010acbb751a2_%2B.svg" loading="lazy" alt="Accordion Open">
                 </div>
                 <div style="opacity: 0;" class="minus-icon">
-                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
+                  <img src="./assets/web_icons/64378d482b7c217a8b6214ac_-.svg" loading="lazy" alt="Accordion Close ">
                 </div>
               </div>
             </div>
@@ -3224,13 +3208,13 @@
         </div>
       </div>
       <div class="questions-image">
-                    <div class="question-main-image animate">
-                        <img src="./assets/new_icons/Frame 2387.png" alt="Employee Image" class="question-image">
-                    </div>
-                    <div class="real-time-user animate">
-                        <img src="./assets/new_icons/frame 2389.png" alt="User Count" class="real-time-user-image">
-                    </div>
-                </div>
+        <div class="question-main-image animate">
+          <img src="./assets/new_icons/Frame 2387.png" alt="Employee Image" class="question-image">
+        </div>
+        <div class="real-time-user animate">
+          <img src="./assets/new_icons/frame 2389.png" alt="User Count" class="real-time-user-image">
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -3263,7 +3247,7 @@
         <div class="our-approachs overflow-off">
           <div class="technology-check-list feature-approachs">
             <div class="technology-checklist-icon">
-              <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6419363dd9d751ef854fbfd1_Orange%20Check%20Icon.svg" loading="lazy" alt="Checked Icon" class="technology-text-list-icon">
+              <img src="./assets/web_icons/6419363dd9d751ef854fbfd1_Orange_Check_Icon.svg" loading="lazy" alt="Checked Icon" class="technology-text-list-icon">
             </div>
             <div class="technology-text-list-menu">
               <div class="header-small margin-bottom-ten">Responsive Panel Support</div>
@@ -3272,7 +3256,7 @@
           </div>
           <div class="technology-check-list feature-approachs">
             <div class="technology-checklist-icon">
-              <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6419363dd9d751ef854fbfd1_Orange%20Check%20Icon.svg" loading="lazy" alt="Checked Icon" class="technology-text-list-icon">
+              <img src="./assets/web_icons/6419363dd9d751ef854fbfd1_Orange_Check_Icon.svg" loading="lazy" alt="Checked Icon" class="technology-text-list-icon">
             </div>
             <div class="technology-text-list-menu">
               <div class="header-small margin-bottom-ten">Fair Incentives</div>
@@ -3301,16 +3285,16 @@
           <div class="why-choose-creative-check-list-block">
             <div class="home-page-creative-list-block">
               <div class="home-page-creative-check-icon">
-                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c335b850973a060da427_Yellow%20Vector.svg" loading="lazy" alt="Check" class="checked-icon-blue-circle">
+                <img src="./assets/web_icons/6444c335b850973a060da427_Yellow_Vector.svg" loading="lazy" alt="Check" class="checked-icon-blue-circle">
               </div>
               <p class="creative-text-list-content">
-                <span class="creative-list-span-text-content">Continuous profiling: </span> 
-                 We enrich respondent profiles over time with demographic, behavioral, and attitudinal data for richer targeting.
+                <span class="creative-list-span-text-content">Continuous profiling: </span>
+                We enrich respondent profiles over time with demographic, behavioral, and attitudinal data for richer targeting.
               </p>
             </div>
             <div class="home-page-creative-list-block">
               <div class="home-page-creative-check-icon">
-                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c335b850973a060da427_Yellow%20Vector.svg" loading="lazy" alt="Check" class="checked-icon-blue-circle">
+                <img src="./assets/web_icons/6444c335b850973a060da427_Yellow_Vector.svg" loading="lazy" alt="Check" class="checked-icon-blue-circle">
               </div>
               <p class="creative-text-list-content list-two">
                 <span class="creative-list-span-text-content">Diverse recruitment sources: </span> We source panelists through targeted campaigns, partnerships, and trusted channels to ensure diversity and balance
@@ -3318,20 +3302,20 @@
             </div>
             <div class="home-page-creative-list-block">
               <div class="home-page-creative-check-icon">
-                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6444c335b850973a060da427_Yellow%20Vector.svg" loading="lazy" alt="Check" class="checked-icon-blue-circle">
+                <img src="./assets/web_icons/6444c335b850973a060da427_Yellow_Vector.svg" loading="lazy" alt="Check" class="checked-icon-blue-circle">
               </div>
               <p class="creative-text-list-content list-three">
-                <span class="creative-list-span-text-content">Profile Refresh: </span> We regularly update key profile fields so targeting stays accurate as respondents’ lives change.
+                <span class="creative-list-span-text-content">Profile Refresh: </span> We regularly update key profile fields so targeting stays accurate as respondents' lives change.
               </p>
             </div>
           </div>
           <div class="hero-caption-buttons-one">
-                                <a role="button" data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee98" class="trial-button w-inline-block">
-                                    <div data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee99" class="trail-text-two-home" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Learn More</div>
-                                    <div data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee9b" class="trail-text-two" style="transform: translate3d(0px, 50px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Learn More</div>
-                                </a>
-                               
-                            </div>
+            <a role="button" data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee98" class="trial-button w-inline-block">
+              <div data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee99" class="trail-text-two-home" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Learn More</div>
+              <div data-w-id="ed211d01-a9c7-1804-c0ae-c31feba0ee9b" class="trail-text-two" style="transform: translate3d(0px, 50px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">Learn More</div>
+            </a>
+
+          </div>
 
         </div>
       </div>
@@ -3368,7 +3352,7 @@
         <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d4-d8996253" class="features-services-block">
           <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d5-d8996253" data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d5" class="analytics" style="background-color: #CBE5FF">
             <div class="services-title">
-              <div class="service-features-icon" style="display:none"><img src="./assets/images/6449eb8c75b83703f4cebd26_Group%202490.svg" loading="lazy" alt="Save" class="feature-icon"></div>
+              <div class="service-features-icon" style="display:none"><img src="./assets/images/6449eb8c75b83703f4cebd26_Group_2490.svg" loading="lazy" alt="Save" class="feature-icon"></div>
               <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d9" class="bold-text" style="color: rgb(34, 34, 34);">Self serve</div>
             </div>
             <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22db" class="service-para" style="color: rgb(107, 107, 107);">Use the Make Opinion platform to connect with the audiences you need. Intuitive, easy to use interface, so you get respondents in minutes</p>
@@ -3385,7 +3369,7 @@
         <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e0-d8996253" data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e0" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="features-services-block">
           <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1-d8996253" data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1" class="analytics" style="background-color: #CBE5FF">
             <div class="services-title">
-              <div class="service-features-icon" style="display:none"><img src="./assets/images-new/6449eb8e4d0a0bf03087dc0a_Logo%20Two.svg" loading="lazy" alt="Globe" class="feature-icon"></div>
+              <div class="service-features-icon" style="display:none"><img src="./assets/images-new/6449eb8e4d0a0bf03087dc0a_Logo_Two.svg" loading="lazy" alt="Globe" class="feature-icon"></div>
               <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e5" class="bold-text" style="color: rgb(34, 34, 34);">API integration</div>
             </div>
             <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e7" class="service-para" style="color: rgb(107, 107, 107);">API integration that covers feasibility, pricing and project execution. we're proud of the extremely accurate data, fast response.</p>
@@ -3402,7 +3386,7 @@
         <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ec-d8996253" data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ec" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="features-services-block">
           <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed-d8996253" data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed" class="analytics" style="background-color: #CBE5FF">
             <div class="services-title">
-              <div class="service-features-icon" style="display:none"><img src="./assets/images/6449eb90f0acdd8695d10564_Group%202493.svg" loading="lazy" alt="Settings" class="feature-icon"></div>
+              <div class="service-features-icon" style="display:none"><img src="./assets/images/6449eb90f0acdd8695d10564_Group_2493.svg" loading="lazy" alt="Settings" class="feature-icon"></div>
               <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f1" class="bold-text" style="color: rgb(34, 34, 34);">Managed projects</div>
             </div>
             <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f3" class="service-para" style="color: rgb(107, 107, 107);">Our expert project management team can handle all your needs, from feasibility and pricing to field management.<br><br>
@@ -3424,120 +3408,120 @@
 
 
 <section class="home-new-technology-section-one wf-section"
-        style="background-color:#fff;padding-top: 50px!important;background-image: url('./assets/images_new/bg4.png');background-size: cover;background-position: 0 0">
-        <div class="service-container w-container">
-            <div class="service-feature-main-block">
-                <h2 class="about-page-review-heading">How to Access Our Panel</h2>
-                <p class="feature-service-paragraph">Choose the level of control you want, from fully self-serve to complete automation.</p>
-                <div class="review-block">
-                    <div class="review-block">
-                        <div class="home-page-reviews">
+  style="background-color:#fff;padding-top: 50px!important;background-image: url('./assets/images_new/bg4.png');background-size: cover;background-position: 0 0">
+  <div class="service-container w-container">
+    <div class="service-feature-main-block">
+      <h2 class="about-page-review-heading">How to Access Our Panel</h2>
+      <p class="feature-service-paragraph">Choose the level of control you want, from fully self-serve to complete automation.</p>
+      <div class="review-block">
+        <div class="review-block">
+          <div class="home-page-reviews">
 
-                            <!-- Card 1 -->
-                            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50" class="review">
-                                <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d5-d8996253"
-                                    data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d5" class="analytics"
-                                    style="background-color: rgb(255, 255, 255);">
+            <!-- Card 1 -->
+            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50" class="review">
+              <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d5-d8996253"
+                data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d5" class="analytics"
+                style="background-color: rgb(255, 255, 255);">
 
-                                    <div class="analytics-inner">
-                                        <div class="services-title">
-                                            <div class="service-features-icon">
-                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb8c75b83703f4cebd26_Group%202490.svg"
-                                                    loading="lazy" alt="Save" class="feature-icon">
-                                            </div>
-                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d9" class="bold-text"
-                                                style="color: rgb(34, 34, 34);">Self serve</div>
-                                        </div>
-                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22db" class="service-para"
-                                            style="color: rgb(107, 107, 107);">Define your audience, get instant feasibility and pricing, and launch projects in minutes.</p>
-                                        <div class="your-balance-block">
-                                            <div class="balance-image-block">
-                                                <img src="./assets/images_new/audience-1-left.png" loading="lazy"
-                                                    sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.65625px"
-                                                    srcset="./assets/images_new/audience-1-left.png 500w,
+                <div class="analytics-inner">
+                  <div class="services-title">
+                    <div class="service-features-icon">
+                      <img src="./assets/web_icons/6449eb8c75b83703f4cebd26_Group_2490.svg"
+                        loading="lazy" alt="Save" class="feature-icon">
+                    </div>
+                    <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22d9" class="bold-text"
+                      style="color: rgb(34, 34, 34);">Self serve</div>
+                  </div>
+                  <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22db" class="service-para"
+                    style="color: rgb(107, 107, 107);">Define your audience, get instant feasibility and pricing, and launch projects in minutes.</p>
+                  <div class="your-balance-block">
+                    <div class="balance-image-block">
+                      <img src="./assets/images_new/audience-1-left.png" loading="lazy"
+                        sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.65625px"
+                        srcset="./assets/images_new/audience-1-left.png 500w,
                                                         ./assets/images_new/audience-1-left.png 612w" alt="Growth"
-                                                    class="balance-image">
-                                            </div>
-                                        </div>
-                                    </div>
+                        class="balance-image">
+                    </div>
+                  </div>
+                </div>
 
-                                </div>
-                            </div>
+              </div>
+            </div>
 
-                            <!-- Card 2 -->
-                            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60-6c8f4e50"
-                                data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60" class="review"
-                                style="opacity: 1; transform: none;">
-                                <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed-d8996253"
-                                    data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed" class="analytics"
-                                    style="background-color: rgb(255, 255, 255);">
+            <!-- Card 2 -->
+            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60-6c8f4e50"
+              data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60" class="review"
+              style="opacity: 1; transform: none;">
+              <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed-d8996253"
+                data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22ed" class="analytics"
+                style="background-color: rgb(255, 255, 255);">
 
-                                    <div class="analytics-inner">
-                                        <div class="services-title">
-                                            <div class="service-features-icon">
-                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb90f0acdd8695d10564_Group%202493.svg"
-                                                    loading="lazy" alt="Settings" class="feature-icon">
-                                            </div>
-                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f1" class="bold-text"
-                                                style="color: rgb(34, 34, 34);">Managed Services</div>
-                                        </div>
-                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f3" class="service-para"
-                                            style="color: rgb(107, 107, 107);">Send us your brief and our team handles targeting, setup, and delivery, with no service fees.</p>
-                                        <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f5-d8996253"
-                                            class="your-balance-block">
-                                            <div class="balance-image-block">
-                                                <img src="./assets/images_new/audience-1-center.png" loading="lazy"
-                                                    sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px"
-                                                    srcset="./assets/images_new/audience-1-center.png 500w,
+                <div class="analytics-inner">
+                  <div class="services-title">
+                    <div class="service-features-icon">
+                      <img src="./assets/web_icons/6449eb90f0acdd8695d10564_Group_2493.svg"
+                        loading="lazy" alt="Settings" class="feature-icon">
+                    </div>
+                    <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f1" class="bold-text"
+                      style="color: rgb(34, 34, 34);">Managed Services</div>
+                  </div>
+                  <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f3" class="service-para"
+                    style="color: rgb(107, 107, 107);">Send us your brief and our team handles targeting, setup, and delivery, with no service fees.</p>
+                  <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22f5-d8996253"
+                    class="your-balance-block">
+                    <div class="balance-image-block">
+                      <img src="./assets/images_new/audience-1-center.png" loading="lazy"
+                        sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px"
+                        srcset="./assets/images_new/audience-1-center.png 500w,
                                                         ./assets/images_new/audience-1-center.png 612w" alt="Target"
-                                                    class="balance-image">
-                                            </div>
-                                        </div>
-                                    </div>
+                        class="balance-image">
+                    </div>
+                  </div>
+                </div>
 
-                                </div>
-                            </div>
+              </div>
+            </div>
 
-                            <!-- Card 3 -->
-                            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e-6c8f4e50"
-                                data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e" class="review"
-                                style="opacity: 1; transform: none;">
-                                <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1-d8996253"
-                                    data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1" class="analytics"
-                                    style="background-color: rgb(255, 255, 255);">
+            <!-- Card 3 -->
+            <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e-6c8f4e50"
+              data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e" class="review"
+              style="opacity: 1; transform: none;">
+              <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1-d8996253"
+                data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e1" class="analytics"
+                style="background-color: rgb(255, 255, 255);">
 
-                                    <div class="analytics-inner">
-                                        <div class="services-title">
-                                            <div class="service-features-icon">
-                                                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6449eb8e4d0a0bf03087dc0a_Logo%20Two.svg"
-                                                    loading="lazy" alt="Globe" class="feature-icon">
-                                            </div>
-                                            <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e5" class="bold-text"
-                                                style="color: rgb(34, 34, 34);">API Integration</div>
-                                        </div>
-                                        <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e7" class="service-para"
-                                            style="color: rgb(107, 107, 107);">Connect directly to our panel for real-time feasibility, pricing, and project execution.</p>
-                                        <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e9-d8996253"
-                                            class="your-balance-block">
-                                            <div class="balance-image-block">
-                                                <img src="./assets/images_new/audience-1-right.png" loading="lazy"
-                                                    sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px"
-                                                    srcset="./assets/images_new/audience-1-right.png 500w,
+                <div class="analytics-inner">
+                  <div class="services-title">
+                    <div class="service-features-icon">
+                      <img src="./assets/web_icons/6449eb8e4d0a0bf03087dc0a_Logo_Two.svg"
+                        loading="lazy" alt="Globe" class="feature-icon">
+                    </div>
+                    <div data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e5" class="bold-text"
+                      style="color: rgb(34, 34, 34);">API Integration</div>
+                  </div>
+                  <p data-w-id="fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e7" class="service-para"
+                    style="color: rgb(107, 107, 107);">Connect directly to our panel for real-time feasibility, pricing, and project execution.</p>
+                  <div id="w-node-fa1a0254-dc6a-ccfd-1cb6-a3a8553d22e9-d8996253"
+                    class="your-balance-block">
+                    <div class="balance-image-block">
+                      <img src="./assets/images_new/audience-1-right.png" loading="lazy"
+                        sizes="(max-width: 479px) 85vw, (max-width: 746px) 82vw, (max-width: 991px) 612px, (max-width: 1439px) 24vw, 324.671875px"
+                        srcset="./assets/images_new/audience-1-right.png 500w,
                                                         ./assets/images_new/audience-1-right.png 612w" alt="Analytics"
-                                                    class="balance-image">
-                                            </div>
-                                        </div>
-                                    </div>
+                        class="balance-image">
+                    </div>
+                  </div>
+                </div>
 
-                                </div>
-                            </div>
+              </div>
+            </div>
 
-                        </div><!-- .home-page-reviews -->
-                    </div><!-- .review-block -->
-                </div><!-- .review-block -->
-            </div><!-- .service-feature-main-block -->
-        </div><!-- .service-container -->
-    </section>
+          </div><!-- .home-page-reviews -->
+        </div><!-- .review-block -->
+      </div><!-- .review-block -->
+    </div><!-- .service-feature-main-block -->
+  </div><!-- .service-container -->
+</section>
 
 
 <section class="our-service-section">
@@ -3545,7 +3529,9 @@
     <div class="our-service-main-block">
       <h2 class="our-service-heading" style="
     margin-bottom: unset;">Sampling Capabilities</h2>
-      <p class="our-service-paragraph">We help you reach exactly who you need, anywhere in the world.</p>
+      <p class="our-service-paragraph" style="
+    margin-bottom: 20px;
+">We help you reach exactly who you need, anywhere in the world.</p>
       <div class="our-service-block">
         <div id="w-node-_9104910f-62a6-dc0c-724a-15eae74ba3a8-f3e30ed3" class="service">
           <div class="service-topics">
@@ -3611,16 +3597,16 @@
   <div class="about-page-review-container w-container">
     <div class="about-page-review-main-block background-change">
       <h2 class="about-page-review-heading">Sweet word from sweet people</h2>
-      <p class="about-page-review-para">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text.Magaliqua Quis ipsum suspe.</p>
+      <p class="about-page-review-para">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's standard dummy text.Magaliqua Quis ipsum suspe.</p>
       <div class="review-block">
         <div class="review-block">
           <div class="home-page-reviews">
             <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e52-6c8f4e50" class="review">
               <div class="home-page-quotes-block">
-                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6422b89a3271b5175628814a_Mask%20group%20(12).svg" loading="lazy" alt="Review Quotes" class="quotes-icon">
+                <img src="./assets/web_icons/6422b89a3271b5175628814a_Mask_group_(12).svg" loading="lazy" alt="Review Quotes" class="quotes-icon">
               </div>
               <div class="paragraph-block">
-                <p class="review-text">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text.Magaliqua Quis ipsum suspe.</p>
+                <p class="review-text">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's standard dummy text.Magaliqua Quis ipsum suspe.</p>
               </div>
               <div class="people-name-and-image">
                 <div class="name-block">
@@ -3628,16 +3614,16 @@
                   <p class="job-role">Premium Customer</p>
                 </div>
                 <div class="profile-image-block-one">
-                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642a65dddcf107711ef8db9d_Review%20User%20One.webp" loading="lazy" alt="Review One Image">
+                  <img src="./assets/web_icons/642a65dddcf107711ef8db9d_Review_User_One.webp" loading="lazy" alt="Review One Image">
                 </div>
               </div>
             </div>
             <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60-6c8f4e50" data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e60" class="review" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
               <div class="home-page-quotes-block">
-                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6422b89a3271b5175628814a_Mask%20group%20(12).svg" loading="lazy" alt="Review Quotes" class="quotes-icon">
+                <img src="./assets/web_icons/6422b89a3271b5175628814a_Mask_group_(12).svg" loading="lazy" alt="Review Quotes" class="quotes-icon">
               </div>
               <div class="paragraph-block">
-                <p class="review-text">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text.Magaliqua Quis ipsum suspe.</p>
+                <p class="review-text">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's standard dummy text.Magaliqua Quis ipsum suspe.</p>
               </div>
               <div class="people-name-and-image">
                 <div class="name-block">
@@ -3645,16 +3631,16 @@
                   <p class="job-role">Operations Director</p>
                 </div>
                 <div class="profile-image-block-one">
-                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642a65dc5288622882dd492f_Review%20User%20Two.webp" loading="lazy" alt="Review Two Image" class="girl">
+                  <img src="./assets/web_icons/642a65dc5288622882dd492f_Review_User_Two.webp" loading="lazy" alt="Review Two Image" class="girl">
                 </div>
               </div>
             </div>
             <div id="w-node-_05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e-6c8f4e50" data-w-id="05347b9a-7c45-e4d9-eb9d-c5a76c8f4e6e" class="review" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
               <div class="home-page-quotes-block">
-                <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/6422b89a3271b5175628814a_Mask%20group%20(12).svg" loading="lazy" alt="Review Quotes" class="quotes-icon">
+                <img src="./assets/web_icons/6422b89a3271b5175628814a_Mask_group_(12).svg" loading="lazy" alt="Review Quotes" class="quotes-icon">
               </div>
               <div class="paragraph-block">
-                <p class="review-text">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text.Magaliqua Quis ipsum suspe.</p>
+                <p class="review-text">Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry's standard dummy text.Magaliqua Quis ipsum suspe.</p>
               </div>
               <div class="people-name-and-image">
                 <div class="name-block">
@@ -3662,7 +3648,7 @@
                   <p class="job-role">Premium Customer</p>
                 </div>
                 <div class="profile-image-block-one">
-                  <img src="https://cdn.prod.website-files.com/64180342570b0dc26c6fd2d1/642a65e4164f5ff6492b5f93_Review%20User%20Three.webp" loading="lazy" alt="Review Three Image" class="boy-two">
+                  <img src="./assets/web_icons/642a65e4164f5ff6492b5f93_Review_User_Three.webp" loading="lazy" alt="Review Three Image" class="boy-two">
                 </div>
               </div>
             </div>
@@ -3767,106 +3753,106 @@
 </script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const accordions = document.querySelectorAll(".questions-block");
+  document.addEventListener("DOMContentLoaded", function() {
+    const accordions = document.querySelectorAll(".questions-block");
 
-        // Accordion toggle
-        accordions.forEach(block => {
-            const header = block.querySelector(".question-block");
-            const answer = block.querySelector(".answers-block");
-            const plusIcon = block.querySelector(".plus-icon");
-            const minusIcon = block.querySelector(".minus-icon");
+    // Accordion toggle
+    accordions.forEach(block => {
+      const header = block.querySelector(".question-block");
+      const answer = block.querySelector(".answers-block");
+      const plusIcon = block.querySelector(".plus-icon");
+      const minusIcon = block.querySelector(".minus-icon");
 
-            header.addEventListener("click", () => {
-                const isOpen = answer.style.height && answer.style.height !== "0px";
+      header.addEventListener("click", () => {
+        const isOpen = answer.style.height && answer.style.height !== "0px";
 
-                // Close all
-                accordions.forEach(other => {
-                    other.querySelector(".answers-block").style.height = "0px";
-                    other.querySelector(".plus-icon").style.opacity = "1";
-                    other.querySelector(".minus-icon").style.opacity = "0";
-                    other.querySelector(".question-block").classList.remove("active");
-                });
-
-                // Open clicked if closed
-                if (!isOpen) {
-                    answer.style.height = answer.scrollHeight + "px";
-                    plusIcon.style.opacity = "0";
-                    minusIcon.style.opacity = "1";
-                    header.classList.add("active");
-                }
-            });
+        // Close all
+        accordions.forEach(other => {
+          other.querySelector(".answers-block").style.height = "0px";
+          other.querySelector(".plus-icon").style.opacity = "1";
+          other.querySelector(".minus-icon").style.opacity = "0";
+          other.querySelector(".question-block").classList.remove("active");
         });
 
-        // ✅ Auto-expand the first section on load
-        if (accordions.length > 0) {
-            const first = accordions[0];
-            const firstAnswer = first.querySelector(".answers-block");
-            const firstHeader = first.querySelector(".question-block");
-            const firstPlus = first.querySelector(".plus-icon");
-            const firstMinus = first.querySelector(".minus-icon");
-
-            firstAnswer.style.height = firstAnswer.scrollHeight + "px";
-            firstPlus.style.opacity = "0";
-            firstMinus.style.opacity = "1";
-            firstHeader.classList.add("active");
+        // Open clicked if closed
+        if (!isOpen) {
+          answer.style.height = answer.scrollHeight + "px";
+          plusIcon.style.opacity = "0";
+          minusIcon.style.opacity = "1";
+          header.classList.add("active");
         }
-
-        // Intersection Observer for animations
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("animate");
-                    observer.unobserve(entry.target); // run once
-                }
-            });
-        }, {
-            threshold: 0.3
-        }); // trigger when 30% visible
-
-        // Watch the images
-        const animatedElements = document.querySelectorAll(".question-main-image, .real-time-user");
-        animatedElements.forEach(el => observer.observe(el));
+      });
     });
+
+    // ✅ Auto-expand the first section on load
+    if (accordions.length > 0) {
+      const first = accordions[0];
+      const firstAnswer = first.querySelector(".answers-block");
+      const firstHeader = first.querySelector(".question-block");
+      const firstPlus = first.querySelector(".plus-icon");
+      const firstMinus = first.querySelector(".minus-icon");
+
+      firstAnswer.style.height = firstAnswer.scrollHeight + "px";
+      firstPlus.style.opacity = "0";
+      firstMinus.style.opacity = "1";
+      firstHeader.classList.add("active");
+    }
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          observer.unobserve(entry.target); // run once
+        }
+      });
+    }, {
+      threshold: 0.3
+    }); // trigger when 30% visible
+
+    // Watch the images
+    const animatedElements = document.querySelectorAll(".question-main-image, .real-time-user");
+    animatedElements.forEach(el => observer.observe(el));
+  });
 </script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const logos = [
-            './assets/images_new/uni1.png',
-            './assets/images_new/uni2.png',
-            './assets/images_new/uni3.png',
-            './assets/images_new/uni4.png',
-            './assets/images_new/uni5.png',
-            './assets/images_new/uni6.png',
-            './assets/images_new/uni7.png',
-            './assets/images_new/uni8.png',
-            './assets/images_new/uni9.png',
-            './assets/images_new/uni10.png',
-            './assets/images_new/uni11.png',
-            './assets/images_new/uni12.png',
-            './assets/images_new/uni13.png',
-            './assets/images_new/uni14.png'
-        ];
+  document.addEventListener('DOMContentLoaded', function() {
+    const logos = [
+      './assets/images_new/uni1.png',
+      './assets/images_new/uni2.png',
+      './assets/images_new/uni3.png',
+      './assets/images_new/uni4.png',
+      './assets/images_new/uni5.png',
+      './assets/images_new/uni6.png',
+      './assets/images_new/uni7.png',
+      './assets/images_new/uni8.png',
+      './assets/images_new/uni9.png',
+      './assets/images_new/uni10.png',
+      './assets/images_new/uni11.png',
+      './assets/images_new/uni12.png',
+      './assets/images_new/uni13.png',
+      './assets/images_new/uni14.png'
+    ];
 
-        const marqueeTrack = document.getElementById('marqueeTrack');
+    const marqueeTrack = document.getElementById('marqueeTrack');
 
-        function createLogoElement(path) {
-            const item = document.createElement('div');
-            item.className = 'marquee-item';
-            const img = document.createElement('img');
-            img.className = 'logo';
-            img.src = path;
-            img.alt = 'Client Logo';
-            item.appendChild(img);
-            return item;
-        }
+    function createLogoElement(path) {
+      const item = document.createElement('div');
+      item.className = 'marquee-item';
+      const img = document.createElement('img');
+      img.className = 'logo';
+      img.src = path;
+      img.alt = 'Client Logo';
+      item.appendChild(img);
+      return item;
+    }
 
-        // Add logos twice for seamless loop
-        for (let i = 0; i < 2; i++) {
-            logos.forEach(path => marqueeTrack.appendChild(createLogoElement(path)));
-        }
-    });
+    // Add logos twice for seamless loop
+    for (let i = 0; i < 2; i++) {
+      logos.forEach(path => marqueeTrack.appendChild(createLogoElement(path)));
+    }
+  });
 </script>
 <footer class="zeta-home-page-footer-section"
         style="margin-top: 0px;background-image: url('https://makeopinion.com/en/assets/images_new/footer-bg.png');background-size: cover;background-position: 0 0">
@@ -4483,4 +4469,4 @@
     });
 </script>
 
-</html> 
+</html>
