@@ -747,6 +747,8 @@ These classes provide:
 
   .customer-review {
     box-shadow: 0 4px 12px rgba(234, 231, 231, 0.15);
+    /* height & width*/
+
     /* x-offset | y-offset | blur | color */
   }
   /* mobile view */
