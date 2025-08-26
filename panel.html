@@ -165,6 +165,59 @@
   }
 </style>
 
+<!-- Mobile overflow fix: prevents horizontal scroll and ensures images/absolutely positioned elements fit -->
+<style>
+  /* Hide any accidental horizontal overflow while keeping vertical scroll */
+  html, body { overflow-x: hidden; }
+
+  /* Make media scale down where needed */
+  img, svg, picture { max-width: 100%; height: auto; display: block; }
+
+  /* Tidy up common wide containers on small screens */
+  @media (max-width: 767px) {
+    .service-container, .page-container, .w-container, .service-offer-section, .our-service-section {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+      box-sizing: border-box;
+      max-width: 100% !important;
+    }
+    .customer-review{
+          height: 108px;
+    width: 123px;
+    }
+
+  .idea-review-image {
+    top: 50px !important; 
+    right: 0px !important;
+  }
+    /* Force absolutely positioned decorative elements back into flow so they don't create extra width */
+    /* .revenue, .graphical-image-block, .utilize-time, .overlay, .banner-float-images, .home-hero-image-block {
+      position: relative !important;
+      left: auto !important;
+      right: auto !important;
+      transform: none !important;
+      margin: 0 auto !important;
+      max-width: 100% !important;
+    } */
+
+  /* Make marquees and tracks behave responsively and keep the seamless loop */
+  /* container remains block, track must be flex so items form a horizontal row for the animation */
+  .marquee-container { display: block !important; visibility: visible !important; }
+  .marquee-track { display: flex !important; visibility: visible !important; width: max-content !important; animation-duration: 30s !important; -webkit-animation-duration: 30s !important; }
+  /* ensure items are inline-flex so they align horizontally */
+  .marquee-item { display: inline-flex !important; align-items: center !important; justify-content: center !important; min-width: 120px !important; padding: 0 8px !important; }
+  /* scale logos down to fit the smaller height */
+  .marquee-container { height: 110px !important; }
+  .logo { height: 88px !important; }
+
+    /* Reduce large paddings/negative margins that can push content out */
+    .banner-float-images, .overlay-image, .float-image { margin-left: 0 !important; margin-right: 0 !important; }
+
+    /* Keep generic cards inside viewport */
+    .offer, .service { box-sizing: border-box; max-width: 100% !important; }
+  }
+</style>
+
 <style>
   .analytics {
     position: relative;
@@ -691,26 +744,7 @@
     right: 20px;
   }
 </style>
-<style>
-  .customer-review {
-    box-shadow: 0 4px 12px rgba(234, 231, 231, 0.15);
-    /* x-offset | y-offset | blur | color */
-  }
-  /* mobile view */
-  @media (max-width: 767px) {
-    .accordion,.minus-icon,.plus-icon{
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    .our-approachs,.feature-sucess-description,.feature-success-header {
-      padding-left: 20px;
-    }
-    .revenue {
-      margin-left: 30px;
-    }
-    
-  }
-</style>
+
 
 <style>
   .marquee-container {
@@ -727,18 +761,28 @@
   .marquee-track {
     display: flex;
     width: max-content;
+    flex-wrap: nowrap;
     animation: marquee 60s linear infinite;
+    -webkit-animation: marquee 60s linear infinite;
+    will-change: transform;
+    animation-play-state: running;
     /* smooth scroll */
   }
 
   @keyframes marquee {
     0% {
-      transform: translateX(0);
+      transform: translate3d(0,0,0);
     }
 
     100% {
-      transform: translateX(-50%);
+      transform: translate3d(-50%,0,0);
     }
+  }
+
+  /* WebKit-prefixed keyframes for better Safari/older mobile support */
+  @-webkit-keyframes marquee {
+    0% { -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
+    100% { -webkit-transform: translate3d(-50%,0,0); transform: translate3d(-50%,0,0); }
   }
 
   .marquee-item {
