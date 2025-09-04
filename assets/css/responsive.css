@@ -792,7 +792,7 @@ h1.home-hero-heading.v2 br {
 
     section.ask-for-demo-hero-section.wf-section {
         padding-top: 10px;
-        padding-bottom: 349px !important;
+        /* padding-bottom: 349px !important; */
     }
 
     .text-field-block {
@@ -869,6 +869,10 @@ h1.home-hero-heading.v2 br {
 
     .about-block.home-footer-about-block {
         gap: 5px;
+    }
+    
+    .balance-image-block{
+        margin-bottom: 10px;
     }
 
     .body-font.text-white {

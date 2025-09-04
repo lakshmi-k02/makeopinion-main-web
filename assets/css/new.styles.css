@@ -754,7 +754,7 @@ These classes provide:
   /* mobile view */
   @media (max-width: 767px) {
     .accordion,.minus-icon,.plus-icon{
-      padding-left: 20px;
+      padding-left:10px;
       padding-right: 20px;
     }
     .our-approachs,.feature-sucess-description,.feature-success-header {
@@ -763,5 +763,75 @@ These classes provide:
     .revenue {
       margin-left: 30px;
     }
-    
   }
+
+
+
+.balance-image-block{
+
+    padding-bottom: 25px !important;
+}
+
+
+/* Override for idea-review-image: ensure shadow isn't clipped and apply levitation */
+.idea-review-image {
+    overflow: visible !important; /* prevent clipping */
+    background: transparent !important; /* avoid white box before image loads/animates */
+    border-radius: 20px !important;
+}
+
+.idea-review-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: inherit !important;
+    box-shadow: none !important; 
+    transition: box-shadow 220ms ease, transform 220ms ease, opacity 220ms ease;
+}
+
+/* When the animation class is present (image becomes visible), add the shadow and subtle lift */
+.animate .idea-review-image img {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15) !important;
+    transform: translateY(-8px) !important;
+    opacity: 1 !important;
+}
+
+.animate .idea-review-image:hover .idea-review-image img,
+.animate .idea-review-image img:hover,
+.animate .idea-review-image img:focus {
+    transform: translateY(-12px) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+}
+
+
+/* Same approach for .cusomer-image (keeps spelling used in source) */
+.cusomer-image {
+    overflow: visible !important;
+    background: transparent !important;
+    border-radius: 20px !important;
+}
+
+.cusomer-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: inherit !important;
+    box-shadow: none !important;
+    transition: box-shadow 220ms ease, transform 220ms ease, opacity 220ms ease;
+}
+
+.animate .cusomer-image img {
+    /* box-shadow: 0 12px 30px rgba(0,0,0,0.15) !important; */
+    box-shadow: 6px 16px 30px #0070e073 !important;
+    transform: translateY(-8px) !important;
+    opacity: 1 !important;
+}
+
+.animate .cusomer-image:hover .cusomer-image img,
+.animate .cusomer-image img:hover,
+.animate .cusomer-image img:focus {
+    transform: translateY(-12px) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+}
+
+
