@@ -815,7 +815,7 @@ These classes provide:
     display: block;
     width: 100%;
     height: auto;
-    border-radius: inherit !important;
+    /* border-radius: inherit !important; */
     box-shadow: none !important;
     transition: box-shadow 220ms ease, transform 220ms ease, opacity 220ms ease;
 }
