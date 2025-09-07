@@ -834,4 +834,41 @@ These classes provide:
     box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
 }
 
+/* Mobile only */
+@media (max-width: 768px) {
+  .review {
+    height: auto !important;     
+    overflow: hidden !important; /* keep everything inside card */
+    padding: 20px;               /* make room inside */
+    box-sizing: border-box;
+  }
+
+  .people-name-and-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;            /* spacing from text */
+  }
+
+  .name-block {
+  flex: 1;                   /* takes up remaining space */
+}
+  .profile-image-block-one {
+    flex: 0 0 auto;
+    max-width: 100px;            /* control size */
+    height: auto !important;
+  }
+
+  .profile-image-block-one img {
+    width: 100%;
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 50%;          /* keep avatar round */
+    display: block;
+  }
+}
+
+
+
 

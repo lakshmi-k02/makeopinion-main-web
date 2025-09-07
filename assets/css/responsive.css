@@ -648,9 +648,9 @@ h1.home-hero-heading.v2 br {
     }
 
     .help-text {
-        text-align: center;
+        /* text-align: center; */
         justify-content: center;
-        align-items: center;
+        /* align-items: center; */
     }
 
     .hlep-items {

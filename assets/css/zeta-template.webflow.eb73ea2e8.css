@@ -8828,11 +8828,26 @@ blockquote {
   margin-bottom: 10px;
 }
 
-.profile-image-block-one {
+/* .profile-image-block-one {
   border-radius: 60px;
   width: 22%;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+} */
+
+.profile-image-block-one {
+  width: clamp(40px, 6vw, 70px);   /* min 40px, fluid up to 6% of viewport width, max 70px */
+  height: clamp(40px, 6vw, 70px);
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.profile-image-block-one img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-page-review-main-block {
@@ -10884,7 +10899,7 @@ blockquote {
 
 .help-center-main-block {
   grid-row-gap: 15px;
-  background-image: url("https://assets-global.website-files.com/64180342570b0dc26c6fd2d1/644250ab87442791be8136e8_Star%2013.webp");
+  /* background-image: url("../web_icons/644250ab87442791be8136e8_Star 13.webp"); */
   background-position: 15% 0;
   background-repeat: no-repeat;
   background-size: 25%;
@@ -11941,7 +11956,40 @@ blockquote {
   position: relative;
 }
 
+/* .home-page-reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 20px; 
+} */
+
+.home-page-reviews {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+  align-items: stretch; /* makes all cards equal height */
+}
+
 .review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 0 10px -1px rgba(0,0,0,.1);
+}
+
+.people-name-and-image{
+  margin-top:10px ;
+}
+.review-text {
+  margin: 0;  /* remove browser default top/bottom margins */
+  line-height: 1.75;
+}
+
+.paragraph-block {
+  flex-grow: 1;  /* pushes name+image down evenly */
+}
+/* .review {
   grid-column-gap: 16px;
   grid-row-gap: 15px;
   color: #000;
@@ -11954,7 +12002,7 @@ blockquote {
   padding: 2rem 2rem 2rem 2.4rem;
   display: flex;
   box-shadow: 0 0 10px -1px rgba(0, 0, 0, .1);
-}
+} */
 
 .service-banner-main {
   width: 100%;
@@ -13259,11 +13307,22 @@ blockquote {
 }
 
 .service-feature-main-block {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  display: flex;
+  /* text-align: center; */
+  width: 100%;
 }
+
+
+/* Fallback option (alternative to flex):
+.service-feature-main-block {
+  display: grid;
+  place-items: center; /
+  text-align: center;
+}
+*/
 
 .feature-service-heading {
   text-align: center;
@@ -21703,7 +21762,8 @@ blockquote {
   }
 
   .profile-image-block-one {
-    width: 24%;
+    width: 30%;
+    overflow: visible !important;
   }
 
   .floating-icon {
@@ -22017,7 +22077,7 @@ blockquote {
     padding-left: 20px;
     padding-right: 40px;
     /* make these sections center aligned to the screen */
-    text-align: center;
+    /* text-align: center; */
   }
 
   .online-list-items {
